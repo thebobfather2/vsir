@@ -21,7 +21,7 @@ const Send = () => {
   console.log(receiver)
   console.log(amount)
   const toSend = parseInt(amount)
-  const connection = new Connection("https://api.mainnet-beta.solana.com");
+  const connection = new Connection("https://bold-old-moon.solana-mainnet.quiknode.pro/ce6fe5d59cabd95814a4c61a6e69afbbfc625c9f/","confirmed");
   const fromWallet = wallet
   const mint = new PublicKey('CARoTGvYPajELZsoLQSovLY8fZmBkrrUoyJVJN3zGwQT')
   const [isLoading, setIsLoading] = useState(false)
@@ -79,13 +79,15 @@ const Send = () => {
       }
       const signature = await sendTransaction(transaction, connection);
       const latestBlockHash = await connection.getLatestBlockhash();
+      let confirmed = 'processed'
 
       await connection.confirmTransaction({
         blockhash: latestBlockHash.blockhash,
         lastValidBlockHeight: latestBlockHash.lastValidBlockHeight,
         signature: signature,
-
+        Commitment: confirmed,
       });
+
       setTx(signature)
       console.log(signature)
       setIsLoading(false)

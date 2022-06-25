@@ -22,7 +22,7 @@ const BulkSend = () => {
     console.log(rabbitFilter)
     //   const filterList = JSON.parse(JSON.stringify(filter))
 
-    const connection = new Connection('https://bold-old-moon.solana-mainnet.quiknode.pro/ce6fe5d59cabd95814a4c61a6e69afbbfc625c9f/');
+    const connection = new Connection('https://bold-old-moon.solana-mainnet.quiknode.pro/ce6fe5d59cabd95814a4c61a6e69afbbfc625c9f/', "confirmed");
 
     const { nfts } = useWalletNfts({
         publicAddress: walletAddress
