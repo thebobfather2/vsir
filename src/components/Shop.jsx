@@ -42,7 +42,7 @@ const Shop = () => {
       "itemDescription": "Burn any NFT or Token and redeem your rent!",
       "itemPrice": ".001 SOL per NFT or supply of tokens burned, free for Bobby Rabbits holders",
       "path": "/Cleaner",
-      "buttonText": "Coming Soon"
+      "buttonText": "Clean Wallet"
     },
     {
       "id": "5",
