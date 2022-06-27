@@ -339,7 +339,7 @@ const Cleaner = () => {
                   >
                     {nfts.map((nft, index) => {
                       return (
-                        <Grid item key={index} md={3} lg={2}>
+                        <Grid item key={index} md={4} lg={3}>
                           <div className='eachNFT' onClick={(e) => onEachNFTClick(e, index)} > {nftsSelected.includes(nfts[index].mint) &&
                             <div className='eachNFTClicked'><h1 className='selectedText'>Selected</h1></div>}
                             <img src={metadata?.[nft.mint]?.image} className='nftImage' alt="loading" />
