@@ -97,6 +97,7 @@ const BulkSend = () => {
             let mint = new PublicKey(selected[i])
             let toTokenAccount = await connection.getParsedTokenAccountsByOwner(toWallet, { mint: mint, });
             let nftAccount = await connection.getParsedTokenAccountsByOwner(fromWallet.publicKey, { mint: mint, })
+            console.log(nftAccount)
 
             const ataNft = await spltoken.getAssociatedTokenAddress(
                 mint,
