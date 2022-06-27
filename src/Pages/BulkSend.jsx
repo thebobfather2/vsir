@@ -12,6 +12,7 @@ import { SystemProgram, Transaction } from "@solana/web3.js";
 import * as spltoken from "@solana/spl-token";
 import CircularProgress from '@mui/material/CircularProgress';
 import rabbitFilter from '../filter.json'
+import refresh from '../images/refresh.png'
 
 const BulkSend = () => {
 
@@ -174,7 +175,9 @@ const BulkSend = () => {
             setIsLoading(false)
         }
     })
-
+    const refreshPage = () => {
+        window.location.reload();
+      }
 
 
     return (
@@ -230,6 +233,7 @@ const BulkSend = () => {
                         }} />{selected.length > 7 && <h4>{selected.length} NFTS Selected. Please Remove {selected.length - 7}</h4>}
                     {!isLoading ? (<Button size="large" className='transactionBtn' onClick={sendNfts} disabled={!publicKey || selected.length > 7 || selected.length === 0} >Send NFTs</Button>) :
                         (<Button size="large" variant='outlined' className='transactionBtn'><CircularProgress /></Button>)}<br></br>
+                        <Button className='refresh' variant='contained' onClick={refreshPage}>Refresh<img className='refreshIcon' src={refresh} alt='refresh' /></Button><br></br>
                     {tx.length > 6 ?
                         (<Alert severity="success">
                             Success - Transaction success <strong><a href={'https://solscan.io/tx/' + tx} target='_blank' rel='noreferrer'>Check Tx on Solscan</a></strong>

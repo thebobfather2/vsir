@@ -17,7 +17,12 @@
     flex-direction: row;
     margin-bottom: 20px;
 }
-
+.refreshIcon {
+    max-width: 30px;
+}
+.refresh {
+    margin-bottom: 20px !important;
+}
 .BulkNfts {
     padding-left: 20px;
 }
