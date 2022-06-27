@@ -64,11 +64,14 @@ const Cleaner = () => {
     if (nfts?.length) fetchMetadata();
   }, [nfts, fetchMetadata]);
 
+  
 
   //get all wallet tokens and filter for Fungible Tokens.  First get all tokens from wallet.  
   //Then filter for empty accounts and tokens with an amount over 1 (this is the current filter for fungible vs nfts, a better one is needed)
   useEffect(() => {
+    
     const fetchTokens = async () => {
+      
       //get tokens from wallet
       let response = await connection.getParsedTokenAccountsByOwner(wallet?.publicKey, {
         programId: spltoken.TOKEN_PROGRAM_ID,
@@ -92,8 +95,11 @@ const Cleaner = () => {
       })
 
     };
-    fetchTokens()
-      .catch(console.error)
+    
+    
+     if (wallet?.publicKey){
+      fetchTokens()
+    }
   }, [metadata])
 
   //Set up filter for wallets containing Bobby Rabbits nfts utilizing hashlist.
@@ -179,7 +185,7 @@ const Cleaner = () => {
          }))
 
     //build instructions for closing empty token accounts
-    for (let i = 0; i < 25; i++) {
+    for (let i = 0; i < empty.length; i++) {
       let tokenAccountPub = new PublicKey(empty[i].pubkey.toBase58())
       instructions.push(
         spltoken.createCloseAccountInstruction(
@@ -200,20 +206,20 @@ const Cleaner = () => {
        )
      }
      for (let n = 50; n < empty.length; n++) {
-       let tokenAccountPub2 = new PublicKey(empty[n].pubkey.toBase58())
-       instructions2.push(
+       let tokenAccountPub3 = new PublicKey(empty[n].pubkey.toBase58())
+       instructions3.push(
          spltoken.createCloseAccountInstruction(
-           tokenAccountPub2,
+           tokenAccountPub3,
            fromWallet.publicKey,
            fromWallet.publicKey
          )
        )
      }
      for (let n = 75; n < empty.length; n++) {
-       let tokenAccountPub2 = new PublicKey(empty[n].pubkey.toBase58())
-       instructions2.push(
+       let tokenAccountPub4 = new PublicKey(empty[n].pubkey.toBase58())
+       instructions4.push(
          spltoken.createCloseAccountInstruction(
-           tokenAccountPub2,
+           tokenAccountPub4,
            fromWallet.publicKey,
            fromWallet.publicKey
          )
@@ -263,7 +269,7 @@ const Cleaner = () => {
     }
   })
  let numOfTxs
- if (empty.length < 25){
+ if ((empty.length < 25) && (empty.length > 0)){
     numOfTxs = 1 + " Transaction"
  }else if (empty.length === 0){
   numOfTxs = 0 + " Transactions"
