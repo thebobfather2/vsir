@@ -42,7 +42,7 @@ const Navbar = () => {
             <Link to='/Custom'> <li className='listItem'>Custom</li></Link>
             <Link to='/Send'> <li className='listItem'>Send $CAROT</li></Link>
             <Link to='/BulkSend'> <li className='listItem'>Bulk Send</li></Link>
-            <Link to='Cleaner'> <li className='listItem'>Wallet Cleaner</li></Link>
+            <Link to='/Cleaner'> <li className='listItem'>Wallet Cleaner</li></Link>
             <br></br>
             <WalletModalProvider>
               <li><WalletMultiButton
