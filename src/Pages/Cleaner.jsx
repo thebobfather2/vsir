@@ -64,11 +64,14 @@ const Cleaner = () => {
     if (nfts?.length) fetchMetadata();
   }, [nfts, fetchMetadata]);
 
+  
 
   //get all wallet tokens and filter for Fungible Tokens.  First get all tokens from wallet.  
   //Then filter for empty accounts and tokens with an amount over 1 (this is the current filter for fungible vs nfts, a better one is needed)
   useEffect(() => {
+    
     const fetchTokens = async () => {
+      
       //get tokens from wallet
       let response = await connection.getParsedTokenAccountsByOwner(wallet?.publicKey, {
         programId: spltoken.TOKEN_PROGRAM_ID,
@@ -92,8 +95,11 @@ const Cleaner = () => {
       })
 
     };
-    fetchTokens()
-      .catch(console.error)
+    
+    
+     if (wallet?.publicKey){
+      fetchTokens()
+    }
   }, [metadata])
 
   //Set up filter for wallets containing Bobby Rabbits nfts utilizing hashlist.
@@ -138,25 +144,45 @@ const Cleaner = () => {
     setIsLoading(true)
     //define and initialize instructions variable to build custom instructions
     let instructions = []
+    let instructions2 = []
+    let instructions3 = []
+    let instructions4 = []
     //define the sender wallet
     const fromWallet = wallet
     //define wallet accepting fees.
     const feeWallet = new PublicKey('63CgiXpqYeziY9swqNw3oTuQy1TuNhcykGUy99q8X816')
-
+    
     //create fee schedule depending on amount closed/burned and if user holds a Bobby Rabbit
-    let fee = 0
-    if (checkTokens === true) {
-      fee = 0
-    } else {
-      fee = 1_000_000 * empty.length
-    }
-    instructions.push(
-      SystemProgram.transfer({
-        fromPubkey: fromWallet.publicKey,
-        toPubkey: feeWallet,
-        lamports: fee,
-      })
-    )
+     let fee = 0
+     if (checkTokens === true) {
+       fee = 0
+     } else {
+       fee = empty.length * 1_000_000
+     }
+     instructions.push(
+       SystemProgram.transfer({
+         fromPubkey: fromWallet.publicKey,
+         toPubkey: feeWallet,
+         lamports: fee,
+       }))
+       instructions2.push(
+         SystemProgram.transfer({
+           fromPubkey: fromWallet.publicKey,
+           toPubkey: feeWallet,
+           lamports: (empty.length - 25)* 1_000_000,
+         }))
+       instructions3.push(
+         SystemProgram.transfer({
+           fromPubkey: fromWallet.publicKey,
+           toPubkey: feeWallet,
+           lamports: (empty.length - 50)* 1_000_000,
+         }))
+       instructions4.push(
+         SystemProgram.transfer({
+           fromPubkey: fromWallet.publicKey,
+           toPubkey: feeWallet,
+           lamports: (empty.length - 75)* 1_000_000,
+         }))
 
     //build instructions for closing empty token accounts
     for (let i = 0; i < empty.length; i++) {
@@ -169,10 +195,47 @@ const Cleaner = () => {
         )
       )
     }
+     for (let n = 25; n < empty.length; n++) {
+       let tokenAccountPub2 = new PublicKey(empty[n].pubkey.toBase58())
+       instructions2.push(
+         spltoken.createCloseAccountInstruction(
+           tokenAccountPub2,
+           fromWallet.publicKey,
+           fromWallet.publicKey
+         )
+       )
+     }
+     for (let n = 50; n < empty.length; n++) {
+       let tokenAccountPub3 = new PublicKey(empty[n].pubkey.toBase58())
+       instructions3.push(
+         spltoken.createCloseAccountInstruction(
+           tokenAccountPub3,
+           fromWallet.publicKey,
+           fromWallet.publicKey
+         )
+       )
+     }
+     for (let n = 75; n < empty.length; n++) {
+       let tokenAccountPub4 = new PublicKey(empty[n].pubkey.toBase58())
+       instructions4.push(
+         spltoken.createCloseAccountInstruction(
+           tokenAccountPub4,
+           fromWallet.publicKey,
+           fromWallet.publicKey
+         )
+       )
+     }
+ 
     //send and confirm transaction
     try {
       const transaction = new Transaction().add(...instructions)
+       const transaction2 = new Transaction().add(...instructions2)
+       const transaction3 = new Transaction().add(...instructions3)
+       const transaction4 = new Transaction().add(...instructions4)
       const signature = await sendTransaction(transaction, connection);
+       const signature2 = await sendTransaction(transaction2, connection);
+       const signature3 = await sendTransaction(transaction3, connection);
+       const signature4 = await sendTransaction(transaction4, connection);
       const latestBlockHash = await connection.getLatestBlockhash();
 
       await connection.confirmTransaction({
@@ -180,6 +243,21 @@ const Cleaner = () => {
         lastValidBlockHeight: latestBlockHash.lastValidBlockHeight,
         signature: signature,
       });
+        await connection.confirmTransaction({
+          blockhash: latestBlockHash.blockhash,
+          lastValidBlockHeight: latestBlockHash.lastValidBlockHeight,
+          signature: signature2,
+        });
+        await connection.confirmTransaction({
+          blockhash: latestBlockHash.blockhash,
+          lastValidBlockHeight: latestBlockHash.lastValidBlockHeight,
+          signature: signature3,
+        });
+        await connection.confirmTransaction({
+          blockhash: latestBlockHash.blockhash,
+          lastValidBlockHeight: latestBlockHash.lastValidBlockHeight,
+          signature: signature4,
+        });
       setTx(signature)
       console.log(signature)
       setIsLoading(false)
@@ -190,6 +268,15 @@ const Cleaner = () => {
       setIsLoading(false)
     }
   })
+ let numOfTxs
+ if ((empty.length < 25) && (empty.length > 0)){
+    numOfTxs = 1 + " Transaction"
+ }else if (empty.length === 0){
+  numOfTxs = 0 + " Transactions"
+ }
+  else{
+  numOfTxs = (empty.length / 25) + " Transactions"
+ }
 
   //burning mechanism function
   const onBurnClick = useCallback(async () => {
@@ -384,7 +471,7 @@ const Cleaner = () => {
           <h4 className='step'>4. Click the Burn Button and Approve Transaction!</h4>
           <div className='Buttons'>
             <h5 className='Fees'>A fee of .001 is applied for each NFT or Token burned.  This service is free for Bobby Rabbits Holders</h5>
-            {!isLoading ? (<Button className='closeAccounts' variant='contained' onClick={onCloseClick} disabled={!publicKey}>Close Empty Accounts ({empty.length})</Button>) :
+            {!isLoading ? (<Button className='closeAccounts' variant='contained' onClick={onCloseClick} disabled={!publicKey}>Close Empty Accounts ({empty.length}) in {numOfTxs}</Button>) :
               (<Button className='closeAccounts' variant='contained'><CircularProgress /></Button>)}
             {!isBurnLoading ? (<Button className='burn' variant='contained' onClick={onBurnClick} disabled={!publicKey || isTooMuch}>Burn Tokens {(!isNFTS && isTokens) ? (<span> ({tokensSelected.length})</span>) : (isNFTS && !isTokens) ? (<span> ({nftsSelected.length})</span>) : (<span></span>)}</Button>) :
               (<Button className='burn' variant='contained'><CircularProgress /></Button>)}
