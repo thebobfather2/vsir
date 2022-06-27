@@ -10,12 +10,12 @@
     font-family: 'Fredoka One', cursive;
     font-size: 4em;
     text-align: center;
-    
+
 }
-.CleanerDescription{
+.CleanerDescription {
     margin-top: -40px;
 }
-.CleanerContainer{
+.CleanerContainer {
     display: flex;
     flex-direction: row;
     margin: 20px;
@@ -28,7 +28,7 @@
     position: relative;
     width: fit-content;
 }
-.Tabs{
+.Tabs {
     border-top: 2px solid white;
     border-left: 2px solid white;
     border-right: 2px solid white;
@@ -36,40 +36,40 @@
     width: 150px;
     padding: 0;
     margin-top: -10px;
-   
+
 }
-.NFTS{
+.NFTS {
     border-radius: 6px !important;
 }
-.Tokens{
-    border-radius: 6px !important; 
+.Tokens {
+    border-radius: 6px !important;
 }
-.NFTSClicked{
+.NFTSClicked {
     border-top-left-radius: 6px !important;
     background-color: white !important;
-    
+
 }
-.TokensClicked{
-    border-radius: 6px !important; 
+.TokensClicked {
+    border-radius: 6px !important;
     background-color: white !important;
 }
-.mappedNFTS{
- color: rgb(0, 0, 0);
- margin-top: 68px;
+.mappedNFTS {
+    color: rgb(0, 0, 0);
+    margin-top: 68px;
 }
-.nftImage{
+.nftImage {
     max-width: 150px;
     position: relative;
 }
-.nftImage:hover{
+.nftImage:hover {
     opacity: 40%;
     cursor: pointer;
 }
-.eachNFT{
+.eachNFT {
     position: relative;
-    width:fit-content;
+    width: fit-content;
 }
-.eachNFTClicked{
+.eachNFTClicked {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -82,8 +82,7 @@
     pointer-events: none;
     z-index: 10;
 }
-
-.eachToken{
+.eachToken {
     padding: 10px;
     border-radius: 20px;
     border: 1px solid rgb(248, 155, 79);
@@ -96,26 +95,25 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
-.eachToken:hover{
+.eachToken:hover {
     opacity: 60%;
     cursor: pointer;
 }
-.mappedTokens{
+.mappedTokens {
     margin-right: 10px;
     max-width: 100%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    
 }
-.warning{
+.warning {
     margin-top: -10px;
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 10px;
     text-align: center;
 }
-.eachTokenClicked{
+.eachTokenClicked {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -129,11 +127,11 @@
     border-radius: 20px !important;
     z-index: 10
 }
-.tokenNames{
+.tokenNames {
     text-align: left;
     margin-top: 0px;
 }
-.tokenAddress{
+.tokenAddress {
     text-align: left;
     margin-top: -20px;
     margin-bottom: 0px;
@@ -141,7 +139,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
-.purchase{
+.purchase {
     background-color: black;
     min-width: 300px;
     max-width: 400px;
@@ -156,72 +154,73 @@
     padding-bottom: 20px;
     margin-left: 50px;
 }
-.howto{
+.howto {
     color: white;
 }
-.tokensORnfts{
+.tokensORnfts {
     height: 80%;
     width: 80%;
     justify-content: center;
     align-items: center;
     color: white;
 }
-.step{
+.step {
     color: white;
-   font-size: 0.9em;
-   margin-top:0;
-   margin-bottom: 15px;
-   text-align: center;
-   }
-.Buttons{
+    font-size: 0.9em;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.Buttons {
     border-radius: 20px;
     border: 1px solid white;
     margin-top: 30px;
 }
-.Fees{
+.Fees {
     color: white;
 }
-.closeAccounts{
+.closeAccounts {
     margin-bottom: 10px !important;
     margin-right: 5px !important;
 }
-.burn{
+.burn {
     margin-bottom: 10px !important;
     background-color: #FF2525 !important;
-    
+
 }
-.refreshIcon{
+.refreshIcon {
     max-width: 30px;
 }
-.refresh{
+.refresh {
     margin-bottom: 20px !important;
 }
+
 @media screen and (max-width: 900px) {
-    .CleanerContainer{
+    .CleanerContainer {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    .purchase{
+    .purchase {
         margin-left: 0;
         margin-top: 20px;
     }
 }
+
 @media screen and (max-width: 755px) {
-    .CleanerContainer{
+    .CleanerContainer {
         display: flex;
         flex-direction: column;
     }
-    .eachToken{
+    .eachToken {
         max-width: 250px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
-    .tokenAddress{
+    .tokenAddress {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
-    
 }
