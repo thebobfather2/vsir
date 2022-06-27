@@ -37,6 +37,15 @@ const Shop = () => {
     },
     {
       "id": "4",
+      "itemTitle": "Wallet Cleaner",
+      "itemImage": placeholder,
+      "itemDescription": "Burn any NFT or Token and redeem your rent!",
+      "itemPrice": ".001 SOL per NFT or supply of tokens burned, free for Bobby Rabbits holders",
+      "path": "/Cleaner",
+      "buttonText": "Clean Wallet"
+    },
+    {
+      "id": "5",
       "itemTitle": "Raffles",
       "itemImage": placeholder,
       "itemDescription": "Use your $CAROT coin to purchase raffle tickets for various NFTs!",
@@ -45,7 +54,7 @@ const Shop = () => {
       "buttonText": "Coming Soon"
     },
     {
-      "id": "5",
+      "id": "6",
       "itemTitle": "Auctions",
       "itemImage": placeholder,
       "itemDescription": "Use your $CAROT coin to bid on awesome Solana NFTs!",
@@ -67,7 +76,7 @@ const Shop = () => {
         style={{ margin: '0', maxWidth: 'fit-content', textAlign: 'center' }}
       >
         {items.map(item => (
-          <Grid item key={item.id} xs={8} sm={8} md={6} lg={4}>
+          <Grid item key={item.id} xs={8} sm={8} md={4} lg={3}>
             <div className='item'>
               <h1 className='itemTitle'>{item.itemTitle}</h1>
               <img className='itemImage' src={item.itemImage} alt='Utility'></img>
