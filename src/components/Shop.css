@@ -6,16 +6,17 @@
 .ShopMain {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  min-width: 100vh;
   text-align: center;
   align-items: center;
   justify-content: center;
-  padding: 20px;
 }
 
 /*Items*/
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
-
+.grid{
+  margin: auto  !important;
+}
 .item {
   padding: 20px;
   margin-top: 20px;
