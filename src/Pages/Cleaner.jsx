@@ -228,16 +228,46 @@ const Cleaner = () => {
  
     //send and confirm transaction
     try {
+      if ((empty.length <= 25) && (empty.length > 0)){
+        const transaction = new Transaction().add(...instructions)
+        const signature = await sendTransaction(transaction, connection);
+        const latestBlockHash = await connection.getLatestBlockhash();
+        await connection.confirmTransaction({
+          blockhash: latestBlockHash.blockhash,
+          lastValidBlockHeight: latestBlockHash.lastValidBlockHeight,
+          signature: signature,
+        });
+        setTx(signature)
+      console.log(signature)
+      setIsLoading(false)
+      }else if ((empty.length > 25) && (empty.length <= 50)){
       const transaction = new Transaction().add(...instructions)
-       const transaction2 = new Transaction().add(...instructions2)
-       const transaction3 = new Transaction().add(...instructions3)
-       const transaction4 = new Transaction().add(...instructions4)
+      const transaction2 = new Transaction().add(...instructions2)
       const signature = await sendTransaction(transaction, connection);
        const signature2 = await sendTransaction(transaction2, connection);
-       const signature3 = await sendTransaction(transaction3, connection);
-       const signature4 = await sendTransaction(transaction4, connection);
-      const latestBlockHash = await connection.getLatestBlockhash();
+       const latestBlockHash = await connection.getLatestBlockhash();
+       await connection.confirmTransaction({
+        blockhash: latestBlockHash.blockhash,
+        lastValidBlockHeight: latestBlockHash.lastValidBlockHeight,
+        signature: signature,
+      });
 
+        await connection.confirmTransaction({
+          blockhash: latestBlockHash.blockhash,
+          lastValidBlockHeight: latestBlockHash.lastValidBlockHeight,
+          signature: signature2,
+        });
+        setTx(signature)
+      console.log(signature)
+      setIsLoading(false)
+    }else if ((empty.length > 50) && (empty.length <= 75)) {
+      const transaction = new Transaction().add(...instructions)
+      const transaction2 = new Transaction().add(...instructions2)
+      const transaction3 = new Transaction().add(...instructions3)
+      const signature = await sendTransaction(transaction, connection);
+      const signature2 = await sendTransaction(transaction2, connection);
+      const signature3 = await sendTransaction(transaction3, connection);
+      const latestBlockHash = await connection.getLatestBlockhash();
       await connection.confirmTransaction({
         blockhash: latestBlockHash.blockhash,
         lastValidBlockHeight: latestBlockHash.lastValidBlockHeight,
@@ -253,14 +283,46 @@ const Cleaner = () => {
           lastValidBlockHeight: latestBlockHash.lastValidBlockHeight,
           signature: signature3,
         });
-        await connection.confirmTransaction({
-          blockhash: latestBlockHash.blockhash,
-          lastValidBlockHeight: latestBlockHash.lastValidBlockHeight,
-          signature: signature4,
-        });
-      setTx(signature)
+        setTx(signature)
       console.log(signature)
       setIsLoading(false)
+    }else{
+      const transaction = new Transaction().add(...instructions)
+      const transaction2 = new Transaction().add(...instructions2)
+      const transaction3 = new Transaction().add(...instructions3)
+      const transaction4 = new Transaction().add(...instructions4)
+       const signature = await sendTransaction(transaction, connection);
+      const signature2 = await sendTransaction(transaction2, connection);
+      const signature3 = await sendTransaction(transaction3, connection);
+      const signature4 = await sendTransaction(transaction4, connection);
+     const latestBlockHash = await connection.getLatestBlockhash();
+
+     await connection.confirmTransaction({
+       blockhash: latestBlockHash.blockhash,
+       lastValidBlockHeight: latestBlockHash.lastValidBlockHeight,
+       signature: signature,
+     });
+       await connection.confirmTransaction({
+         blockhash: latestBlockHash.blockhash,
+         lastValidBlockHeight: latestBlockHash.lastValidBlockHeight,
+         signature: signature2,
+       });
+       await connection.confirmTransaction({
+         blockhash: latestBlockHash.blockhash,
+         lastValidBlockHeight: latestBlockHash.lastValidBlockHeight,
+         signature: signature3,
+       });
+       await connection.confirmTransaction({
+         blockhash: latestBlockHash.blockhash,
+         lastValidBlockHeight: latestBlockHash.lastValidBlockHeight,
+         signature: signature4,
+       });
+       setTx(signature)
+      console.log(signature)
+      setIsLoading(false)
+    }
+       
+      
 
     } catch (error) {
       setTx('false')
@@ -477,13 +539,14 @@ const Cleaner = () => {
               (<Button className='burn' variant='contained'><CircularProgress /></Button>)}
             <br></br> <Button className='refresh' variant='contained' onClick={refreshPage}>Refresh<img className='refreshIcon' src={refresh} alt='refresh' /></Button>
             {tx.length > 6 ?
-              (<Alert severity="success">
+              (<Alert severity="success" style={{width: '90%', marginLeft: 'auto', marginRight: 'auto'}}>
                 Success - Transaction success <strong><a href={'https://solscan.io/tx/' + tx} target='_blank' rel='noreferrer'>Check Tx on Solscan</a></strong>
               </Alert>) : tx === 'false' ?
                 (<Alert severity="error">
                   Error - Transaction was not confirmed-<strong>Please check wallet and try again</strong>
                 </Alert>) : (<div></div>)
             }
+            <br></br>
           </div>
         </div>
       </div>
