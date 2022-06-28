@@ -28,6 +28,7 @@
     display: flex;
     margin: auto;
     margin-top: 0;
+    padding: 0 20px;
 }
 
 .rabbits {
@@ -55,7 +56,7 @@
 }
 
 .images:hover {
-    border: 1px solid white;
+    opacity: 60%;
     cursor: pointer;
 }
 
@@ -65,15 +66,7 @@
     right: 25px;
 }
 
-.imagesClicked {
-    align-items: center;
-    position: relative;
-    margin: 5px;
-    width: fit-content;
-    justify-content: center !important;
-    background-color: black !important;
-    border: 3px solid white;
-}
+
 
 .clicked {
     position: absolute;
@@ -96,7 +89,8 @@
 
 .completePurchase {
     margin-left: 20px;
-    max-width: 500px;
+    min-width: 400px;
+    height:fit-content;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -115,7 +109,6 @@
 
 .transactionCarot {
     max-width: 150px;
-
 }
 
 .carots {
@@ -140,14 +133,20 @@
     .completePurchase {
         margin-left: 0;
         margin-bottom: 20px;
+        min-width: 60%;
     }
 
     .RabbitSelect {
         position: relative;
         margin-bottom: 20px;
         padding-bottom: 10px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
     }
-
+    .MainContainer{
+        padding: 0;
+    }
     .BobbyRabbits {
         max-width: 100px;
     }
