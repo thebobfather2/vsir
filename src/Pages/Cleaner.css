@@ -40,18 +40,23 @@
 }
 .NFTS {
     border-radius: 6px !important;
+    width: 50%;
 }
 .Tokens {
     border-radius: 6px !important;
 }
 .NFTSClicked {
-    border-top-left-radius: 6px !important;
+    border-top-left-radius: 10px !important;
     background-color: white !important;
+    width: 50%;
+    margin-left: -10px !important;
 
 }
 .TokensClicked {
-    border-radius: 6px !important;
+    border-top-right-radius: 10px !important;
     background-color: white !important;
+    width: 50%;
+    margin-right: -10px !important;
 }
 .mappedNFTS {
     color: rgb(0, 0, 0);

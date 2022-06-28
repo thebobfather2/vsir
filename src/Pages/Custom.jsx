@@ -192,7 +192,7 @@ const Custom = () => {
           <Grid container spacing={2} className='rabbitGrid'>
             {result.map((nft, index) => {
               return (
-                <Grid item key={index} md={6} lg={3}>
+                <Grid item key={index} md={6} lg={4}>
                   <Paper className='images' elevation={8}>
                     <img src={nft[1].image} className='BobbyRabbits' alt='rabbits' onClick={(e) => onClick(e, index)} />
                     {selected.includes(result[index][0]) &&
