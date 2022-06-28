@@ -189,10 +189,10 @@ const Custom = () => {
         <div className='RabbitSelect'>
           <h1 className='SelectRabbits'>Choose 3 OG to Retire</h1>
           {selected.length > 3 && <h1 className='Warning'>Please only select 3</h1>}
-          <Grid container spacing={2}>
+          <Grid container spacing={2} className='rabbitGrid'>
             {result.map((nft, index) => {
               return (
-                <Grid item key={index} md={6} lg={4}>
+                <Grid item key={index} md={6} lg={3}>
                   <Paper className='images' elevation={8}>
                     <img src={nft[1].image} className='BobbyRabbits' alt='rabbits' onClick={(e) => onClick(e, index)} />
                     {selected.includes(result[index][0]) &&
@@ -205,12 +205,11 @@ const Custom = () => {
         </div>
         <div className='completePurchase'>
           <img className='transactionCarot' src={carot} alt='carot coin' />
-          <Paper elevation={8} className='completePurchase'>
+          
             {(selected.length === 3) ? (<><h1 className='carots'>Pay 500 $CAROT to send 3 OGs to retirement and initiate your custom</h1><h3>After the transaction completes, please copy the link provided and create a discord ticket!</h3>
               {!isLoading ? (<Button size="large" className='transactionBtn' onClick={onSPLClick} disabled={!publicKey} >Order Your Custom</Button>) :
                 (<Button size="large" variant='outlined' className='transactionBtn'><CircularProgress /></Button>)}</>) :
               (<h1 className='carots'>Please Select 3 OG Rabbits to Retire</h1>)}
-          </Paper>
           {tx.length > 6 ?
             (<><Alert severity="success">
               Success - Transaction success <strong><a href={'https://solscan.io/tx/' + tx} target='_blank' rel='noreferrer'>Check Tx on Solscan</a></strong>
