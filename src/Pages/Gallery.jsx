@@ -91,17 +91,17 @@ const Gallery = () => {
     setMyWallet(walletAddress)
   }
 
-  console.log(myWallet)
-  console.log(enteredWallet)
+  // console.log(myWallet)
+  // console.log(enteredWallet)
 
   // const [isPopup, setIsPopup] = useState(false)
 
   // const handleImageClick = () => {
   //   setIsPopup(!isPopup)
   // }
-  console.log("isError is " + isError)
-  console.log("isLoading is " + isLoading)
-  console.log(nfts?.length)
+  // console.log("isError is " + isError)
+  // console.log("isLoading is " + isLoading)
+  // console.log(nfts?.length)
 
   return (
     <div className='galleryMain'>
