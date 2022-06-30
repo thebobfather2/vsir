@@ -18,7 +18,11 @@
     background-color: #FAD961;
     background-image: linear-gradient(123deg, #FAD961 0%, #F76B1C 100%);
     box-shadow: 0 0 8px black;
+    position: relative;
 
+}
+.Viewing{
+    margin-top: -20px;
 }
 .inputs{
     height: 60px;
