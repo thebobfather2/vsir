@@ -3,11 +3,12 @@ import { useState, useCallback, useEffect } from 'react'
 import { useAnchorWallet } from '@solana/wallet-adapter-react'
 import { useWalletNfts } from '@nfteyez/sol-rayz-react'
 import { Grid, Button, TextField } from '@material-ui/core'
-//import { Connection } from '@solana/web3.js';
+import { Connection, PublicKey } from '@solana/web3.js';
 import CircularProgress from '@mui/material/CircularProgress';
 import magicEden from '../images/MELogo.png'
 import Solscan from '../images/solscan.png'
 import { WalletMultiButton } from '@solana/wallet-adapter-react-ui'
+
 
 
 const Gallery = () => {
@@ -16,11 +17,28 @@ const Gallery = () => {
   const [myWallet, setMyWallet] = useState('')
   const [isLoading, setIsLoading] = useState(true)
   const [isError, setIsError] = useState(false)
-  
+
+  // useEffect(() => {
+  //   try {
+  //     let pubkey = new PublicKey(myWallet)
+  //     let  isSolana =  PublicKey.isOnCurve(pubkey.toBuffer())
+  //     if (isSolana) {
+  //       setIsError(!isSolana)
+  //     }else{
+  //       setIsError(!isSolana)
+  //     }
+      
+      
+  // } catch (error) {
+  //     return false
+  // }
+  // },[myWallet])
+
+
   let walletAddress = ''
   const wallet = useAnchorWallet()
   walletAddress = wallet?.publicKey.toString()
-  //const connection = new Connection("https://bold-old-moon.solana-mainnet.quiknode.pro/ce6fe5d59cabd95814a4c61a6e69afbbfc625c9f/", "confirmed");
+  const connection = new Connection("https://bold-old-moon.solana-mainnet.quiknode.pro/ce6fe5d59cabd95814a4c61a6e69afbbfc625c9f/", "confirmed");
 
   const { nfts } = useWalletNfts({
     publicAddress: myWallet
@@ -44,15 +62,14 @@ const Gallery = () => {
       }
 
     }
-    
+
   }, [nfts]);
 
+
   useEffect(() => {
-    if (myWallet !== wallet?.publicKey.toString()) {
-      setIsError(false);
-      setIsLoading(true)
-    }
-    if (nfts?.length) {fetchMetadata();}
+   
+     //if (!isSolana) setIsError(true)
+    if (nfts?.length) { fetchMetadata(); }
   }, [nfts, fetchMetadata]);
 
   const fetchInputWallet = (e) => {
@@ -60,7 +77,14 @@ const Gallery = () => {
   }
   const handleEnter = () => {
     setMyWallet(enteredWallet)
-    if (myWallet !== wallet?.publicKey.toString()) setIsError(true)
+    try {
+      let pubkey = new PublicKey(myWallet)
+      let  isSolana =  PublicKey.isOnCurve(pubkey.toBuffer())
+      console.log("isSolana is " + isSolana)
+      setIsError(false)    
+  } catch (error) {
+      setIsError(true)
+  }
   }
   const fetchWallet = () => {
 
@@ -75,16 +99,18 @@ const Gallery = () => {
   // const handleImageClick = () => {
   //   setIsPopup(!isPopup)
   // }
-console.log(isError)
-console.log(isLoading)
+  console.log("isError is " + isError)
+  console.log("isLoading is " + isLoading)
+  console.log(nfts?.length)
+
   return (
     <div className='galleryMain'>
       <h1 className='galleryTitle'>Gallery</h1>
       <div className='walletSelect'>
         <h4 className='instructions'>Click button to use your connected wallet, or enter a valid wallet address in the search bar.</h4>
         <div className='inputs'>
-          { wallet?.publicKey? (<Button size='large' className='mywallet' variant='outlined' onClick={fetchWallet}>Use My Wallet</Button>):
-          (<><div style={{marginRight: '10px'}}><WalletMultiButton>Connect Wallet</WalletMultiButton></div></>)}
+          {wallet?.publicKey ? (<Button size='large' className='mywallet' variant='outlined' onClick={fetchWallet}>Use My Wallet</Button>) :
+            (<><div style={{ marginRight: '10px' }}><WalletMultiButton>Connect Wallet</WalletMultiButton></div></>)}
           <TextField
             id='walletAddress'
             className='walletInput'
@@ -95,28 +121,28 @@ console.log(isLoading)
               console.log(`Pressed keyCode ${ev.key}`);
               if (ev.key === 'Enter') {
                 handleEnter()
-                ev.preventDefault();
+                
               }
             }}
             InputLabelProps={{
               style: {
-                  color: "white"
+                color: "white"
               }
-          }}
-          InputProps={{
+            }}
+            InputProps={{
               style: {
-                  color: "white"
+                color: "white"
               }
-          }} />
+            }} />
         </div>
       </div>
-     {(nfts?.length) ? (<> {(!isLoading && !isError)? (<div className='Gallery'>
+      {((nfts?.length > 0) && !isLoading && !isError) ? (<> {(!isLoading && !isError) ? (<div className='Gallery'>
         <Grid
           container
           spacing={2}
           className="nftsgrid"
         >
-          
+
           {nfts.map((nft, index) => (
             <Grid item key={index} md={3} lg={2}>
               <div className='AllImages'>
@@ -132,12 +158,13 @@ console.log(isLoading)
           ))}
         </Grid>
 
-      </div>) : (isLoading && !isError)?
-          (<div className='galleryLoading'><div className='circprog'><h3 style={{color: 'white'}}>Please Select Your Wallet or Enter a Valid Solana Address</h3><CircularProgress style={{width: '100px', height:'100px', color: 'white'}}/></div></div>) : (<div className='galleryLoading'><h1 style={{color: 'white'}}>Please Enter a Valid Solana Address</h1></div>)}</>)
-    : (<div className='galleryLoading'>
-      <h1 style={{color: 'white'}}>You (or the wallet you're stalking) have 0 NFTs</h1>
-      <a href='https://magiceden.io/marketplace/bobbyrabbits' target='_blank' rel='noreferrer'><h3 style={{color: 'white'}}>Purchase a Bobby Rabbit NFT today!</h3> <img src={magicEden} alt='Magic Eden Logo' width='100px' style={{marginLeft: 'auto', marginRight: 'auto', marginTop: '-20px'}}/></a>
-      </div>)}</div>
+      </div>) : (isLoading && !isError) ?
+        (<div className='galleryLoading'><div className='circprog'><h3 style={{ color: 'white' }}>Please Select Your Wallet or Enter a Valid Solana Address</h3><CircularProgress style={{ width: '100px', height: '100px', color: 'white' }} /></div></div>) : (<div className='galleryLoading'><h1 style={{ color: 'white' }}>Please Enter a Valid Solana Address</h1></div>)}</>)
+        : (!(nfts?.length > 0) && isLoading && !isError) ? (<div className='galleryLoading'><div className='circprog'><h3 style={{ color: 'white' }}>Please Select Your Wallet or Enter a Valid Solana Address</h3><CircularProgress style={{ width: '100px', height: '100px', color: 'white' }} /></div></div>) : (!(nfts?.length > 0) && !isLoading && !isError) ? (<div className='galleryLoading'>
+        <h1 style={{ color: 'white' }}>You (or the wallet you're stalking) have 0 NFTs</h1>
+        <a href='https://magiceden.io/marketplace/bobbyrabbits' target='_blank' rel='noreferrer'><h3 style={{ color: 'white' }}>Purchase a Bobby Rabbit NFT today!</h3> <img src={magicEden} alt='Magic Eden Logo' width='100px' style={{ marginLeft: 'auto', marginRight: 'auto', marginTop: '-20px' }} /></a>
+      </div>)
+          : (<div className='galleryLoading'><h1 style={{ color: 'white' }}>Please Enter a Valid Solana Address</h1></div>) }</div >
   )
 }
 
