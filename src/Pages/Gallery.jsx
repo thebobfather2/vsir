@@ -89,6 +89,8 @@ const Gallery = () => {
   const fetchWallet = () => {
 
     setMyWallet(walletAddress)
+    if (!(nfts?.length > 0)) setIsLoading(false)
+    
   }
 
   // console.log(myWallet)
@@ -107,6 +109,7 @@ const Gallery = () => {
     <div className='galleryMain'>
       <h1 className='galleryTitle'>Gallery</h1>
       <div className='walletSelect'>
+        
         <h4 className='instructions'>Click button to use your connected wallet, or enter a valid wallet address in the search bar.</h4>
         <div className='inputs'>
           {wallet?.publicKey ? (<Button size='large' className='mywallet' variant='outlined' onClick={fetchWallet}>Use My Wallet</Button>) :
@@ -135,6 +138,7 @@ const Gallery = () => {
               }
             }} />
         </div>
+        <div className='Viewing'><h3>Viewing Wallet: {myWallet}</h3></div>
       </div>
       {((nfts?.length > 0) && !isLoading && !isError) ? (<> {(!isLoading && !isError) ? (<div className='Gallery'>
         <Grid
