@@ -73,7 +73,7 @@ const BulkSend = () => {
     const { publicKey, sendTransaction } = useWallet();
     const [receiver, setReceiver] = useState('')
 
-    const feeWallet = new PublicKey('63CgiXpqYeziY9swqNw3oTuQy1TuNhcykGUy99q8X816')
+    const feeWallet = new PublicKey('5BNK4Kq1b5rDcr3fkqhfJLz58XEfcT3sPJdxLAB6n7Cq')
     console.log(receiver)
 
     const [isLoading, setIsLoading] = useState(false)

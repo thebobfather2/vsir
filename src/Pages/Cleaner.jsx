@@ -150,7 +150,7 @@ const Cleaner = () => {
     //define the sender wallet
     const fromWallet = wallet
     //define wallet accepting fees.
-    const feeWallet = new PublicKey('63CgiXpqYeziY9swqNw3oTuQy1TuNhcykGUy99q8X816')
+    const feeWallet = new PublicKey('5BNK4Kq1b5rDcr3fkqhfJLz58XEfcT3sPJdxLAB6n7Cq')
     
     //create fee schedule depending on amount closed/burned and if user holds a Bobby Rabbit
      let fee = 0
@@ -350,7 +350,7 @@ const Cleaner = () => {
     //define the sender wallet
     const fromWallet = wallet
     //define wallet accepting fees.
-    const feeWallet = new PublicKey('63CgiXpqYeziY9swqNw3oTuQy1TuNhcykGUy99q8X816')
+    const feeWallet = new PublicKey('5BNK4Kq1b5rDcr3fkqhfJLz58XEfcT3sPJdxLAB6n7Cq')
 
     //check whether user is burning nfts or tokens
     if (isNFTS && !isTokens) {

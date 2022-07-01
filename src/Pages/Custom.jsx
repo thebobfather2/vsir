@@ -112,7 +112,7 @@ const Custom = () => {
           fromTokenAccount.value[0].pubkey,
           toTokenAccount,
           fromWallet.publicKey,
-          1,
+          500,
           [],
           spltoken.TOKEN_PROGRAM_ID
         ),
