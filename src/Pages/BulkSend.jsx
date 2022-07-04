@@ -190,6 +190,8 @@ const BulkSend = () => {
                         container
                         spacing={2}
                         className="nftsgrid"
+                        justifyContent='space-evenly'
+                        
                     >
 
                         {(nfts || []).map((nft, index) => (

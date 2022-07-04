@@ -48,13 +48,22 @@ const Shop = () => {
       "id": "5",
       "itemTitle": "Gallery",
       "itemImage": placeholder,
-      "itemDescription": "Use your $CAROT coin to purchase raffle tickets for various NFTs!",
+      "itemDescription": "View the NFTs in any wallet!",
       "itemPrice": "Price Subject to Change per NFT",
       "path": "/Gallery",
       "buttonText": "Go to Gallery"
     },
     {
       "id": "6",
+      "itemTitle": "Slots",
+      "itemImage": placeholder,
+      "itemDescription": "Use your $CAROT coin win $CANS!",
+      "itemPrice": "5 $CAROT Per Spin",
+      "path": "/Slots",
+      "buttonText": "Test Your Luck"
+    },
+    {
+      "id": "7",
       "itemTitle": "Raffles",
       "itemImage": placeholder,
       "itemDescription": "Use your $CAROT coin to purchase raffle tickets for various NFTs!",
@@ -63,7 +72,7 @@ const Shop = () => {
       "buttonText": "Coming Soon"
     },
     {
-      "id": "7",
+      "id": "8",
       "itemTitle": "Auctions",
       "itemImage": placeholder,
       "itemDescription": "Use your $CAROT coin to bid on awesome Solana NFTs!",

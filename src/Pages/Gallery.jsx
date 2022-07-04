@@ -145,6 +145,8 @@ const Gallery = () => {
           container
           spacing={2}
           className="nftsgrid"
+          justifyContent="space-evenly"
+          
         >
 
           {nfts.map((nft, index) => (

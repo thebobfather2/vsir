@@ -1,38 +1,47 @@
 nav {
-    
+
     width: 100%;
     height: 50px;
     padding-top: 20px;
     background: transparent;
     z-index: 10;
 }
-.navlogo{
+
+.navlogo {
     float: left;
     max-width: 150px;
     margin-left: 20px;
     align-self: center;
     margin-top: 10px;
 }
-.close{
+
+.close {
     display: none !important;
 }
-a{
+
+a {
     text-decoration: none;
 }
-.wallet-adapter-button-trigger{
+
+.wallet-adapter-button-trigger {
     background-color: black !important;
     border: 2px solid rgb(255, 255, 255) !important;
 }
-.wallet-adapter-button-trigger:not([disable]){
+
+.wallet-adapter-button-trigger:not([disable]) {
     background-color: transparent !important;
+    height: 40px;
 }
-.wallet-adapter-button-trigger:not([disable]):hover{
+
+.wallet-adapter-button-trigger:not([disable]):hover {
     background-color: orange !important;
     border: 2px solid rgb(255, 255, 255) !important;
 }
+
 .wallet-adapter-modal-wrapper {
     background-color: rgb(206, 137, 9) !important;
-} 
+}
+
 .list {
     list-style-type: none;
     background: transparent;
@@ -42,15 +51,21 @@ a{
     position: relative;
     margin-right: 40px;
 }
+
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
-.listItem{
+.listItem {
     font-size: 1em;
     margin-right: 20px;
     font-family: 'Fredoka One', cursive;
     color: rgb(255, 255, 255);
     margin-bottom: 5px;
     padding-top: 5px;
+}
+
+.listItem:hover {
+    color: black;
+    border-bottom: 4px solid #000;
 }
 
 .items {
@@ -71,14 +86,25 @@ a{
     font-size: 18px;
 }
 
+@media screen and (max-width: 1054px) {
 
-@media screen and (max-width: 755px){
-   .nav{
-       z-index: 4;
-      padding-top: -20px;
-       color: white;
+    .wallet-adapter-button-trigger:not([disable]) {
+        background-color: transparent !important;
+        height: 40px;
+        font-size: .6em !important;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
 
-   }
+    }
+}
+
+@media screen and (max-width: 755px) {
+    .nav {
+        z-index: 4;
+        padding-top: -20px;
+        color: white;
+    }
 
     .list {
         flex-direction: column;
@@ -91,7 +117,7 @@ a{
         top: -20px;
         z-index: 10;
     }
-    
+
     .items {
         width: 100%;
         text-align: center;
@@ -100,8 +126,9 @@ a{
         background-color: rgba(0, 0, 0, 1);
         color: white;
         margin-left: auto;
-        
+
     }
+
     .btn {
         display: block;
         border-radius: 20px;
@@ -109,18 +136,20 @@ a{
         background-color: transparent;
         border: none;
     }
-    
-    .navlogo{
-       float: none;
-       margin: auto;
-       display: none;
-       
+
+    .navlogo {
+        float: none;
+        margin: auto;
+        display: none;
+
     }
-    .listItem{
+
+    .listItem {
         color: white;
         font-size: 1.5em;
     }
-    .close{
+
+    .close {
         color: white !important;
         position: absolute;
         top: -10px;

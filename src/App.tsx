@@ -20,6 +20,7 @@ import Auctions from './Pages/Auctions';
 import BulkSend from './Pages/BulkSend';
 import Cleaner from './Pages/Cleaner';
 import Gallery from './Pages/Gallery';
+import Slots from './Pages/Slots';
 
 require('./App.css')
 require('@solana/wallet-adapter-react-ui/styles.css');
@@ -80,6 +81,7 @@ const Content: FC = () => {
                 <Route path="/Custom" element={<Custom />} />
                 <Route path="/Raffles" element={<Raffles />} />
                 <Route path="/Auctions" element={<Auctions />} />
+                <Route path="/Slots" element={<Slots />} />
                 <Route path="/Gallery" element={<Gallery />} />
             </Routes>
         </>
