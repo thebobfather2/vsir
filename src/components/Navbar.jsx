@@ -44,6 +44,7 @@ const Navbar = () => {
             <Link to='/BulkSend' onClick={toggleNav} > <li className='listItem'>Bulk Send</li></Link>
             <Link to='/Cleaner' onClick={toggleNav}> <li className='listItem'>Wallet Cleaner</li></Link>
             <Link to='/Gallery' onClick={toggleNav}> <li className='listItem'>Gallery</li></Link>
+            <Link to='/Slots' onClick={toggleNav}> <li className='listItem'>Slots</li></Link>
             <br></br>
             <WalletModalProvider>
               <li><WalletMultiButton

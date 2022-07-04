@@ -25,13 +25,14 @@
 }
 .BulkNfts {
     padding-left: 20px;
+    
 }
 
 .nftsgrid {
     margin-left: 20px;
     margin-right: 20px;
-    width: 100% !important;
-    padding-left: 40px;
+    min-width: 100% !important;
+    
     padding-top: 20px;
     background-color: black;
     border-radius: 20px;

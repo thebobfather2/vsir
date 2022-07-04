@@ -185,7 +185,8 @@ const Cleaner = () => {
          }))
 
     //build instructions for closing empty token accounts
-    for (let i = 0; i < empty.length; i++) {
+   
+    for (let i = 0; i < (empty.length || 25); i++) {
       let tokenAccountPub = new PublicKey(empty[i].pubkey.toBase58())
       instructions.push(
         spltoken.createCloseAccountInstruction(
@@ -337,7 +338,7 @@ const Cleaner = () => {
   numOfTxs = 0 + " Transactions"
  }
   else{
-  numOfTxs = (empty.length / 25) + " Transactions"
+  numOfTxs = Math.ceil((empty.length / 25)) + " Transactions"
  }
 
   //burning mechanism function
