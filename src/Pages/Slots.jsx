@@ -12,8 +12,8 @@ import { useWallet } from "@solana/wallet-adapter-react";
 import { WalletNotConnectedError } from "@solana/wallet-adapter-base";
 import * as bs58 from "bs58";
 import { CircularProgress } from '@material-ui/core'
-import { createTransferCheckedInstruction, transferChecked } from '@solana/spl-token'
-import { inspect } from 'util'
+import closeTx from '../images/closeIcon.png'
+import Alert from '@mui/material/Alert';
 
 
 const Slots = () => {
@@ -30,6 +30,7 @@ const Slots = () => {
     const [rewardTX, setRewardTX] = useState('')
     const [isLoading, setIsLoading] = useState(false)
     const [isTokenAccount, setIsTokenAccount] = useState(false)
+    const [isPrize, setIsPrize] = useState(false)
 
     const key = process.env.REACT_APP_TOKEN_ACCOUNT_KEY.toString()
     const payer = Keypair.fromSecretKey(bs58.decode(key))
@@ -440,20 +441,27 @@ const Slots = () => {
         if (ring1 <= 50 && ring2 <= 50 && ring3 <= 50 && ring1 !== undefined) {
             setPrice(1)
             sendReward1()
+            setIsPrize(true)
         } else if (ring1 > 50 && ring1 <= 75 && ring2 > 50 && ring2 <= 75 && ring3 > 50 && ring3 <= 75 && ring1 !== undefined) {
             setPrice(2)
             sendReward2()
+            setIsPrize(true)
         } else if (ring1 > 75 && ring1 <= 95 && ring2 > 75 && ring2 <= 95 && ring3 > 75 && ring3 <= 95 && ring1 !== undefined) {
             setPrice(3)
             sendReward3()
+            setIsPrize(true)
         } else if (ring1 > 95 && ring1 <= 100 && ring2 > 95 && ring2 <= 100 && ring3 > 95 && ring3 <= 100 && ring1 !== undefined) {
             setPrice(4)
             sendReward4()
+            setIsPrize(true)
         } else {
             setPrice(0)
+            
         }
     }
-
+    const closePrize = () => {
+        setIsPrize(false)
+    }
     function rand() {
         setRing1(Math.floor(Math.random() * (100 - 1) + 1))
         setTimeout(function () { setRing2(Math.floor(Math.random() * (100 - 1) + 1)) }, 1000)
@@ -524,36 +532,41 @@ const Slots = () => {
         if (ring1 <= 50 && ring2 <= 50 && ring3 <= 50 && ring1 !== undefined) {
             setPrice(1)
             sendReward1()
+            setIsPrize(true)
         } else if (ring1 > 50 && ring1 <= 75 && ring2 > 50 && ring2 <= 75 && ring3 > 50 && ring3 <= 75 && ring1 !== undefined) {
             setPrice(2)
             sendReward2()
+            setIsPrize(true)
         } else if (ring1 > 75 && ring1 <= 95 && ring2 > 75 && ring2 <= 95 && ring3 > 75 && ring3 <= 95 && ring1 !== undefined) {
             setPrice(3)
             sendReward3()
+            setIsPrize(true)
         } else if (ring1 > 95 && ring1 <= 100 && ring2 > 95 && ring2 <= 100 && ring3 > 95 && ring3 <= 100 && ring1 !== undefined) {
             setPrice(4)
             sendReward4()
+            setIsPrize(true)
         } else {
             setPrice(0)
+            
         }
     }
 
     function premio() {
         if (price === 1 && ring3 > 1) {
             return (
-                <p className="priceInd">{"Winner, Winner, Chicken Dinner! You've won " + (realBet * 15) + "$CANS!"}</p>
+                <p className="priceInd">Winner, Winner, Chicken Dinner! <br></br>You've won {realBet * 15} $CANS!</p>
             )
         } else if (price === 2 && ring3 > 1) {
             return (
-                <p className="priceInd">{"Holy smokes! You've won " + (realBet * 20) + "$CANS!!"}</p>
+                <p className="priceInd">Holy smokes! <br></br>You've won {realBet * 20} $CANS!!</p>
             )
         } else if (price === 3 && ring3 > 1) {
             return (
-                <p className="priceInd">{"Somebody stop them!!  You've won " + (realBet * 25) + "$CANS!!!"}</p>
+                <p className="priceInd">Somebody stop them!! <br></br> You've won {realBet * 25} $CANS!!!</p>
             )
         } else if (price === 4 && ring3 > 1) {
             return (
-                <p className="priceInd">{"WTF!! Jackpot! You've won: " + (realBet * 50) + "$CANS!!!!"}</p>
+                <p className="priceInd"> WTF!! Jackpot! <br></br>You've won: {realBet * 50} $CANS!!!!</p>
             )
         } else if (price === 0 && ring3 > 1) {
             return (
@@ -576,9 +589,33 @@ const Slots = () => {
 
 
     return (
-        <div className='SlotsMain'>
+        <>{isPrize && <>
+                    <div className='prizeModal'>
+                        <div className='prizeDiv'>
+                        <img className='closeModal' src={closeTx} alt='close button' onClick={closePrize} />
+                            <h1 className='Winner'>
+                                {premio()}
+                            </h1>
+                            <div className='viewTransaction'>
+                                {isLoading ? (<CircularProgress />) : (<>{rewardTX.length > 6 ?
+                                    (<Alert className='success' severity="success">
+                                        Transaction success <strong><a href={'https://solscan.io/tx/' + rewardTX} target='_blank' rel='noreferrer'>View on Solscan</a></strong>
+                                    </Alert>)
+                                    : tx === 'false' ?
+                                        (<Alert className='failure' severity="error">
+                                            Transaction was not confirmed <strong>Please check wallet and try again</strong>
+                                        </Alert>) : (<div></div>)}
+                                </>)
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </>}
+        <div className='SlotsMain'> 
+        
             <h1 class="neon" data-text="U">SL<span class="flicker-slow">O</span>T<span class="flicker-fast">S</span></h1>
             <div className="fullSlot">
+               
                 <h1 className="price">Jackpot: 50x your bet in $CANS</h1>
                 {/* <div className='jackpotImages'><img className='small icon' src=</div> */}
                 <div className="slot">
@@ -603,6 +640,7 @@ const Slots = () => {
                 <h1 className="price">{"Available $CAROT: " + Math.round((balance * 100)) / 100}</h1>
             </div>
         </div>
+    </>
     )
 }
 
