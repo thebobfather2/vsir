@@ -13,6 +13,7 @@ import CircularProgress from '@mui/material/CircularProgress';
 import { WalletMultiButton } from '@solana/wallet-adapter-react-ui'
 import rabbitFilter from '../filter.json'
 import refresh from '../images/refresh.png'
+import { TokenListProvider, TokenInfo } from '@solana/spl-token-registry';
 
 
 const Cleaner = () => {
@@ -37,6 +38,7 @@ const Cleaner = () => {
   const [empty, setEmpty] = useState([])  //state variable for which token accounts in wallet are empty
   const [nftsSelected, setNftsSelected] = useState([])  //state variable for which nfts have been selected by user
   const [tokensSelected, setTokensSelected] = useState([]) //state variable for which fungible tokens have been selected by user
+  const [theTokenList, setTheTokenList] = useState([])
 
   //fetch nfts from wallet
   const { nfts } = useWalletNfts({
@@ -65,6 +67,15 @@ const Cleaner = () => {
   }, [nfts, fetchMetadata]);
 
   
+ //check token list for names
+ const getTokenList = useCallback(() => {
+  new TokenListProvider().resolve().then((tokens) => {
+   const tokenList = tokens.filterByClusterSlug('mainnet-beta').getList();
+  setTheTokenList(tokenList)
+})})
+useEffect(() =>{
+   getTokenList()
+},[])
 
   //get all wallet tokens and filter for Fungible Tokens.  First get all tokens from wallet.  
   //Then filter for empty accounts and tokens with an amount over 1 (this is the current filter for fungible vs nfts, a better one is needed)
@@ -88,6 +99,7 @@ const Cleaner = () => {
         }
         //filter for tokens with amount over 1 (ft vs nft filter)
         if (parseInt(accountInfo.account.data["parsed"]["info"]["tokenAmount"]["amount"]) > 1) {
+        
 
           token.push(accountInfo)
           setTokens([...token])
@@ -101,6 +113,8 @@ const Cleaner = () => {
       fetchTokens()
     }
   }, [metadata])
+
+  console.log(tokens)
 
   //Set up filter for wallets containing Bobby Rabbits nfts utilizing hashlist.
   const getMints = JSON.stringify(nfts)
@@ -460,6 +474,32 @@ const Cleaner = () => {
   const refreshPage = () => {
     window.location.reload();
   }
+
+const [tokenName, setTokenName] = useState([])
+let listOfTokens = []
+let fuckthisshit = []
+
+  theTokenList.map(item =>{
+    for (let fuckhole = 0; fuckhole < tokens.length; ++fuckhole){
+      
+      if (item.address === tokens[fuckhole].account.data.parsed.info.mint){
+          let thisTokenAddress = item.address
+          let thisTokenName = item.name
+          listOfTokens.push({
+            mint: thisTokenAddress,
+            name: thisTokenName
+          })
+          
+      }
+      
+      
+    }
+    
+  })
+  
+console.log(listOfTokens)
+
+console.log(listOfTokens.length)
   return (
     <div className='CleanerMain'>
       <h1 className='CleanerTitle'>Wallet Cleaner</h1>
@@ -495,7 +535,6 @@ const Cleaner = () => {
                             <img src={metadata?.[nft.mint]?.image} className='nftImage' alt="loading" />
                             <br />
                             <p className='nftTitles'>{nft.data.name}</p>
-
                           </div>
                         </Grid>
                       )
@@ -504,12 +543,12 @@ const Cleaner = () => {
                 </div>)
                 :
                 (!isNFTS && isTokens) ?
-
                   (<div className='mappedTokens'>{!isTooMuch ? (<h3 className='Limit'> Max 10 at a time</h3>) : (<h3 className='Limit'>Too Many Selected</h3>)}
                     {tokens.map((token, index) => {
                       return (<div className='eachToken' key={index} onClick={(e) => onEachTokenClick(e, index)}> {tokensSelected.includes(tokens[index].account.data['parsed']['info']['mint']) &&
                         <div className='eachTokenClicked'><h1 className='selectedText'>Selected</h1></div>}
-                        <h4 className='tokenNames'>Token:</h4> <h4 className='tokenAddress'>{token.account.data['parsed']['info']['mint']}</h4>
+                        <h4 className='tokenNames'>Token:</h4> 
+                        { ((token.account.data.parsed.info.mint) === (listOfTokens[listOfTokens.findIndex(object => object.mint === token.account.data.parsed.info.mint )]?.mint)) ? (<h4 className='tokenAddress'>{listOfTokens[listOfTokens.findIndex(object => object.mint === token.account.data.parsed.info.mint)].name}</h4>) : (<h4 className='tokenAddress'>{token.account.data['parsed']['info']['mint']}</h4>)}
                         <div style={{ display: 'flex' }}> Balance:
                           <div style={{ padding: '2px', backgroundColor: 'white', marginLeft: '4px', borderRadius: '5px' }}><h5 style={{ color: "black", marginTop: '0', marginBottom: '0' }}>{token.account.data['parsed']['info']['tokenAmount']['uiAmount']}</h5></div>
                         </div>

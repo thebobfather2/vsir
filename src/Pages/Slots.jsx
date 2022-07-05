@@ -16,6 +16,7 @@ import closeTx from '../images/closeIcon.png'
 import Alert from '@mui/material/Alert';
 
 
+
 const Slots = () => {
     const [spin, setSpin] = useState(false)
     const [ring1, setRing1] = useState()
