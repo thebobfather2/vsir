@@ -22,6 +22,7 @@ import Cleaner from './Pages/Cleaner';
 import Gallery from './Pages/Gallery';
 import Slots from './Pages/Slots';
 
+
 require('./App.css')
 require('@solana/wallet-adapter-react-ui/styles.css');
 
@@ -83,6 +84,7 @@ const Content: FC = () => {
                 <Route path="/Auctions" element={<Auctions />} />
                 <Route path="/Slots" element={<Slots />} />
                 <Route path="/Gallery" element={<Gallery />} />
+                
             </Routes>
         </>
     );

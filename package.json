@@ -8,6 +8,8 @@
         "@civic/solana-gateway-react": "^0.7.5",
         "@emotion/react": "^11.9.3",
         "@emotion/styled": "^11.9.3",
+        "@liqnft/candy-shop": "^0.5.8",
+        "@liqnft/candy-shop-sdk": "^0.5.11",
         "@material-ui/core": "^4.12.4",
         "@material-ui/lab": "^4.0.0-alpha.61",
         "@mui/material": "^5.8.4",
