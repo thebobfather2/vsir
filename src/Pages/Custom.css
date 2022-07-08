@@ -90,7 +90,7 @@
 .completePurchase {
     margin-left: 20px;
     min-width: 400px;
-    height:fit-content;
+    height: fit-content;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -144,9 +144,11 @@
         margin-left: auto;
         margin-right: auto;
     }
-    .MainContainer{
+
+    .MainContainer {
         padding: 0;
     }
+
     .BobbyRabbits {
         max-width: 100px;
     }

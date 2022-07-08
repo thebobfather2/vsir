@@ -12,7 +12,7 @@ import { clusterApiUrl } from '@solana/web3.js';
 import React, { FC, ReactNode, useMemo } from 'react';
 import Navbar from './components/Navbar'
 import Shop from './components/Shop'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import Send from './Pages/Send'
 import Custom from './Pages/Custom';
 import Raffles from './Pages/Raffles';
@@ -29,12 +29,12 @@ require('@solana/wallet-adapter-react-ui/styles.css');
 const App: FC = () => {
     return (
         <div className='App'>
-            <BrowserRouter>
+            <HashRouter>
                 <Context>
                     <Navbar />
                     <Content />
                 </Context>
-            </BrowserRouter>
+            </HashRouter>
         </div>
     );
 };
@@ -72,7 +72,6 @@ const Context: FC<{ children: ReactNode }> = ({ children }) => {
 
 const Content: FC = () => {
     return (
-
         <>
             <Routes>
                 <Route path="/" element={<Shop />} />
@@ -84,7 +83,6 @@ const Content: FC = () => {
                 <Route path="/Auctions" element={<Auctions />} />
                 <Route path="/Slots" element={<Slots />} />
                 <Route path="/Gallery" element={<Gallery />} />
-                
             </Routes>
         </>
     );

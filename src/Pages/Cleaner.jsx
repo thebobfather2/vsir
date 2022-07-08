@@ -66,55 +66,50 @@ const Cleaner = () => {
     if (nfts?.length) fetchMetadata();
   }, [nfts, fetchMetadata]);
 
-  
- //check token list for names
- const getTokenList = useCallback(() => {
-  new TokenListProvider().resolve().then((tokens) => {
-   const tokenList = tokens.filterByClusterSlug('mainnet-beta').getList();
-  setTheTokenList(tokenList)
-})})
-useEffect(() =>{
-   getTokenList()
-},[])
+
+  //check token list for names
+  const getTokenList = useCallback(() => {
+    new TokenListProvider().resolve().then((tokens) => {
+      const tokenList = tokens.filterByClusterSlug('mainnet-beta').getList();
+      setTheTokenList(tokenList)
+    })
+  })
+  useEffect(() => {
+    getTokenList()
+  }, [])
 
   //get all wallet tokens and filter for Fungible Tokens.  First get all tokens from wallet.  
   //Then filter for empty accounts and tokens with an amount over 1 (this is the current filter for fungible vs nfts, a better one is needed)
+  const fetchTokens = useCallback(async () => {
+
+    //get tokens from wallet
+    let response = await connection.getParsedTokenAccountsByOwner(wallet?.publicKey, {
+      programId: spltoken.TOKEN_PROGRAM_ID,
+    });
+
+    //initialize variables to hold the tokens and empty accounts after filtering.
+    let token = []
+    let emptyAccounts = []
+    //begin filter for empty
+    response.value.forEach((accountInfo, index) => {
+      if (parseInt(accountInfo.account.data["parsed"]["info"]["tokenAmount"]["amount"]) === 0) {
+        emptyAccounts.push(accountInfo)
+        setEmpty([...emptyAccounts])
+      }
+      //filter for tokens with amount over 1 (ft vs nft filter)
+      if (parseInt(accountInfo.account.data["parsed"]["info"]["tokenAmount"]["amount"]) > 1) {
+        token.push(accountInfo)
+        setTokens([...token])
+      }
+    }
+    )
+  }, [wallet])
+
   useEffect(() => {
-    
-    const fetchTokens = async () => {
-      
-      //get tokens from wallet
-      let response = await connection.getParsedTokenAccountsByOwner(wallet?.publicKey, {
-        programId: spltoken.TOKEN_PROGRAM_ID,
-      });
-
-      //initialize variables to hold the tokens and empty accounts after filtering.
-      let token = []
-      let emptyAccounts = []
-      //begin filter for empty
-      response.value.forEach((accountInfo, index) => {
-        if (parseInt(accountInfo.account.data["parsed"]["info"]["tokenAmount"]["amount"]) === 0) {
-          emptyAccounts.push(accountInfo)
-          setEmpty([...emptyAccounts])
-        }
-        //filter for tokens with amount over 1 (ft vs nft filter)
-        if (parseInt(accountInfo.account.data["parsed"]["info"]["tokenAmount"]["amount"]) > 1) {
-        
-
-          token.push(accountInfo)
-          setTokens([...token])
-        }
-      })
-
-    };
-    
-    
-     if (wallet?.publicKey){
+    if (wallet?.publicKey) {
       fetchTokens()
     }
-  }, [metadata])
-
-  console.log(tokens)
+  }, [wallet])
 
   //Set up filter for wallets containing Bobby Rabbits nfts utilizing hashlist.
   const getMints = JSON.stringify(nfts)
@@ -165,41 +160,40 @@ useEffect(() =>{
     const fromWallet = wallet
     //define wallet accepting fees.
     const feeWallet = new PublicKey('5BNK4Kq1b5rDcr3fkqhfJLz58XEfcT3sPJdxLAB6n7Cq')
-    
+
     //create fee schedule depending on amount closed/burned and if user holds a Bobby Rabbit
-     let fee = 0
-     if (checkTokens === true) {
-       fee = 0
-     } else {
-       fee = empty.length * 1_000_000
-     }
-     instructions.push(
-       SystemProgram.transfer({
-         fromPubkey: fromWallet.publicKey,
-         toPubkey: feeWallet,
-         lamports: fee,
-       }))
-       instructions2.push(
-         SystemProgram.transfer({
-           fromPubkey: fromWallet.publicKey,
-           toPubkey: feeWallet,
-           lamports: (empty.length - 25)* 1_000_000,
-         }))
-       instructions3.push(
-         SystemProgram.transfer({
-           fromPubkey: fromWallet.publicKey,
-           toPubkey: feeWallet,
-           lamports: (empty.length - 50)* 1_000_000,
-         }))
-       instructions4.push(
-         SystemProgram.transfer({
-           fromPubkey: fromWallet.publicKey,
-           toPubkey: feeWallet,
-           lamports: (empty.length - 75)* 1_000_000,
-         }))
+    let fee = 0
+    if (checkTokens === true) {
+      fee = 0
+    } else {
+      fee = empty.length * 1_000_000
+    }
+    instructions.push(
+      SystemProgram.transfer({
+        fromPubkey: fromWallet.publicKey,
+        toPubkey: feeWallet,
+        lamports: fee,
+      }))
+    instructions2.push(
+      SystemProgram.transfer({
+        fromPubkey: fromWallet.publicKey,
+        toPubkey: feeWallet,
+        lamports: (empty.length - 25) * 1_000_000,
+      }))
+    instructions3.push(
+      SystemProgram.transfer({
+        fromPubkey: fromWallet.publicKey,
+        toPubkey: feeWallet,
+        lamports: (empty.length - 50) * 1_000_000,
+      }))
+    instructions4.push(
+      SystemProgram.transfer({
+        fromPubkey: fromWallet.publicKey,
+        toPubkey: feeWallet,
+        lamports: (empty.length - 75) * 1_000_000,
+      }))
 
     //build instructions for closing empty token accounts
-   
     for (let i = 0; i < (empty.length || 25); i++) {
       let tokenAccountPub = new PublicKey(empty[i].pubkey.toBase58())
       instructions.push(
@@ -210,40 +204,40 @@ useEffect(() =>{
         )
       )
     }
-     for (let n = 25; n < empty.length; n++) {
-       let tokenAccountPub2 = new PublicKey(empty[n].pubkey.toBase58())
-       instructions2.push(
-         spltoken.createCloseAccountInstruction(
-           tokenAccountPub2,
-           fromWallet.publicKey,
-           fromWallet.publicKey
-         )
-       )
-     }
-     for (let n = 50; n < empty.length; n++) {
-       let tokenAccountPub3 = new PublicKey(empty[n].pubkey.toBase58())
-       instructions3.push(
-         spltoken.createCloseAccountInstruction(
-           tokenAccountPub3,
-           fromWallet.publicKey,
-           fromWallet.publicKey
-         )
-       )
-     }
-     for (let n = 75; n < empty.length; n++) {
-       let tokenAccountPub4 = new PublicKey(empty[n].pubkey.toBase58())
-       instructions4.push(
-         spltoken.createCloseAccountInstruction(
-           tokenAccountPub4,
-           fromWallet.publicKey,
-           fromWallet.publicKey
-         )
-       )
-     }
- 
+    for (let n = 25; n < empty.length; n++) {
+      let tokenAccountPub2 = new PublicKey(empty[n].pubkey.toBase58())
+      instructions2.push(
+        spltoken.createCloseAccountInstruction(
+          tokenAccountPub2,
+          fromWallet.publicKey,
+          fromWallet.publicKey
+        )
+      )
+    }
+    for (let n = 50; n < empty.length; n++) {
+      let tokenAccountPub3 = new PublicKey(empty[n].pubkey.toBase58())
+      instructions3.push(
+        spltoken.createCloseAccountInstruction(
+          tokenAccountPub3,
+          fromWallet.publicKey,
+          fromWallet.publicKey
+        )
+      )
+    }
+    for (let n = 75; n < empty.length; n++) {
+      let tokenAccountPub4 = new PublicKey(empty[n].pubkey.toBase58())
+      instructions4.push(
+        spltoken.createCloseAccountInstruction(
+          tokenAccountPub4,
+          fromWallet.publicKey,
+          fromWallet.publicKey
+        )
+      )
+    }
+
     //send and confirm transaction
     try {
-      if ((empty.length <= 25) && (empty.length > 0)){
+      if ((empty.length <= 25) && (empty.length > 0)) {
         const transaction = new Transaction().add(...instructions)
         const signature = await sendTransaction(transaction, connection);
         const latestBlockHash = await connection.getLatestBlockhash();
@@ -253,19 +247,19 @@ useEffect(() =>{
           signature: signature,
         });
         setTx(signature)
-      console.log(signature)
-      setIsLoading(false)
-      }else if ((empty.length > 25) && (empty.length <= 50)){
-      const transaction = new Transaction().add(...instructions)
-      const transaction2 = new Transaction().add(...instructions2)
-      const signature = await sendTransaction(transaction, connection);
-       const signature2 = await sendTransaction(transaction2, connection);
-       const latestBlockHash = await connection.getLatestBlockhash();
-       await connection.confirmTransaction({
-        blockhash: latestBlockHash.blockhash,
-        lastValidBlockHeight: latestBlockHash.lastValidBlockHeight,
-        signature: signature,
-      });
+        console.log(signature)
+        setIsLoading(false)
+      } else if ((empty.length > 25) && (empty.length <= 50)) {
+        const transaction = new Transaction().add(...instructions)
+        const transaction2 = new Transaction().add(...instructions2)
+        const signature = await sendTransaction(transaction, connection);
+        const signature2 = await sendTransaction(transaction2, connection);
+        const latestBlockHash = await connection.getLatestBlockhash();
+        await connection.confirmTransaction({
+          blockhash: latestBlockHash.blockhash,
+          lastValidBlockHeight: latestBlockHash.lastValidBlockHeight,
+          signature: signature,
+        });
 
         await connection.confirmTransaction({
           blockhash: latestBlockHash.blockhash,
@@ -273,21 +267,21 @@ useEffect(() =>{
           signature: signature2,
         });
         setTx(signature)
-      console.log(signature)
-      setIsLoading(false)
-    }else if ((empty.length > 50) && (empty.length <= 75)) {
-      const transaction = new Transaction().add(...instructions)
-      const transaction2 = new Transaction().add(...instructions2)
-      const transaction3 = new Transaction().add(...instructions3)
-      const signature = await sendTransaction(transaction, connection);
-      const signature2 = await sendTransaction(transaction2, connection);
-      const signature3 = await sendTransaction(transaction3, connection);
-      const latestBlockHash = await connection.getLatestBlockhash();
-      await connection.confirmTransaction({
-        blockhash: latestBlockHash.blockhash,
-        lastValidBlockHeight: latestBlockHash.lastValidBlockHeight,
-        signature: signature,
-      });
+        console.log(signature)
+        setIsLoading(false)
+      } else if ((empty.length > 50) && (empty.length <= 75)) {
+        const transaction = new Transaction().add(...instructions)
+        const transaction2 = new Transaction().add(...instructions2)
+        const transaction3 = new Transaction().add(...instructions3)
+        const signature = await sendTransaction(transaction, connection);
+        const signature2 = await sendTransaction(transaction2, connection);
+        const signature3 = await sendTransaction(transaction3, connection);
+        const latestBlockHash = await connection.getLatestBlockhash();
+        await connection.confirmTransaction({
+          blockhash: latestBlockHash.blockhash,
+          lastValidBlockHeight: latestBlockHash.lastValidBlockHeight,
+          signature: signature,
+        });
         await connection.confirmTransaction({
           blockhash: latestBlockHash.blockhash,
           lastValidBlockHeight: latestBlockHash.lastValidBlockHeight,
@@ -299,61 +293,58 @@ useEffect(() =>{
           signature: signature3,
         });
         setTx(signature)
-      console.log(signature)
-      setIsLoading(false)
-    }else{
-      const transaction = new Transaction().add(...instructions)
-      const transaction2 = new Transaction().add(...instructions2)
-      const transaction3 = new Transaction().add(...instructions3)
-      const transaction4 = new Transaction().add(...instructions4)
-       const signature = await sendTransaction(transaction, connection);
-      const signature2 = await sendTransaction(transaction2, connection);
-      const signature3 = await sendTransaction(transaction3, connection);
-      const signature4 = await sendTransaction(transaction4, connection);
-     const latestBlockHash = await connection.getLatestBlockhash();
+        console.log(signature)
+        setIsLoading(false)
+      } else {
+        const transaction = new Transaction().add(...instructions)
+        const transaction2 = new Transaction().add(...instructions2)
+        const transaction3 = new Transaction().add(...instructions3)
+        const transaction4 = new Transaction().add(...instructions4)
+        const signature = await sendTransaction(transaction, connection);
+        const signature2 = await sendTransaction(transaction2, connection);
+        const signature3 = await sendTransaction(transaction3, connection);
+        const signature4 = await sendTransaction(transaction4, connection);
+        const latestBlockHash = await connection.getLatestBlockhash();
 
-     await connection.confirmTransaction({
-       blockhash: latestBlockHash.blockhash,
-       lastValidBlockHeight: latestBlockHash.lastValidBlockHeight,
-       signature: signature,
-     });
-       await connection.confirmTransaction({
-         blockhash: latestBlockHash.blockhash,
-         lastValidBlockHeight: latestBlockHash.lastValidBlockHeight,
-         signature: signature2,
-       });
-       await connection.confirmTransaction({
-         blockhash: latestBlockHash.blockhash,
-         lastValidBlockHeight: latestBlockHash.lastValidBlockHeight,
-         signature: signature3,
-       });
-       await connection.confirmTransaction({
-         blockhash: latestBlockHash.blockhash,
-         lastValidBlockHeight: latestBlockHash.lastValidBlockHeight,
-         signature: signature4,
-       });
-       setTx(signature)
-      console.log(signature)
-      setIsLoading(false)
-    }
-       
-      
-
+        await connection.confirmTransaction({
+          blockhash: latestBlockHash.blockhash,
+          lastValidBlockHeight: latestBlockHash.lastValidBlockHeight,
+          signature: signature,
+        });
+        await connection.confirmTransaction({
+          blockhash: latestBlockHash.blockhash,
+          lastValidBlockHeight: latestBlockHash.lastValidBlockHeight,
+          signature: signature2,
+        });
+        await connection.confirmTransaction({
+          blockhash: latestBlockHash.blockhash,
+          lastValidBlockHeight: latestBlockHash.lastValidBlockHeight,
+          signature: signature3,
+        });
+        await connection.confirmTransaction({
+          blockhash: latestBlockHash.blockhash,
+          lastValidBlockHeight: latestBlockHash.lastValidBlockHeight,
+          signature: signature4,
+        });
+        setTx(signature)
+        console.log(signature)
+        setIsLoading(false)
+      }
     } catch (error) {
       setTx('false')
       console.error(error);
       setIsLoading(false)
     }
   })
- let numOfTxs
- if ((empty.length < 25) && (empty.length > 0)){
+  let numOfTxs
+  if ((empty.length < 25) && (empty.length > 0)) {
     numOfTxs = 1 + " Transaction"
- }else if (empty.length === 0){
-  numOfTxs = 0 + " Transactions"
- }
-  else{
-  numOfTxs = Math.ceil((empty.length / 25)) + " Transactions"
- }
+  } else if (empty.length === 0) {
+    numOfTxs = 0 + " Transactions"
+  }
+  else {
+    numOfTxs = Math.ceil((empty.length / 25)) + " Transactions"
+  }
 
   //burning mechanism function
   const onBurnClick = useCallback(async () => {
@@ -475,31 +466,23 @@ useEffect(() =>{
     window.location.reload();
   }
 
-const [tokenName, setTokenName] = useState([])
-let listOfTokens = []
-let fuckthisshit = []
+  const [tokenName, setTokenName] = useState([])
+  let listOfTokens = []
+  let fuckthisshit = []
 
-  theTokenList.map(item =>{
-    for (let fuckhole = 0; fuckhole < tokens.length; ++fuckhole){
-      
-      if (item.address === tokens[fuckhole].account.data.parsed.info.mint){
-          let thisTokenAddress = item.address
-          let thisTokenName = item.name
-          listOfTokens.push({
-            mint: thisTokenAddress,
-            name: thisTokenName
-          })
-          
+  theTokenList.map(item => {
+    for (let fuckhole = 0; fuckhole < tokens.length; ++fuckhole) {
+
+      if (item.address === tokens[fuckhole].account.data.parsed.info.mint) {
+        let thisTokenAddress = item.address
+        let thisTokenName = item.name
+        listOfTokens.push({
+          mint: thisTokenAddress,
+          name: thisTokenName
+        })
       }
-      
-      
     }
-    
   })
-  
-console.log(listOfTokens)
-
-console.log(listOfTokens.length)
   return (
     <div className='CleanerMain'>
       <h1 className='CleanerTitle'>Wallet Cleaner</h1>
@@ -511,10 +494,8 @@ console.log(listOfTokens.length)
             <div className='Tabs'>
               {(tabClicked === 'true') ? (<><Button className='NFTS' onClick={onNFTClick}> NFTs</Button>
                 <Button className='TokensClicked' onClick={onTokensClick}>Tokens</Button></>) : (tabClicked === 'false') ?
-
                 (<><Button className='NFTSClicked' onClick={onNFTClick}> NFTs</Button>
                   <Button className='Tokens' onClick={onTokensClick}>Tokens</Button></>) :
-
                 (<><Button className='NFTS' onClick={onNFTClick}> NFTs</Button>
                   <Button className='Tokens' onClick={onTokensClick}>Tokens</Button></>)
               }
@@ -547,8 +528,8 @@ console.log(listOfTokens.length)
                     {tokens.map((token, index) => {
                       return (<div className='eachToken' key={index} onClick={(e) => onEachTokenClick(e, index)}> {tokensSelected.includes(tokens[index].account.data['parsed']['info']['mint']) &&
                         <div className='eachTokenClicked'><h1 className='selectedText'>Selected</h1></div>}
-                        <h4 className='tokenNames'>Token:</h4> 
-                        { ((token.account.data.parsed.info.mint) === (listOfTokens[listOfTokens.findIndex(object => object.mint === token.account.data.parsed.info.mint )]?.mint)) ? (<h4 className='tokenAddress'>{listOfTokens[listOfTokens.findIndex(object => object.mint === token.account.data.parsed.info.mint)].name}</h4>) : (<h4 className='tokenAddress'>{token.account.data['parsed']['info']['mint']}</h4>)}
+                        <h4 className='tokenNames'>Token:</h4>
+                        {((token.account.data.parsed.info.mint) === (listOfTokens[listOfTokens.findIndex(object => object.mint === token.account.data.parsed.info.mint)]?.mint)) ? (<h4 className='tokenAddress'>{listOfTokens[listOfTokens.findIndex(object => object.mint === token.account.data.parsed.info.mint)].name}</h4>) : (<h4 className='tokenAddress'>{token.account.data['parsed']['info']['mint']}</h4>)}
                         <div style={{ display: 'flex' }}> Balance:
                           <div style={{ padding: '2px', backgroundColor: 'white', marginLeft: '4px', borderRadius: '5px' }}><h5 style={{ color: "black", marginTop: '0', marginBottom: '0' }}>{token.account.data['parsed']['info']['tokenAmount']['uiAmount']}</h5></div>
                         </div>
@@ -579,7 +560,7 @@ console.log(listOfTokens.length)
               (<Button className='burn' variant='contained'><CircularProgress /></Button>)}
             <br></br> <Button className='refresh' variant='contained' onClick={refreshPage}>Refresh<img className='refreshIcon' src={refresh} alt='refresh' /></Button>
             {tx.length > 6 ?
-              (<Alert severity="success" style={{width: '90%', marginLeft: 'auto', marginRight: 'auto'}}>
+              (<Alert severity="success" style={{ width: '90%', marginLeft: 'auto', marginRight: 'auto' }}>
                 Success - Transaction success <strong><a href={'https://solscan.io/tx/' + tx} target='_blank' rel='noreferrer'>Check Tx on Solscan</a></strong>
               </Alert>) : tx === 'false' ?
                 (<Alert severity="error">

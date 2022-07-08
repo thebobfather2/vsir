@@ -18,10 +18,8 @@ const Send = () => {
   const { publicKey, sendTransaction } = useWallet();
   const [receiver, setReceiver] = useState('')
   const [amount, setAmount] = useState('')
-  console.log(receiver)
-  console.log(amount)
   const toSend = parseInt(amount)
-  const connection = new Connection("https://bold-old-moon.solana-mainnet.quiknode.pro/ce6fe5d59cabd95814a4c61a6e69afbbfc625c9f/","confirmed");
+  const connection = new Connection("https://bold-old-moon.solana-mainnet.quiknode.pro/ce6fe5d59cabd95814a4c61a6e69afbbfc625c9f/", "confirmed");
   const fromWallet = wallet
   const mint = new PublicKey('CARoTGvYPajELZsoLQSovLY8fZmBkrrUoyJVJN3zGwQT')
   const [isLoading, setIsLoading] = useState(false)
@@ -87,7 +85,6 @@ const Send = () => {
         signature: signature,
         Commitment: confirmed,
       });
-
       setTx(signature)
       console.log(signature)
       setIsLoading(false)

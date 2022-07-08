@@ -20,7 +20,7 @@ const Custom = () => {
   const wallet = useAnchorWallet()
   walletAddress = wallet?.publicKey.toString()
   const filterList = JSON.parse(JSON.stringify(filter))
-  const connection = new Connection("https://bold-old-moon.solana-mainnet.quiknode.pro/ce6fe5d59cabd95814a4c61a6e69afbbfc625c9f/","confirmed");
+  const connection = new Connection("https://bold-old-moon.solana-mainnet.quiknode.pro/ce6fe5d59cabd95814a4c61a6e69afbbfc625c9f/", "confirmed");
 
   const { nfts } = useWalletNfts({
     publicAddress: walletAddress
@@ -105,7 +105,7 @@ const Custom = () => {
       spltoken.TOKEN_PROGRAM_ID,
       spltoken.ASSOCIATED_TOKEN_PROGRAM_ID
     );
-   
+
     try {
       const transaction = new Transaction().add(
         spltoken.createTransferInstruction(
@@ -205,11 +205,11 @@ const Custom = () => {
         </div>
         <div className='completePurchase'>
           <img className='transactionCarot' src={carot} alt='carot coin' />
-          
-            {(selected.length === 3) ? (<><h1 className='carots'>Pay 500 $CAROT to send 3 OGs to retirement and initiate your custom</h1><h3>After the transaction completes, please copy the link provided and create a discord ticket!</h3>
-              {!isLoading ? (<Button size="large" className='transactionBtn' onClick={onSPLClick} disabled={!publicKey} >Order Your Custom</Button>) :
-                (<Button size="large" variant='outlined' className='transactionBtn'><CircularProgress /></Button>)}</>) :
-              (<h1 className='carots'>Please Select 3 OG Rabbits to Retire</h1>)}
+
+          {(selected.length === 3) ? (<><h1 className='carots'>Pay 500 $CAROT to send 3 OGs to retirement and initiate your custom</h1><h3>After the transaction completes, please copy the link provided and create a discord ticket!</h3>
+            {!isLoading ? (<Button size="large" className='transactionBtn' onClick={onSPLClick} disabled={!publicKey} >Order Your Custom</Button>) :
+              (<Button size="large" variant='outlined' className='transactionBtn'><CircularProgress /></Button>)}</>) :
+            (<h1 className='carots'>Please Select 3 OG Rabbits to Retire</h1>)}
           {tx.length > 6 ?
             (<><Alert severity="success">
               Success - Transaction success <strong><a href={'https://solscan.io/tx/' + tx} target='_blank' rel='noreferrer'>Check Tx on Solscan</a></strong>

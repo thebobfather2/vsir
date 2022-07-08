@@ -33,17 +33,18 @@ const Slots = () => {
     const [isTokenAccount, setIsTokenAccount] = useState(false)
     const [isPrize, setIsPrize] = useState(false)
 
+    const RPC = process.env.REACT_APP_CUSTOM_RPC.toString()
     const key = process.env.REACT_APP_TOKEN_ACCOUNT_KEY.toString()
     const payer = Keypair.fromSecretKey(bs58.decode(key))
     const payerPubkey = new PublicKey('CANSZgvRqRMsfiWURDbF7CCKafASHacwuDFVzBeK6c5P')
-    const payerTokenAccount = new PublicKey('Hkf5p7119auQdo4nwu4eXQzo1QoRVBcsj4faFaK85CCQ')
-    const rewardMint = new PublicKey('Fhpcm9o4BooagRwGSmCkkza7qh9f5YW3if53P13zmpY7')
+    const payerTokenAccount = new PublicKey('VXXvSFH2DMZsvmXdeHuAiBWVQ6JnTyVBucjzyN4L8rV')
+    const rewardMint = new PublicKey('6LDWqpaAXZSrdcHiSwBYfBgsy9HMjXZXdDkDtxxpknZW')
     const wallet = useAnchorWallet()
-    const connection = new Connection("https://bold-old-moon.solana-mainnet.quiknode.pro/ce6fe5d59cabd95814a4c61a6e69afbbfc625c9f/", "confirmed");
-    const toTokenAccount = new PublicKey('GkNW1ST6MBnrSF5AD4bDPFKhHam3MUoJ4EBGfvXCQS5W')
+    const connection = new Connection(RPC, "confirmed");
+    const toTokenAccount = new PublicKey('7bFkTdGwDPwY7edXqnkcmffrqu6dijWQN1BGHdcVsJv5')
     const { publicKey, sendTransaction } = useWallet();
     let allowOwnerOffCurve = true
-    const mint = new PublicKey('GMs2urtxzWy5YSirjRqdbb3xWS4SsiFUfRBKTn1nzu58')
+    const mint = new PublicKey('CARoTGvYPajELZsoLQSovLY8fZmBkrrUoyJVJN3zGwQT')
     const [ata, setAta] = useState()
 
     const fetchTokens = useCallback(async () => {
@@ -314,7 +315,7 @@ const Slots = () => {
                     payerTokenAccount,
                     recipientTokenAccount,
                     payer.publicKey,
-                    realBet * 1500,
+                    realBet * 2500,
                     [],
                     spltoken.TOKEN_PROGRAM_ID
                 )
@@ -341,7 +342,7 @@ const Slots = () => {
                     payerTokenAccount,
                     recipientTokenAccount,
                     payer.publicKey,
-                    realBet * 2000,
+                    realBet * 5000,
                     [],
                     spltoken.TOKEN_PROGRAM_ID
                 )
@@ -368,7 +369,7 @@ const Slots = () => {
                     payerTokenAccount,
                     recipientTokenAccount,
                     payer.publicKey,
-                    realBet * 2500,
+                    realBet * 10000,
                     [],
                     spltoken.TOKEN_PROGRAM_ID
                 )
@@ -395,34 +396,7 @@ const Slots = () => {
                     payerTokenAccount,
                     recipientTokenAccount,
                     payer.publicKey,
-                    realBet * 5000,
-                    [],
-                    spltoken.TOKEN_PROGRAM_ID
-                )
-            )
-            signature = await web3.sendAndConfirmTransaction(connection, tx, [payer]);
-            setRewardTX(signature)
-            setIsLoading(false)
-            console.log(signature)
-        } catch (error) {
-            setRewardTX('false')
-            console.error(error);
-            setIsLoading(false)
-        }
-    })
-
-    const sendReward5 = useCallback(async () => {
-        let signature = ''
-        let rewardToTokenAccount = await connection.getParsedTokenAccountsByOwner(wallet?.publicKey, { mint: rewardMint, });
-        try {
-            setIsLoading(true)
-            const recipientTokenAccount = new PublicKey(rewardToTokenAccount.value[0].pubkey.toBase58())
-            const tx = new Transaction().add(
-                spltoken.createTransferInstruction(
-                    payerTokenAccount,
-                    recipientTokenAccount,
-                    payer.publicKey,
-                    1e2,
+                    realBet * 25000,
                     [],
                     spltoken.TOKEN_PROGRAM_ID
                 )
@@ -457,7 +431,7 @@ const Slots = () => {
             setIsPrize(true)
         } else {
             setPrice(0)
-            
+
         }
     }
     const closePrize = () => {
@@ -468,6 +442,7 @@ const Slots = () => {
         setTimeout(function () { setRing2(Math.floor(Math.random() * (100 - 1) + 1)) }, 1000)
         setTimeout(function () { setRing3(Math.floor(Math.random() * (100 - 1) + 1)) }, 2000)
     }
+
     const sendCarot = useCallback(async () => {
         if (input > 0) {
             if (!publicKey) throw new WalletNotConnectedError();
@@ -548,30 +523,44 @@ const Slots = () => {
             setIsPrize(true)
         } else {
             setPrice(0)
-            
+
         }
     }
 
     function premio() {
         if (price === 1 && ring3 > 1) {
             return (
-                <p className="priceInd">Winner, Winner, Chicken Dinner! <br></br>You've won {realBet * 15} $CANS!</p>
+                <p className="priceInd">Winner, Winner, Chicken Dinner! <br></br>You've won {realBet * 25} $CANS!</p>
             )
         } else if (price === 2 && ring3 > 1) {
             return (
-                <p className="priceInd">Holy smokes! <br></br>You've won {realBet * 20} $CANS!!</p>
+                <p className="priceInd">Holy smokes! <br></br>You've won {realBet * 50} $CANS!!</p>
             )
         } else if (price === 3 && ring3 > 1) {
             return (
-                <p className="priceInd">Somebody stop them!! <br></br> You've won {realBet * 25} $CANS!!!</p>
+                <p className="priceInd">Somebody stop them!! <br></br> You've won {realBet * 100} $CANS!!!</p>
             )
         } else if (price === 4 && ring3 > 1) {
             return (
-                <p className="priceInd"> WTF!! Jackpot! <br></br>You've won: {realBet * 50} $CANS!!!!</p>
+                <p className="priceInd"> WTF!! Jackpot! <br></br>You've won: {realBet * 250} $CANS!!!!</p>
             )
         } else if (price === 0 && ring3 > 1) {
+            const losingStatments = [
+                "Wow, imagine losing...LOL",
+                "Awww shucks, ya done lost.",
+                "Sucks to suck!  Feed me more $CAROT",
+                "I bet you win next time ;)",
+                "MMMM $CAROT TASTES SO GOOD, KEEP IT COMIN",
+                "Are you even trying to win?",
+                "Daaaaaaaang, thought you had it that time",
+                "NEXT",
+                "HA. You lose.",
+                "What does it feel like being a loser?"
+            ]
+            const randomLosingMessage = losingStatments[(Math.random() * losingStatments.length) | 0]
+
             return (
-                <p className="priceInd">Sucks to suck!  Try again!</p>
+                <p className="priceInd">{randomLosingMessage}</p>
             )
         } else if (price === 10) {
             return (
@@ -591,57 +580,91 @@ const Slots = () => {
 
     return (
         <>{isPrize && <>
-                    <div className='prizeModal'>
-                        <div className='prizeDiv'>
-                        <img className='closeModal' src={closeTx} alt='close button' onClick={closePrize} />
-                            <h1 className='Winner'>
-                                {premio()}
-                            </h1>
-                            <div className='viewTransaction'>
-                                {isLoading ? (<CircularProgress />) : (<>{rewardTX.length > 6 ?
-                                    (<Alert className='success' severity="success">
-                                        Transaction success <strong><a href={'https://solscan.io/tx/' + rewardTX} target='_blank' rel='noreferrer'>View on Solscan</a></strong>
-                                    </Alert>)
-                                    : tx === 'false' ?
-                                        (<Alert className='failure' severity="error">
-                                            Transaction was not confirmed <strong>Please check wallet and try again</strong>
-                                        </Alert>) : (<div></div>)}
-                                </>)
-                                }
+            <div className='prizeModal'>
+                <div className='prizeDiv'>
+                    <img className='closeModal' src={closeTx} alt='close button' onClick={closePrize} />
+                    <h1 className='Winner'>
+                        {premio()}
+                    </h1>
+                    <div className='viewTransaction'>
+                        {isLoading ? (<CircularProgress />) : (<>{rewardTX.length > 6 ?
+                            (<Alert className='success' severity="success">
+                                Transaction success <strong><a href={'https://solscan.io/tx/' + rewardTX} target='_blank' rel='noreferrer'>View on Solscan</a></strong>
+                            </Alert>)
+                            : tx === 'false' ?
+                                (<Alert className='failure' severity="error">
+                                    Transaction was not confirmed <strong>Please check wallet and try again</strong>
+                                </Alert>) : (<div></div>)}
+                        </>)
+                        }
+                    </div>
+                </div>
+            </div>
+        </>}
+            <div className='SlotsMain'>
+
+                <h1 class="neon" data-text="U">SL<span class="flicker-slow">O</span>T<span class="flicker-fast">S</span></h1>
+                <div className="fullSlot">
+
+                    <div className='Payout'>
+                        <h2 className='Payouts'>Payouts</h2>
+                        <div className='prizes'>
+                            <div className='PrizeImages'>
+                                <img className='prizeIcons' src={bunnyHead} alt='bunny head' />
+                                <img className='prizeIcons' src={bunnyHead} alt='bunny head' />
+                                <img className='prizeIcons' src={bunnyHead} alt='bunny head' />
                             </div>
+                            <h3 className='prizeDescription'>JACKPOT!  250X Your Bet</h3>
+                        </div>
+                        <div className='prizes'>
+                            <div className='PrizeImages'>
+                                <img className='prizeIcons' src={brLogo} alt='text logo' />
+                                <img className='prizeIcons' src={brLogo} alt='text logo' />
+                                <img className='prizeIcons' src={brLogo} alt='text logo' />
+                            </div>
+                            <h3 className='prizeDescription'>100X Your Bet</h3>
+                        </div>
+                        <div className='prizes'>
+                            <div className='PrizeImages'>
+                                <img className='prizeIcons' src={carrot} alt='carro logo' />
+                                <img className='prizeIcons' src={carrot} alt='carrot logo' />
+                                <img className='prizeIcons' src={carrot} alt='carrot logo' />
+                            </div>
+                            <h3 className='prizeDescription'>50X Your Bet</h3>
+                        </div>
+                        <div className='prizes'>
+                            <div className='PrizeImages'>
+                                <img className='prizeIcons' src={carotCoin} alt='carot logo' />
+                                <img className='prizeIcons' src={carotCoin} alt='carot logo' />
+                                <img className='prizeIcons' src={carotCoin} alt='carot logo' />
+                            </div>
+                            <h3 className='prizeDescription'>25X Your Bet</h3>
                         </div>
                     </div>
-                </>}
-        <div className='SlotsMain'> 
-        
-            <h1 class="neon" data-text="U">SL<span class="flicker-slow">O</span>T<span class="flicker-fast">S</span></h1>
-            <div className="fullSlot">
-               
-                <h1 className="price">Jackpot: 50x your bet in $CANS</h1>
-                {/* <div className='jackpotImages'><img className='small icon' src=</div> */}
-                <div className="slot">
-                    <div className="row">
-                        {row1()}
+                    {/* <div className='jackpotImages'><img className='small icon' src=</div> */}
+                    <div className="slot">
+                        <div className="row">
+                            {row1()}
+                        </div>
+                        <div className="row">
+                            {row2()}
+                        </div>
+                        <div className="row">
+                            {row3()}
+                        </div>
                     </div>
-                    <div className="row">
-                        {row2()}
+                    <h1 className="price">
+                        {premio()}
+                    </h1>
+                    <div className="slotFoot">
+                        <input value={input} type="number" onChange={(e) => numChecker(e)} className="betInput" placeholder="Enter Your Bet"></input>
+                        {!isTokenAccount ? (<>{!isLoading ? (<button className="spinButton" onClick={createAccount} disabled={!publicKey}>Create Reward Account</button>) : (<button className="spinButton" onClick={createAccount} disabled={!publicKey}><CircularProgress /></button>)}</>) : (<>{!tx ? (<> {!isLoading ? (<button className="spinButton" onClick={sendCarot} disabled={isLoading}>Confirm Transaction</button>)
+                            : (<button className="spinButton" disabled={isLoading}><CircularProgress /></button>)}</>) : (<button className="spinButton" onClick={() => play()}>Try Your Luck!</button>)}</>)}
                     </div>
-                    <div className="row">
-                        {row3()}
-                    </div>
+                    <h1 className="price">{"Available $CAROT: " + Math.round((balance * 100)) / 100}</h1>
                 </div>
-                <h1 className="price">
-                    {premio()}
-                </h1>
-                <div className="slotFoot">
-                    <input value={input} type="number" onChange={(e) => numChecker(e)} className="betInput" placeholder="Enter Your Bet"></input>
-                    {!isTokenAccount ? (<>{!isLoading ? (<button className="spinButton" onClick={createAccount} disabled={!publicKey}>Create Reward Account</button>) : (<button className="spinButton" onClick={createAccount} disabled={!publicKey}><CircularProgress /></button>)}</>) : (<>{!tx ? (<> {!isLoading ? (<button className="spinButton" onClick={sendCarot} disabled={isLoading}>Confirm Transaction</button>)
-                        : (<button className="spinButton" disabled={isLoading}><CircularProgress /></button>)}</>) : (<button className="spinButton" onClick={() => play()}>Try Your Luck!</button>)}</>)}
-                </div>
-                <h1 className="price">{"Available $CAROT: " + Math.round((balance * 100)) / 100}</h1>
             </div>
-        </div>
-    </>
+        </>
     )
 }
 

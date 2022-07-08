@@ -1,7 +1,6 @@
 import React, { useState, useCallback, useEffect } from 'react'
 import './BulkSend.css'
 import { useAnchorWallet } from '@solana/wallet-adapter-react'
-
 import { useWalletNfts } from '@nfteyez/sol-rayz-react'
 import { Grid, Paper, Button, TextField } from '@material-ui/core'
 import Alert from '@mui/material/Alert';
@@ -19,17 +18,11 @@ const BulkSend = () => {
     let walletAddress = ''
     const wallet = useAnchorWallet()
     walletAddress = wallet?.publicKey.toString()
-
-    console.log(rabbitFilter)
-    //   const filterList = JSON.parse(JSON.stringify(filter))
-
     const connection = new Connection('https://bold-old-moon.solana-mainnet.quiknode.pro/ce6fe5d59cabd95814a4c61a6e69afbbfc625c9f/', "confirmed");
 
     const { nfts } = useWalletNfts({
         publicAddress: walletAddress
-
     })
-    console.log(nfts)
 
     const [metadata, setMetadata] = useState({});
 
@@ -64,42 +57,27 @@ const BulkSend = () => {
     }
     const checkTokens = rabbitFilter.some((r) => arr.indexOf(r) >= 0)
 
-    console.log(checkTokens)
     const onClick = (e, index) => {
         setSelected(selected => selected.includes(nfts[index].mint) ? selected.filter(n => n !== selected[selected.indexOf(nfts[index].mint)]) : [...selected, nfts[index].mint])
-
     }
 
     const { publicKey, sendTransaction } = useWallet();
     const [receiver, setReceiver] = useState('')
-
     const feeWallet = new PublicKey('5BNK4Kq1b5rDcr3fkqhfJLz58XEfcT3sPJdxLAB6n7Cq')
-    console.log(receiver)
-
     const [isLoading, setIsLoading] = useState(false)
     const [tx, setTx] = useState('')
     const fromWallet = wallet
 
-    console.log(selected)
-
-
     const sendNfts = useCallback(async () => {
         if (!publicKey) throw new WalletNotConnectedError();
         setIsLoading(true)
-
-
         const toWallet = new PublicKey(receiver)
         let instructions = []
         let allowOwnerOffCurve = true
-
-
-
         for (let i = 0; i < selected.length; i++) {
             let mint = new PublicKey(selected[i])
             let toTokenAccount = await connection.getParsedTokenAccountsByOwner(toWallet, { mint: mint, });
             let nftAccount = await connection.getParsedTokenAccountsByOwner(fromWallet.publicKey, { mint: mint, })
-            console.log(nftAccount)
-
             const ataNft = await spltoken.getAssociatedTokenAddress(
                 mint,
                 toWallet,
@@ -107,7 +85,6 @@ const BulkSend = () => {
                 spltoken.TOKEN_PROGRAM_ID,
                 spltoken.ASSOCIATED_TOKEN_PROGRAM_ID
             );
-
             if (toTokenAccount.value.length === 0) {
                 instructions.push(
                     spltoken.createAssociatedTokenAccountInstruction(
@@ -140,7 +117,7 @@ const BulkSend = () => {
                 )
             }
         }
-        console.log(instructions)
+
         let fee = 0
         if (checkTokens === true) {
             fee = 1
@@ -156,7 +133,6 @@ const BulkSend = () => {
         )
         try {
             const transaction = new Transaction().add(...instructions);
-
             const signature = await sendTransaction(transaction, connection);
             const latestBlockHash = await connection.getLatestBlockhash();
 
@@ -177,8 +153,7 @@ const BulkSend = () => {
     })
     const refreshPage = () => {
         window.location.reload();
-      }
-
+    }
 
     return (
         <div className='BulkMain'>
@@ -191,9 +166,7 @@ const BulkSend = () => {
                         spacing={2}
                         className="nftsgrid"
                         justifyContent='space-evenly'
-                        
                     >
-
                         {(nfts || []).map((nft, index) => (
                             <Grid item key={index} md={6} lg={3}>
                                 <div className='BulkImages' onClick={(e) => onClick(e, index)}>
@@ -235,7 +208,7 @@ const BulkSend = () => {
                         }} />{selected.length > 7 && <h4>{selected.length} NFTS Selected. Please Remove {selected.length - 7}</h4>}
                     {!isLoading ? (<Button size="large" className='transactionBtn' onClick={sendNfts} disabled={!publicKey || selected.length > 7 || selected.length === 0} >Send NFTs</Button>) :
                         (<Button size="large" variant='outlined' className='transactionBtn'><CircularProgress /></Button>)}<br></br>
-                        <Button className='refresh' variant='contained' onClick={refreshPage}>Refresh<img className='refreshIcon' src={refresh} alt='refresh' /></Button><br></br>
+                    <Button className='refresh' variant='contained' onClick={refreshPage}>Refresh<img className='refreshIcon' src={refresh} alt='refresh' /></Button><br></br>
                     {tx.length > 6 ?
                         (<Alert severity="success">
                             Success - Transaction success <strong><a href={'https://solscan.io/tx/' + tx} target='_blank' rel='noreferrer'>Check Tx on Solscan</a></strong>

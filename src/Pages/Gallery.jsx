@@ -9,8 +9,6 @@ import magicEden from '../images/MELogo.png'
 import Solscan from '../images/solscan.png'
 import { WalletMultiButton } from '@solana/wallet-adapter-react-ui'
 
-
-
 const Gallery = () => {
 
   const [enteredWallet, setEnteredWallet] = useState('')
@@ -27,8 +25,8 @@ const Gallery = () => {
   //     }else{
   //       setIsError(!isSolana)
   //     }
-      
-      
+
+
   // } catch (error) {
   //     return false
   // }
@@ -67,8 +65,8 @@ const Gallery = () => {
 
 
   useEffect(() => {
-   
-     //if (!isSolana) setIsError(true)
+
+    //if (!isSolana) setIsError(true)
     if (nfts?.length) { fetchMetadata(); }
   }, [nfts, fetchMetadata]);
 
@@ -79,37 +77,23 @@ const Gallery = () => {
     setMyWallet(enteredWallet)
     try {
       let pubkey = new PublicKey(myWallet)
-      let  isSolana =  PublicKey.isOnCurve(pubkey.toBuffer())
-      console.log("isSolana is " + isSolana)
-      setIsError(false)    
-  } catch (error) {
+      let isSolana = PublicKey.isOnCurve(pubkey.toBuffer())
+      setIsError(false)
+    } catch (error) {
       setIsError(true)
-  }
+    }
   }
   const fetchWallet = () => {
 
     setMyWallet(walletAddress)
     if (!(nfts?.length > 0)) setIsLoading(false)
-    
+
   }
-
-  // console.log(myWallet)
-  // console.log(enteredWallet)
-
-  // const [isPopup, setIsPopup] = useState(false)
-
-  // const handleImageClick = () => {
-  //   setIsPopup(!isPopup)
-  // }
-  // console.log("isError is " + isError)
-  // console.log("isLoading is " + isLoading)
-  // console.log(nfts?.length)
 
   return (
     <div className='galleryMain'>
       <h1 className='galleryTitle'>Gallery</h1>
       <div className='walletSelect'>
-        
         <h4 className='instructions'>Click button to use your connected wallet, or enter a valid wallet address in the search bar.</h4>
         <div className='inputs'>
           {wallet?.publicKey ? (<Button size='large' className='mywallet' variant='outlined' onClick={fetchWallet}>Use My Wallet</Button>) :
@@ -124,7 +108,6 @@ const Gallery = () => {
               console.log(`Pressed keyCode ${ev.key}`);
               if (ev.key === 'Enter') {
                 handleEnter()
-                
               }
             }}
             InputLabelProps={{
@@ -146,9 +129,7 @@ const Gallery = () => {
           spacing={2}
           className="nftsgrid"
           justifyContent="space-evenly"
-          
         >
-
           {nfts.map((nft, index) => (
             <Grid item key={index} md={3} lg={2}>
               <div className='AllImages'>
@@ -163,14 +144,13 @@ const Gallery = () => {
             </Grid>
           ))}
         </Grid>
-
       </div>) : (isLoading && !isError) ?
         (<div className='galleryLoading'><div className='circprog'><h3 style={{ color: 'white' }}>Please Select Your Wallet or Enter a Valid Solana Address</h3><CircularProgress style={{ width: '100px', height: '100px', color: 'white' }} /></div></div>) : (<div className='galleryLoading'><h1 style={{ color: 'white' }}>Please Enter a Valid Solana Address</h1></div>)}</>)
         : (!(nfts?.length > 0) && isLoading && !isError) ? (<div className='galleryLoading'><div className='circprog'><h3 style={{ color: 'white' }}>Please Select Your Wallet or Enter a Valid Solana Address</h3><CircularProgress style={{ width: '100px', height: '100px', color: 'white' }} /></div></div>) : (!(nfts?.length > 0) && !isLoading && !isError) ? (<div className='galleryLoading'>
-        <h1 style={{ color: 'white' }}>You (or the wallet you're stalking) have 0 NFTs</h1>
-        <a href='https://magiceden.io/marketplace/bobbyrabbits' target='_blank' rel='noreferrer'><h3 style={{ color: 'white' }}>Purchase a Bobby Rabbit NFT today!</h3> <img src={magicEden} alt='Magic Eden Logo' width='100px' style={{ marginLeft: 'auto', marginRight: 'auto', marginTop: '-20px' }} /></a>
-      </div>)
-          : (<div className='galleryLoading'><h1 style={{ color: 'white' }}>Please Enter a Valid Solana Address</h1></div>) }</div >
+          <h1 style={{ color: 'white' }}>You (or the wallet you're stalking) have 0 NFTs</h1>
+          <a href='https://magiceden.io/marketplace/bobbyrabbits' target='_blank' rel='noreferrer'><h3 style={{ color: 'white' }}>Purchase a Bobby Rabbit NFT today!</h3> <img src={magicEden} alt='Magic Eden Logo' width='100px' style={{ marginLeft: 'auto', marginRight: 'auto', marginTop: '-20px' }} /></a>
+        </div>)
+          : (<div className='galleryLoading'><h1 style={{ color: 'white' }}>Please Enter a Valid Solana Address</h1></div>)}</div >
   )
 }
 
