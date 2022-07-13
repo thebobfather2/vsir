@@ -38,7 +38,6 @@ const Navbar = () => {
           <Link to='/'> <img className="navlogo" src={br} alt='logo' /></Link>
           <ul className="list">
             <br></br><br></br>
-            <Link to='/' onClick={toggleNav}> <li className='listItem'>Home</li></Link>
             <Link to='/Custom' onClick={toggleNav}> <li className='listItem'>Custom</li></Link>
             <Link to='/Send' onClick={toggleNav}> <li className='listItem'>Send $CAROT</li></Link>
             <Link to='/BulkSend' onClick={toggleNav} > <li className='listItem'>Bulk Send</li></Link>
