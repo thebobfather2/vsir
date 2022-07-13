@@ -44,6 +44,7 @@ const Navbar = () => {
             <Link to='/Cleaner' onClick={toggleNav}> <li className='listItem'>Wallet Cleaner</li></Link>
             <Link to='/Gallery' onClick={toggleNav}> <li className='listItem'>Gallery</li></Link>
             <Link to='/Slots' onClick={toggleNav}> <li className='listItem'>Slots</li></Link>
+            <Link to='/Dashboard' onClick={toggleNav}> <li className='listItem'>Dashboard</li></Link>
             <a href='https://magiceden.io/marketplace/bobbyrabbits' target="_blank" rel="noreferrer" onClick={toggleNav}> <li className='listItem'>Buy A Rabbit</li></a>
             <br></br>
             <WalletModalProvider>
