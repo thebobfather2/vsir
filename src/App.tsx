@@ -3,6 +3,7 @@ import { ConnectionProvider, WalletProvider } from '@solana/wallet-adapter-react
 import { WalletModalProvider } from '@solana/wallet-adapter-react-ui';
 import {
     GlowWalletAdapter,
+    LedgerWalletAdapter,
     PhantomWalletAdapter,
     SlopeWalletAdapter,
     SolflareWalletAdapter,
@@ -21,6 +22,7 @@ import BulkSend from './Pages/BulkSend';
 import Cleaner from './Pages/Cleaner';
 import Gallery from './Pages/Gallery';
 import Slots from './Pages/Slots';
+import Dashboard from './Pages/Dashboard';
 
 
 require('./App.css')
@@ -57,6 +59,7 @@ const Context: FC<{ children: ReactNode }> = ({ children }) => {
             new SlopeWalletAdapter(),
             new SolflareWalletAdapter({ network }),
             new TorusWalletAdapter(),
+            new LedgerWalletAdapter(),
         ],
         [network]
     );
@@ -83,6 +86,7 @@ const Content: FC = () => {
                 <Route path="/Auctions" element={<Auctions />} />
                 <Route path="/Slots" element={<Slots />} />
                 <Route path="/Gallery" element={<Gallery />} />
+                <Route path="/Dashboard" element={<Dashboard />} />
             </Routes>
         </>
     );

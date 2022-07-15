@@ -38,13 +38,13 @@ const Navbar = () => {
           <Link to='/'> <img className="navlogo" src={br} alt='logo' /></Link>
           <ul className="list">
             <br></br><br></br>
-            <Link to='/' onClick={toggleNav}> <li className='listItem'>Home</li></Link>
             <Link to='/Custom' onClick={toggleNav}> <li className='listItem'>Custom</li></Link>
             <Link to='/Send' onClick={toggleNav}> <li className='listItem'>Send $CAROT</li></Link>
             <Link to='/BulkSend' onClick={toggleNav} > <li className='listItem'>Bulk Send</li></Link>
             <Link to='/Cleaner' onClick={toggleNav}> <li className='listItem'>Wallet Cleaner</li></Link>
             <Link to='/Gallery' onClick={toggleNav}> <li className='listItem'>Gallery</li></Link>
             <Link to='/Slots' onClick={toggleNav}> <li className='listItem'>Slots</li></Link>
+            <Link to='/Dashboard' onClick={toggleNav}> <li className='listItem'>Dashboard</li></Link>
             <a href='https://magiceden.io/marketplace/bobbyrabbits' target="_blank" rel="noreferrer" onClick={toggleNav}> <li className='listItem'>Buy A Rabbit</li></a>
             <br></br>
             <WalletModalProvider>

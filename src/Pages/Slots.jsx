@@ -438,9 +438,18 @@ const Slots = () => {
         setIsPrize(false)
     }
     function rand() {
+        let randomNumber = Math.floor(Math.random() * (100-1)+1)
+        console.log(randomNumber)
+        if (randomNumber < 75 ){
         setRing1(Math.floor(Math.random() * (100 - 1) + 1))
         setTimeout(function () { setRing2(Math.floor(Math.random() * (100 - 1) + 1)) }, 1000)
         setTimeout(function () { setRing3(Math.floor(Math.random() * (100 - 1) + 1)) }, 2000)
+        }else{
+            setRing1(45)
+        setTimeout(function () { setRing2(45) }, 1000)
+        setTimeout(function () { setRing3(45) }, 2000)
+        }
+
     }
 
     const sendCarot = useCallback(async () => {
