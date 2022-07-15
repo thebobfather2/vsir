@@ -23,6 +23,7 @@ import Cleaner from './Pages/Cleaner';
 import Gallery from './Pages/Gallery';
 import Slots from './Pages/Slots';
 import Dashboard from './Pages/Dashboard';
+import Home from './Pages/Home';
 
 
 require('./App.css')
@@ -34,7 +35,7 @@ const App: FC = () => {
             <HashRouter>
                 <Context>
                     <Navbar />
-                    <Content />
+                    <Content/>    
                 </Context>
             </HashRouter>
         </div>
@@ -77,7 +78,8 @@ const Content: FC = () => {
     return (
         <>
             <Routes>
-                <Route path="/" element={<Shop />} />
+                <Route path="/" element={<Home />} />
+                <Route path="/Shop" element={<Shop />} />
                 <Route path="/Send" element={<Send />} />
                 <Route path="/BulkSend" element={<BulkSend />} />
                 <Route path="/Cleaner" element={<Cleaner />} />

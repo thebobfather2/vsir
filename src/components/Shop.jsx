@@ -9,6 +9,8 @@ import galleryIcon from '../images/icons/gallery.png'
 import slotIcon from '../images/icons/slots.png'
 import walletIcon from '../images/icons/wallet.png'
 import dashboardIcon from '../images/icons/dashboard.png'
+import carotShop from '../images/carotshop.jpeg'
+import dots from '../images/dots.png'
 
 
 const Shop = () => {
@@ -80,18 +82,71 @@ const Shop = () => {
 
   return (
     <>
-      <h1 className='MainTitle'>Carot Shop </h1>
-      {/* <Grid container
-        spacing={0}
-        direction="row"
-        justifyContent="center"
-        alignItems="flex-start"
-        className='grid'
-        style={{ margin: '0', maxWidth: '60%', textAlign: 'center' }}
-      > */}
-      <div className='toolsContainer'>
+      {/* <img src={carotShop} className='carotshopimage' alt='carot shop'/> */}
+    <div className='MainShopContainer'>
+      <div className='menuContainer'>
+        <div className='menuHeading'>
+          <h1 className='menuTitle'>Welcome to the Carot Shop</h1>
+          <h2 className='menuSubtitle'>The Carot Menu</h2>
+        </div>
+        <div className='TheMenu'>
+          <div className='Category'>
+            <div className='CategoryTitle'>
+              <h2 className='CatTitle'>Solana Tools</h2>
+              <div className='underline'></div>
+            </div>
+            <div className='menuItems'>
+            <div className='items1'>
+              <Link to='/BulkSend'><h3 className='eachMenuItem'>Bulk Send NFTs</h3></Link>
+              <h3 className='Prices'>0.005 SOL/NFT or Free for Bobby Rabbits Holders</h3>
+              </div>
+              <div className='itemsUnderline'></div>
+            <div className='items1'>
+            <Link to='/Cleaner'><h3 className='eachMenuItem'>Wallet Cleaner</h3></Link>
+              <h3 className='Prices'>0.001 SOL/Burned NFT or Token Set or Free for Bobby Rabbits Holders</h3>
+              </div>
+              <div className='itemsUnderline'></div>
+            <div className='items1'>
+            <Link to='/Gallery'><h3 className='eachMenuItem'>Gallery</h3></Link>
+              <h3 className='Prices'>Free</h3>
+              </div>
+              <div className='itemsUnderline'></div>
+            </div>
+          </div>
+          <div className='Category'>
+            <div className='CategoryTitle'>
+              <h2 className='CatTitle'>Carot Utility</h2>
+              <div className='underline'></div>
+            </div>
+            <div className='menuItems'>
+            <div className='items1'>
+              <Link to='/Custom'><h3 className='eachMenuItem'>Custom Bobby Rabbit</h3></Link>
+              <h3 className='Prices'>3 OG Rabbits and 500 $CAROT Coin</h3>
+              </div>
+              <div className='itemsUnderline'></div>
+              <div className='items1'>
+            <Link to='/Slots'><h3 className='eachMenuItem'>Slots</h3></Link>
+              <h3 className='Prices'>Minimum bet 1 $CAROT Coin</h3>
+              </div>
+              <div className='itemsUnderline'></div>
+            </div>
+            <div className='items1'>
+            <Link to='/Dashboard'><h3 className='eachMenuItem'>Holder's Dashboard</h3></Link>
+              <h3 className='Prices'>Must Own OG or Icy Rabbit</h3>
+              </div>
+              <div className='itemsUnderline'></div>
+           
+            <div className='items1'>
+            <Link to='/Send'><h3 className='eachMenuItem'>$Carot Send</h3></Link>
+              <h3 className='Prices'>Typical Solana Transaction Fee</h3>
+              </div>
+              <div className='itemsUnderline'></div>
+          </div>
+        </div>
+      
+      {/* <div className='toolsContainer'>
         {items.map(item => (
-          // <Grid item key={item.id} lg>
+         
           <Link to={item.path} style={{color: 'black'}}>
             <div className='item'>
               <h1 className='itemTitle'>{item.itemTitle}</h1>
@@ -99,9 +154,11 @@ const Shop = () => {
              <br></br>
             </div>
             </Link>
-          // </Grid>
+      
         ))}
-      {/* </Grid> */}
+     
+      </div> */}
+      </div>
       </div>
     </>
   )

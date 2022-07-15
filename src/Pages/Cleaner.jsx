@@ -528,7 +528,6 @@ const Cleaner = () => {
                     {tokens.map((token, index) => {
                       return (<div className='eachToken' key={index} onClick={(e) => onEachTokenClick(e, index)}> {tokensSelected.includes(tokens[index].account.data['parsed']['info']['mint']) &&
                         <div className='eachTokenClicked'><h1 className='selectedText'>Selected</h1></div>}
-                        <h4 className='tokenNames'>Token:</h4>
                         {((token.account.data.parsed.info.mint) === (listOfTokens[listOfTokens.findIndex(object => object.mint === token.account.data.parsed.info.mint)]?.mint)) ? (<h4 className='tokenAddress'>{listOfTokens[listOfTokens.findIndex(object => object.mint === token.account.data.parsed.info.mint)].name}</h4>) : (<h4 className='tokenAddress'>{token.account.data['parsed']['info']['mint']}</h4>)}
                         <div style={{ display: 'flex' }}> Balance:
                           <div style={{ padding: '2px', backgroundColor: 'white', marginLeft: '4px', borderRadius: '5px' }}><h5 style={{ color: "black", marginTop: '0', marginBottom: '0' }}>{token.account.data['parsed']['info']['tokenAmount']['uiAmount']}</h5></div>

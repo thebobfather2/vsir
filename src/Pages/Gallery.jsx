@@ -147,7 +147,7 @@ const Gallery = () => {
       </div>) : (isLoading && !isError) ?
         (<div className='galleryLoading'><div className='circprog'><h3 style={{ color: 'white' }}>Please Select Your Wallet or Enter a Valid Solana Address</h3><CircularProgress style={{ width: '100px', height: '100px', color: 'white' }} /></div></div>) : (<div className='galleryLoading'><h1 style={{ color: 'white' }}>Please Enter a Valid Solana Address</h1></div>)}</>)
         : (!(nfts?.length > 0) && isLoading && !isError) ? (<div className='galleryLoading'><div className='circprog'><h3 style={{ color: 'white' }}>Please Select Your Wallet or Enter a Valid Solana Address</h3><CircularProgress style={{ width: '100px', height: '100px', color: 'white' }} /></div></div>) : (!(nfts?.length > 0) && !isLoading && !isError) ? (<div className='galleryLoading'>
-          <h1 style={{ color: 'white' }}>You (or the wallet you're stalking) have 0 NFTs</h1>
+          <h1 style={{ color: 'white' }}>You (or the wallet you're stalking) have 0 NFTs<br></br> or you've entered an invalid Solana address</h1>
           <a href='https://magiceden.io/marketplace/bobbyrabbits' target='_blank' rel='noreferrer'><h3 style={{ color: 'white' }}>Purchase a Bobby Rabbit NFT today!</h3> <img src={magicEden} alt='Magic Eden Logo' width='100px' style={{ marginLeft: 'auto', marginRight: 'auto', marginTop: '-20px' }} /></a>
         </div>)
           : (<div className='galleryLoading'><h1 style={{ color: 'white' }}>Please Enter a Valid Solana Address</h1></div>)}</div >
