@@ -136,4 +136,7 @@
     .walletInput {
         margin-top: 20px !important;
     }
+    .Viewing{
+        font-size:.75rem;
+    }
 }

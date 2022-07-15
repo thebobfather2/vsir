@@ -12,20 +12,180 @@
   justify-content: center;
 }
 
+.MainShopContainer {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FFE53B;
+  background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
+  animation: gradient 10s ease infinite;
+  background-size: 400% 400%;
+}
+
+.menuContainer {
+  width: 80%;
+  height: fit-content;
+  background-image: url('../images/chalkboard.jpg');
+  background-size: cover;
+  margin-top: 40px;
+  border: 15px rgba(255, 115, 0, 0.856) ridge;
+}
+
+.menuHeading {
+  font-family: chalk-outline;
+  font-size: 2rem;
+  color: white;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  display: block;
+  -webkit-mask-image: url('../images/texture.svg');
+  -moz-mask-image: url('../images/texture.svg');
+  -o-mask-image: url('../images/texture.svg');
+  mask-image: url('../images/texture.svg');
+  mix-blend-mode: difference;
+
+}
+
+.menuSubtitle {
+  font-size: 2rem;
+  margin-top: -40px;
+}
+.Category{
+  margin-left: 40px;
+  margin-bottom: 50px;
+}
+.CatTitle {
+  font-family: menuItems;
+  color: white;
+  font-size: 2.5rem;
+  -webkit-mask-image: url('../images/texture.svg');
+  -moz-mask-image: url('../images/texture.svg');
+  -o-mask-image: url('../images/texture.svg');
+  mask-image: url('../images/texture.svg');
+  mix-blend-mode: difference;
+}
+
+.CategoryTitle {
+  width: fit-content;
+  -webkit-mask-image: url('../images/texture.svg');
+  -moz-mask-image: url('../images/texture.svg');
+  -o-mask-image: url('../images/texture.svg');
+  mask-image: url('../images/texture.svg');
+  mix-blend-mode: difference;
+}
+
+.underline {
+  width: 100%;
+  height: 3px;
+  margin-top: -30px;
+  background-color: white;
+  margin-left: 0px;
+  -webkit-mask-image: url('../images/texture.svg');
+  -moz-mask-image: url('../images/texture.svg');
+  -o-mask-image: url('../images/texture.svg');
+  mask-image: url('../images/texture.svg');
+  mix-blend-mode: difference;
+}
+.itemsUnderline {
+  width: 90%;
+  height: 3px;
+  margin-top: -20px;
+  background-color: white;
+  margin-left: 40px;
+  -webkit-mask-image: url('../images/texture.svg');
+  -moz-mask-image: url('../images/texture.svg');
+  -o-mask-image: url('../images/texture.svg');
+  mask-image: url('../images/texture.svg');
+  mix-blend-mode: difference;
+}
+.items1{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: -20px;
+  -webkit-mask-image: url('../images/texture.svg');
+  -moz-mask-image: url('../images/texture.svg');
+  -o-mask-image: url('../images/texture.svg');
+  mask-image: url('../images/texture.svg');
+  mix-blend-mode: difference;
+}
+.menuPrice{
+  font-size: 1.2rem;
+  -webkit-mask-image: url('../images/texture.svg');
+  -moz-mask-image: url('../images/texture.svg');
+  -o-mask-image: url('../images/texture.svg');
+  mask-image: url('../images/texture.svg');
+  mix-blend-mode: difference;
+}
+.menuItems{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.dotsImage{
+  max-height: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.Prices{
+  font-family: menuItems;
+  color: white;
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+  -webkit-mask-image: url('../images/texture.svg');
+  -moz-mask-image: url('../images/texture.svg');
+  -o-mask-image: url('../images/texture.svg');
+  mask-image: url('../images/texture.svg');
+  mix-blend-mode: difference;
+  margin-right: 40px;
+  text-align: right;
+  
+}
+.eachMenuItem{
+  color: white;
+  font-family: menuItems;
+  font-size: 2rem;
+  -webkit-mask-image: url('../images/texture.svg');
+  -moz-mask-image: url('../images/texture.svg');
+  -o-mask-image: url('../images/texture.svg');
+  mask-image: url('../images/texture.svg');
+  mix-blend-mode: difference;
+}
+.eachMenuItem:hover{
+  animation: gelatine ease .5s;
+  text-shadow: 0 0 5px rgb(255, 255, 255);
+}
+@font-face {
+  font-family: menuItems;
+  src: url('./fonts/DkMidnightChalkerRegular-lGWV.otf');
+}
+
+@font-face {
+  font-family: chalk-outline;
+  src: url('../components/fonts/BobcatItalicPersonalUseBoldItalic-DOPY0.ttf');
+
+}
+
 /*Items*/
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
-.grid{
-  margin: auto  !important;
+
+.grid {
+  margin: auto !important;
 }
-.toolsContainer{
-  
+
+.toolsContainer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   margin: auto;
   justify-content: center;
   max-width: 80%;
-  
 }
 
 .item {
@@ -40,19 +200,34 @@
   background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
   border-radius: 20px;
   margin: 20px;
-  
+
   box-shadow: 0 0 10px 2px black;
 }
-.item:hover{
+
+.item:hover {
   cursor: pointer;
   opacity: 60%;
   animation: gelatine 0.4s;
 }
+
 @keyframes gelatine {
-  from, to { transform: scale(1, 1); }
-  25% { transform: scale(0.98, 1.02); }
-  50% { transform: scale(1.02, 0.98); }
-  75% { transform: scale(0.99, 1.01); }
+
+  from,
+  to {
+    transform: scale(1, 1);
+  }
+
+  25% {
+    transform: scale(0.98, 1.02);
+  }
+
+  50% {
+    transform: scale(1.02, 0.98);
+  }
+
+  75% {
+    transform: scale(0.99, 1.01);
+  }
 }
 
 .itemTitle {
@@ -67,7 +242,7 @@
   height: 50px;
   margin-left: auto;
   margin-right: auto;
- 
+
 }
 
 /* .itemDescription {
@@ -108,6 +283,19 @@
   margin-top: 50px;
 }
 
+@media screen and (max-width: 1130px) {
+  .CatTitle{
+    font-size: 2.2rem;
+  }
+  .eachMenuItem{
+    font-size: 1.5rem;
+  }
+  .Prices{
+    font-size: 1rem;
+    margin-right: 0;
+  }
+}
+
 @media screen and (max-width:900px) {
   .carotGif {
     display: none;
@@ -124,12 +312,14 @@
   }
 
   .itemImage {
-    
+
     margin-left: auto;
     margin-right: auto;
-   
+
   }
+
 }
+
 @media screen and (max-width: 755px) {
   .item {
     display: flex;
@@ -140,12 +330,32 @@
     align-items: center;
     margin: auto -10px;
   }
+  .menuItems{
+    margin-left: 0px;
+  }
+  .items1{
+    margin-left: 0;
+  }
+  .itemsUnderline{
+    margin-left: 0;
+  }
+  
 }
 
 @media screen and (max-width: 500px) {
   .MainTitle {
     font-size: 3em;
     text-align: center
+  }
+  .menuContainer{
+    width:90%;
+  }
+  .menuTitle{
+    font-size: 1.2em;
+  }
+  .menuSubtitle{
+    font-size: .8em;
+    margin-top: -8px
   }
 
   .ShopMain {
@@ -165,10 +375,10 @@
   }
 
   .itemImage {
-   
+
     margin-left: auto;
     margin-right: auto;
-  
+
   }
 
   .itemDescription {

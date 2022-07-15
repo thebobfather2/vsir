@@ -3,6 +3,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
 
 }
 
@@ -28,6 +29,7 @@
 
 .BulkNfts {
     padding-left: 20px;
+    
 
 }
 
@@ -35,10 +37,10 @@
     margin-left: 20px;
     margin-right: 20px;
     min-width: 100% !important;
-
     padding-top: 20px;
     background-color: black;
     border-radius: 20px;
+    min-height: 505px;
 }
 
 .BulkImages {
@@ -141,7 +143,12 @@
     .Send {
         width: 300px;
     }
-
+    .BulkNfts{
+        width: 90%;
+    }
+    .completePurchase{
+        min-width: 300px !important;
+    }
     .amountInput {
         width: 200px;
     }

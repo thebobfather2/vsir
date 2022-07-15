@@ -126,21 +126,23 @@
     .title {
         font-size: 2em;
         text-align: center;
-        margin-left: 0;
+        margin-left: 2px;
+        margin-right: 2px;
         margin-top: -100px;
     }
 
     .completePurchase {
-        margin-left: 0;
+        margin-left: auto;
+        margin-right: auto;
         margin-bottom: 20px;
-        min-width: 60%;
+        max-width: 50%;
     }
 
     .RabbitSelect {
         position: relative;
         margin-bottom: 20px;
         padding-bottom: 10px;
-        width: 90%;
+        width: 80%;
         margin-left: auto;
         margin-right: auto;
     }
@@ -156,7 +158,9 @@
     .transactionCarot {
         max-width: 100px;
     }
-
+.selectedText{
+    font-size: 1rem;
+}
     .carots {
         font-size: 1.5em;
     }

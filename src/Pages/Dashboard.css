@@ -373,5 +373,8 @@ z-index: 5;
         display: block;
         overflow-y: scroll;
     }
+    .Wallets{
+        padding-right: 15px;
+    }
     
   }
