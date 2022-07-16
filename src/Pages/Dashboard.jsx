@@ -299,7 +299,7 @@ const Dashboard = () => {
     priceHistory.forEach(item => {
         const theDate = new Date(item[0])
         newObj.push({
-            'date': (theDate.getMonth() + "/" + theDate.getDate() + "/" + theDate.getFullYear()),
+            'date': (((theDate.getMonth())+ 1) + "/" + theDate.getDate() + "/" + theDate.getFullYear()),
             'price': parseFloat(item[1]).toFixed(2)
         })
     })
@@ -667,7 +667,7 @@ const Dashboard = () => {
                         </div>
                         <div className='DashboardBottom'>
                             <div className='charts'>
-                                {isSolPrice && <>
+                                {isSolPrice && <><div className='chart'>
                                     <h4 className='chartname'>SOL Price</h4>
                                     <ResponsiveContainer width={'99%'} height='99%'>
                                         <AreaChart
@@ -687,8 +687,9 @@ const Dashboard = () => {
                                             <Area type="monotone" dataKey="price" stroke='black' fill="black" />
                                         </AreaChart>
                                     </ResponsiveContainer>
+                                </div>
                                 </>}
-                                {isOGFp && <>
+                                {isOGFp && <><div className='chart'>
                                     <h4 className='chartname'>OG FP</h4>
                                     <ResponsiveContainer width='99%' height='99%'>
                                         <AreaChart
@@ -709,9 +710,9 @@ const Dashboard = () => {
                                             <Tooltip content={<CustomTooltip />} />
                                             <Area type="monotone" dataKey="fp" stroke='black' fill="black" />
                                         </AreaChart>
-                                    </ResponsiveContainer>
+                                    </ResponsiveContainer></div>
                                 </>}
-                                {isOGVol && <>
+                                {isOGVol && <><div className='chart'>
                                     <h4 className='chartname'>OG Volume</h4>
                                     <ResponsiveContainer width='99%' height='99%'>
                                         <AreaChart
@@ -731,8 +732,8 @@ const Dashboard = () => {
                                             </YAxis>
                                             <Tooltip content={<CustomTooltip />} />
                                             <Area type="monotone" dataKey="vol" stroke='black' fill="black" />
-                                        </AreaChart></ResponsiveContainer></>}
-                                {isIcyFp && <>
+                                        </AreaChart></ResponsiveContainer></div></>}
+                                {isIcyFp && <><div className='chart'>
                                     <h4 className='chartname'>Icy FP</h4>
                                     <ResponsiveContainer width='99%' height='99%'>
                                         <AreaChart
@@ -754,119 +755,129 @@ const Dashboard = () => {
                                             <Area type="monotone" dataKey="fp" stroke='black' fill="black" />
                                         </AreaChart>
                                     </ResponsiveContainer>
-                                </>}
+                                </div></>}
                                 {isIcyVol && <>
-                                    <h4 className='chartname'>Icy Volume</h4>
-                                    <ResponsiveContainer width='99%' height='99%'>
-                                        <AreaChart
-                                            width={1500}
-                                            height={300}
-                                            data={icyVolStats}
-                                            margin={{
-                                                top: 10,
-                                                right: 30,
-                                                left: 0,
-                                                bottom: 0,
-                                            }}
-                                        >
-                                            <XAxis dataKey='date' stroke='white'>
-                                            </XAxis>
-                                            <YAxis stroke='white' domain={[0, 5]}>
-                                            </YAxis>
-                                            <Tooltip content={<CustomTooltip />} />
-                                            <Area type="monotone" dataKey="vol" stroke='black' fill="black" />
-                                        </AreaChart></ResponsiveContainer></>}
-                                {isCommunity && <>
-                                    <h4 className='chartname'>Community Wallet Sol Transfers</h4>
-                                    <div className='TableHeadings'>
-                                        <h5 className='headings'>Tx Hash</h5>
-                                        <h5 className='hidden'>hidden text</h5>
-                                        <h5 className='hidden'>hidd</h5>
-                                        <h5 className='headings'>Sender</h5>
-                                        <h5 className='hidden'>hidden text</h5>
-                                        <h5 className='hidden'>hidden </h5>
-                                        <h5 className='headings'>Recipient</h5>
-                                        <h5 className='hidden'>hidden text</h5>
-                                        <h5 className='hidden'>hidden te</h5>
-                                        <h5 className='headings'>Date and Time</h5>
-                                        <h5 className='hidden'>hidden text</h5>
-                                        <h5 className='hidden'>hidd</h5>
-                                        <h5 className='headings'>Sol</h5>
+                                    <div className='chart'>
+                                        <h4 className='chartname'>Icy Volume</h4>
+                                        <ResponsiveContainer width='99%' height='99%'>
+                                            <AreaChart
+                                                width={1500}
+                                                height={300}
+                                                data={icyVolStats}
+                                                margin={{
+                                                    top: 10,
+                                                    right: 30,
+                                                    left: 0,
+                                                    bottom: 0,
+                                                }}
+                                            >
+                                                <XAxis dataKey='date' stroke='white'>
+                                                </XAxis>
+                                                <YAxis stroke='white' domain={[0, 5]}>
+                                                </YAxis>
+                                                <Tooltip content={<CustomTooltip />} />
+                                                <Area type="monotone" dataKey="vol" stroke='black' fill="black" />
+                                            </AreaChart>
+                                        </ResponsiveContainer>
                                     </div>
-                                    <div className='Divider'></div>
-                                    {comTransfers.map(transfer => {
-                                        return (
+                                </>}
+                                {isCommunity && <>
+                                    <div className='Table'>
+                                        <h4 className='chartname'>Community Wallet Sol Transfers</h4>
+                                        <div className='TableHeadings'>
+                                            <h5 className='headings'>Tx Hash</h5>
+                                            <h5 className='hidden'>hidden text</h5>
+                                            <h5 className='hidden'>hidd</h5>
+                                            <h5 className='headings'>Sender</h5>
+                                            <h5 className='hidden'>hidden text</h5>
+                                            <h5 className='hidden'>hidden </h5>
+                                            <h5 className='headings'>Recipient</h5>
+                                            <h5 className='hidden'>hidden text</h5>
+                                            <h5 className='hidden'>hidden te</h5>
+                                            <h5 className='headings'>Date and Time</h5>
+                                            <h5 className='hidden'>hidden text</h5>
+                                            <h5 className='hidden'>hidd</h5>
+                                            <h5 className='headings'>Sol</h5>
+                                        </div>
+                                        <div className='Divider'></div>
+                                        {comTransfers.map(transfer => {
+                                            return (
 
-                                            <div className='Transfers'>
-                                                <a className='links' href={'https://solscan.io/tx/' + transfer.txHash} target='_blank' rel='noreferrer'><h5 className='headings'>{transfer.txHash}</h5></a>
-                                                <a className='links' href={'https://solscan.io/account/' + transfer.src} target='_blank' rel='noreferrer'><h5 className='headings'>{transfer.src}</h5></a>
-                                                <a className='links' href={'https://solscan.io/account/' + transfer.dst} target='_blank' rel='noreferrer'><h5 className='headings'>{transfer.dst}</h5></a>
-                                                <h5 className='headings'>{new Date(transfer.blockTime * 1000).toLocaleDateString()}</h5>
-                                                <h5 className='headings'>{(transfer.lamport / 1000000000)}</h5>
-                                            </div>
-                                        )
-                                    })}
+                                                <div className='Transfers'>
+                                                    <a className='links' href={'https://solscan.io/tx/' + transfer.txHash} target='_blank' rel='noreferrer'><h5 className='headings'>{transfer.txHash}</h5></a>
+                                                    <a className='links' href={'https://solscan.io/account/' + transfer.src} target='_blank' rel='noreferrer'><h5 className='headings'>{transfer.src}</h5></a>
+                                                    <a className='links' href={'https://solscan.io/account/' + transfer.dst} target='_blank' rel='noreferrer'><h5 className='headings'>{transfer.dst}</h5></a>
+                                                    <h5 className='headings'>{new Date(transfer.blockTime * 1000).toLocaleDateString()}</h5>
+                                                    <h5 className='headings'>{(transfer.lamport / 1000000000)}</h5>
+                                                </div>
+                                            )
+                                        })}
+                                    </div>
                                 </>}
                                 {isCarot && <>
-                                    <h4 className='chartname'>Carot Wallet Sol Transfers</h4>
-                                    <div className='TableHeadings'>
-                                        <h5 className='headings'>Tx Hash</h5>
-                                        <h5 className='hidden'>hidden text</h5>
-                                        <h5 className='hidden'>hidd</h5>
-                                        <h5 className='headings'>Sender</h5>
-                                        <h5 className='hidden'>hidden text</h5>
-                                        <h5 className='hidden'>hidden </h5>
-                                        <h5 className='headings'>Recipient</h5>
-                                        <h5 className='hidden'>hidden text</h5>
-                                        <h5 className='hidden'>hidden te</h5>
-                                        <h5 className='headings'>Date and Time</h5>
-                                        <h5 className='hidden'>hidden text</h5>
-                                        <h5 className='hidden'>hidd</h5>
-                                        <h5 className='headings'>Sol</h5>
-                                    </div>
-                                    <div className='Divider'></div>
-                                    {carotTransfers.map(transfer => {
-                                        return (
+                                    <div className='Table'>
+                                        <h4 className='chartname'>Carot Wallet Sol Transfers</h4>
+                                        <div className='TableHeadings'>
+                                            <h5 className='headings'>Tx Hash</h5>
+                                            <h5 className='hidden'>hidden text</h5>
+                                            <h5 className='hidden'>hidd</h5>
+                                            <h5 className='headings'>Sender</h5>
+                                            <h5 className='hidden'>hidden text</h5>
+                                            <h5 className='hidden'>hidden </h5>
+                                            <h5 className='headings'>Recipient</h5>
+                                            <h5 className='hidden'>hidden text</h5>
+                                            <h5 className='hidden'>hidden te</h5>
+                                            <h5 className='headings'>Date and Time</h5>
+                                            <h5 className='hidden'>hidden text</h5>
+                                            <h5 className='hidden'>hidd</h5>
+                                            <h5 className='headings'>Sol</h5>
+                                        </div>
+                                        <div className='Divider'></div>
+                                        {carotTransfers.map(transfer => {
+                                            return (
 
-                                            <div className='Transfers'>
-                                                <a className='links' href={'https://solscan.io/tx/' + transfer.txHash} target='_blank' rel='noreferrer'><h5 className='headings'>{transfer.txHash}</h5></a>
-                                                <a className='links' href={'https://solscan.io/account/' + transfer.src} target='_blank' rel='noreferrer'><h5 className='headings'>{transfer.src}</h5></a>
-                                                <a className='links' href={'https://solscan.io/account/' + transfer.dst} target='_blank' rel='noreferrer'><h5 className='headings'>{transfer.dst}</h5></a>
-                                                <h5 className='headings'>{new Date(transfer.blockTime * 1000).toLocaleDateString()}</h5>
-                                                <h5 className='headings'>{(transfer.lamport / 1000000000)}</h5>
-                                            </div>
-                                        )
-                                    })}
+                                                <div className='Transfers'>
+                                                    <a className='links' href={'https://solscan.io/tx/' + transfer.txHash} target='_blank' rel='noreferrer'><h5 className='headings'>{transfer.txHash}</h5></a>
+                                                    <a className='links' href={'https://solscan.io/account/' + transfer.src} target='_blank' rel='noreferrer'><h5 className='headings'>{transfer.src}</h5></a>
+                                                    <a className='links' href={'https://solscan.io/account/' + transfer.dst} target='_blank' rel='noreferrer'><h5 className='headings'>{transfer.dst}</h5></a>
+                                                    <h5 className='headings'>{new Date(transfer.blockTime * 1000).toLocaleDateString()}</h5>
+                                                    <h5 className='headings'>{(transfer.lamport / 1000000000)}</h5>
+                                                </div>
+                                            )
+                                        })}
+                                    </div>
                                 </>}
                                 {isAlpha && <>
-                                    <h4 className='chartname'>Alpha Wallet Sol Transfers</h4>
-                                    <div className='TableHeadings'>
-                                        <h5 className='headings'>Tx Hash</h5>
-                                        <h5 className='hidden'>hidden text</h5>
-                                        <h5 className='hidden'>hidd</h5>
-                                        <h5 className='headings'>Sender</h5>
-                                        <h5 className='hidden'>hidden text</h5>
-                                        <h5 className='hidden'>hidden </h5>
-                                        <h5 className='headings'>Recipient</h5>
-                                        <h5 className='hidden'>hidden text</h5>
-                                        <h5 className='hidden'>hidden te</h5>
-                                        <h5 className='headings'>Date and Time</h5>
-                                        <h5 className='hidden'>hidden text</h5>
-                                        <h5 className='hidden'>hidd</h5>
-                                        <h5 className='headings'>Sol</h5>
+                                    <div className='Table'>
+                                        <h4 className='chartname'>Alpha Wallet Sol Transfers</h4>
+                                        <div className='TableHeadings'>
+                                            <h5 className='headings'>Tx Hash</h5>
+                                            <h5 className='hidden'>hidden text</h5>
+                                            <h5 className='hidden'>hidd</h5>
+                                            <h5 className='headings'>Sender</h5>
+                                            <h5 className='hidden'>hidden text</h5>
+                                            <h5 className='hidden'>hidden </h5>
+                                            <h5 className='headings'>Recipient</h5>
+                                            <h5 className='hidden'>hidden text</h5>
+                                            <h5 className='hidden'>hidden te</h5>
+                                            <h5 className='headings'>Date and Time</h5>
+                                            <h5 className='hidden'>hidden text</h5>
+                                            <h5 className='hidden'>hidd</h5>
+                                            <h5 className='headings'>Sol</h5>
+                                        </div>
+                                        <div className='Divider'></div>
+                                        {alphaTransfers.map(transfer => {
+                                            return (
+                                                <div className='Transfers'>
+                                                    <a className='links' href={'https://solscan.io/tx/' + transfer.txHash} target='_blank' rel='noreferrer'><h5 className='headings'>{transfer.txHash}</h5></a>
+                                                    <a className='links' href={'https://solscan.io/account/' + transfer.src} target='_blank' rel='noreferrer'><h5 className='headings'>{transfer.src}</h5></a>
+                                                    <a className='links' href={'https://solscan.io/account/' + transfer.dst} target='_blank' rel='noreferrer'><h5 className='headings'>{transfer.dst}</h5></a>
+                                                    <h5 className='headings'>{new Date(transfer.blockTime * 1000).toLocaleDateString()}</h5>
+                                                    <h5 className='headings'>{(transfer.lamport / 1000000000)}</h5>
+                                                </div>
+                                            )
+                                        })}
                                     </div>
-                                    <div className='Divider'></div>
-                                    {alphaTransfers.map(transfer => {
-                                        return (
-                                            <div className='Transfers'>
-                                                <a className='links' href={'https://solscan.io/tx/' + transfer.txHash} target='_blank' rel='noreferrer'><h5 className='headings'>{transfer.txHash}</h5></a>
-                                                <a className='links' href={'https://solscan.io/account/' + transfer.src} target='_blank' rel='noreferrer'><h5 className='headings'>{transfer.src}</h5></a>
-                                                <a className='links' href={'https://solscan.io/account/' + transfer.dst} target='_blank' rel='noreferrer'><h5 className='headings'>{transfer.dst}</h5></a>
-                                                <h5 className='headings'>{new Date(transfer.blockTime * 1000).toLocaleDateString()}</h5>
-                                                <h5 className='headings'>{(transfer.lamport / 1000000000)}</h5>
-                                            </div>
-                                        )
-                                    })}
                                 </>}
                             </div>
                         </div>
