@@ -10,7 +10,7 @@ import {
     TorusWalletAdapter,
 } from '@solana/wallet-adapter-wallets';
 import { clusterApiUrl } from '@solana/web3.js';
-import React, { FC, ReactNode, useMemo } from 'react';
+import React, { FC, ReactNode, useMemo, useState, useEffect } from 'react';
 import Navbar from './components/Navbar'
 import Shop from './components/Shop'
 import { HashRouter, Routes, Route } from 'react-router-dom'
@@ -24,17 +24,35 @@ import Gallery from './Pages/Gallery';
 import Slots from './Pages/Slots';
 import Dashboard from './Pages/Dashboard';
 import Home from './Pages/Home';
+import Navbar2 from './components/Navbar2'
 
 
 require('./App.css')
 require('@solana/wallet-adapter-react-ui/styles.css');
 
 const App: FC = () => {
+
+    
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth)
+
+    useEffect(() => {
+        const changeWidth = () => {
+          setScreenWidth(window.innerWidth);
+        }
+        window.addEventListener('resize', changeWidth)
+        return () => {
+          window.removeEventListener('resize', changeWidth)
+        }
+      }, [])
+
+      
+
     return (
         <div className='App'>
             <HashRouter>
                 <Context>
-                    <Navbar />
+                    { (screenWidth > 755) ? (<Navbar2 />) : (<Navbar/>)}
+                    
                     <Content/>    
                 </Context>
             </HashRouter>
