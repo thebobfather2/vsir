@@ -113,7 +113,7 @@ a {
         background: transparent !important;
     }
 nav{
-    background-color: transparent;
+    background-color: black;
 }
     .list {
         flex-direction: column;
