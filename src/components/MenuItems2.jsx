@@ -15,6 +15,11 @@ export const MenuItems2 = [
       cName: 'dropdown-link'
     },
     {
+      title: "$CAROT Marketplace",
+      path: '/Carot-Market',
+      cName: 'dropdown-link'
+    },
+    {
       title: '$CAROT Send',
       path: '/Send',
       cName: 'dropdown-link'
