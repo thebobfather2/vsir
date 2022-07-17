@@ -25,6 +25,7 @@ import Slots from './Pages/Slots';
 import Dashboard from './Pages/Dashboard';
 import Home from './Pages/Home';
 import Navbar2 from './components/Navbar2'
+import CarotMarket from './Pages/CarotMarket';
 
 
 require('./App.css')
@@ -107,6 +108,7 @@ const Content: FC = () => {
                 <Route path="/Slots" element={<Slots />} />
                 <Route path="/Gallery" element={<Gallery />} />
                 <Route path="/Dashboard" element={<Dashboard />} />
+                <Route path="/Carot-Market" element={<CarotMarket />} />
             </Routes>
         </>
     );
