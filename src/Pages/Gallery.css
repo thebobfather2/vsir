@@ -21,11 +21,11 @@
     background-image: linear-gradient(123deg, #FAD961 0%, #F76B1C 100%);
     box-shadow: 0 0 8px black;
     position: relative;
-
+    margin-top: 10px;
 }
 
 .Viewing {
-    margin-top: -20px;
+    margin-top: 0;
 }
 
 .inputs {
@@ -55,7 +55,7 @@
 }
 
 .gallery {
-    width: 85%;
+    width: 90%;
     background-color: #FAD961;
     background-image: linear-gradient(123deg, #FAD961 0%, #F76B1C 100%);
     box-shadow: 0 0 8px black;
@@ -76,8 +76,6 @@
 
 .circprog {
     margin-top: 150px;
-
-
 }
 
 .nftsgrid {

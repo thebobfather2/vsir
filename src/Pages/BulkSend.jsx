@@ -184,8 +184,8 @@ const BulkSend = () => {
                 <div className='BulkPurchase'>
                     <h1>Send Your NFTs</h1>
                     <h3>Approximately 0.005 SOL per nft </h3>
-                    <h5 style={{ marginTop: '-15px' }}>(Solana fees + Small Usage fee)</h5>
-                    <h4 style={{ marginTop: '-5px', marginBottom: '35px' }}>*Service is free for Bobby Rabbits Holders*</h4>
+                    <h5 >(Solana fees + Small Usage fee)</h5>
+                    <h4 style={{marginBottom: '35px' }}>*Service is free for Bobby Rabbits Holders*</h4>
                     <TextField
                         required
                         className='toWallet'
