@@ -15,7 +15,7 @@
 }
 
 .CleanerDescription {
-    margin-top: -40px;
+    margin-top: 0;
 }
 
 .CleanerContainer {
@@ -130,7 +130,7 @@
 }
 
 .warning {
-    margin-top: -10px;
+    margin-top: 0;
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 10px;
@@ -210,6 +210,8 @@
 
 .Fees {
     color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .closeAccounts {
