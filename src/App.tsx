@@ -26,6 +26,7 @@ import Dashboard from './Pages/Dashboard';
 import Home from './Pages/Home';
 import Navbar2 from './components/Navbar2'
 import CarotMarket from './Pages/CarotMarket';
+import CansMarket from './Pages/CansMarket';
 
 
 require('./App.css')
@@ -109,6 +110,7 @@ const Content: FC = () => {
                 <Route path="/Gallery" element={<Gallery />} />
                 <Route path="/Dashboard" element={<Dashboard />} />
                 <Route path="/Carot-Market" element={<CarotMarket />} />
+                <Route path="/Cans-Market" element={<CansMarket />} />
             </Routes>
         </>
     );

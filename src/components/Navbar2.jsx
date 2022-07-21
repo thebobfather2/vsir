@@ -91,7 +91,7 @@ function Navbar() {
               className='nav-links'
               onClick={closeMobileMenu}
             >
-              $CAROT Utility
+              Rabbit Utility
             </Link>
             {dropdown2 && <Dropdown2 />}
           </li>
