@@ -115,7 +115,7 @@ const Shop = () => {
           </div>
           <div className='Category'>
             <div className='CategoryTitle'>
-              <h2 className='CatTitle'>Carot Utility</h2>
+              <h2 className='CatTitle'>Rabbit Utility</h2>
               <div className='underline'></div>
             </div>
             <div className='menuItems'>
@@ -133,6 +133,16 @@ const Shop = () => {
             <div className='items1'>
             <Link to='/Dashboard'><h3 className='eachMenuItem'>Holder's Dashboard</h3></Link>
               <h3 className='Prices'>Must Own OG or Icy Rabbit</h3>
+              </div>
+              <div className='itemsUnderline'></div>
+            <div className='items1'>
+            <Link to='/Carot-Market'><h3 className='eachMenuItem'>$CAROT Marketplace</h3></Link>
+              <h3 className='Prices'>Individually Priced</h3>
+              </div>
+              <div className='itemsUnderline'></div>
+            <div className='items1'>
+            <Link to='/Cans-Market'><h3 className='eachMenuItem'>$CANS Marketplace</h3></Link>
+              <h3 className='Prices'>Individually Priced</h3>
               </div>
               <div className='itemsUnderline'></div>
            

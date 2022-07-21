@@ -20,6 +20,11 @@ export const MenuItems2 = [
       cName: 'dropdown-link'
     },
     {
+      title: "$CANS Marketplace",
+      path: '/Cans-Market',
+      cName: 'dropdown-link'
+    },
+    {
       title: '$CAROT Send',
       path: '/Send',
       cName: 'dropdown-link'

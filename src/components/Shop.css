@@ -39,7 +39,7 @@
   letter-spacing: 6px;
   text-transform: uppercase;
   text-align: center;
-  margin: 0;
+ 
   display: block;
   -webkit-mask-image: url('../images/texture.svg');
   -moz-mask-image: url('../images/texture.svg');
@@ -51,7 +51,7 @@
 
 .menuSubtitle {
   font-size: 2rem;
-  margin-top: -40px;
+  
 }
 .Category{
   margin-left: 40px;
@@ -80,7 +80,7 @@
 .underline {
   width: 100%;
   height: 3px;
-  margin-top: -30px;
+ 
   background-color: white;
   margin-left: 0px;
   -webkit-mask-image: url('../images/texture.svg');
@@ -92,7 +92,7 @@
 .itemsUnderline {
   width: 90%;
   height: 3px;
-  margin-top: -20px;
+  
   background-color: white;
   margin-left: 40px;
   -webkit-mask-image: url('../images/texture.svg');
@@ -108,7 +108,7 @@
   align-items: baseline;
   margin-left: 40px;
   margin-right: 40px;
-  margin-top: -20px;
+  margin-top: 10px;
   -webkit-mask-image: url('../images/texture.svg');
   -moz-mask-image: url('../images/texture.svg');
   -o-mask-image: url('../images/texture.svg');
