@@ -14,4 +14,9 @@ export const MenuItems = [
       path: '/Gallery',
       cName: 'dropdown-link'
     },
+    {
+      title: 'NFT Minter',
+      path: '/nft-minter',
+      cName: 'dropdown-link'
+    },
   ];
