@@ -5,8 +5,13 @@ export const MenuItems2 = [
       cName: 'dropdown-link'
     },
     {
-      title: '$CAROT Slots',
+      title: 'Slots',
       path: '/Slots',
+      cName: 'dropdown-link'
+    },
+    {
+      title: 'Coin Flip',
+      path: '/Flip',
       cName: 'dropdown-link'
     },
     {

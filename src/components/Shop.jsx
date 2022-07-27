@@ -129,6 +129,11 @@ const Shop = () => {
               <h3 className='Prices'>Minimum bet 1 $CAROT Coin</h3>
               </div>
               <div className='itemsUnderline'></div>
+              <div className='items1'>
+            <Link to='/Flip'><h3 className='eachMenuItem'>Coin Flip</h3></Link>
+              <h3 className='Prices'>Minimum bet 1 $CAROT Coin</h3>
+              </div>
+              <div className='itemsUnderline'></div>
             </div>
             <div className='items1'>
             <Link to='/Dashboard'><h3 className='eachMenuItem'>Holder's Dashboard</h3></Link>

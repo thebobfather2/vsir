@@ -440,7 +440,7 @@ const Slots = () => {
     function rand() {
         let randomNumber = Math.floor(Math.random() * (100-1)+1)
         console.log(randomNumber)
-        if (randomNumber < 75 ){
+        if (randomNumber < 85 ){
         setRing1(Math.floor(Math.random() * (100 - 1) + 1))
         setTimeout(function () { setRing2(Math.floor(Math.random() * (100 - 1) + 1)) }, 1000)
         setTimeout(function () { setRing3(Math.floor(Math.random() * (100 - 1) + 1)) }, 2000)
@@ -449,7 +449,6 @@ const Slots = () => {
         setTimeout(function () { setRing2(45) }, 1000)
         setTimeout(function () { setRing3(45) }, 2000)
         }
-
     }
 
     const sendCarot = useCallback(async () => {
