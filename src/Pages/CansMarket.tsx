@@ -5,7 +5,7 @@ import { useAnchorWallet } from "@solana/wallet-adapter-react";
 import {
   CANDY_SHOP_CREATOR_ADDRESS,
   CANDY_SHOP_TREASURY_MINT_CANS,
-  CANDY_SHOP_PROGRAM_ID,
+  CANDY_SHOP_PROGRAM_ID_CANS,
   NETWORK,
 } from "../components/candy-shop-cans";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
@@ -19,7 +19,7 @@ const CansMarket: React.FC = () => {
     new CandyShop({
       candyShopCreatorAddress: CANDY_SHOP_CREATOR_ADDRESS,
       treasuryMint: CANDY_SHOP_TREASURY_MINT_CANS,
-      candyShopProgramId: CANDY_SHOP_PROGRAM_ID,
+      candyShopProgramId: CANDY_SHOP_PROGRAM_ID_CANS,
       env: NETWORK,
       // pass additional settings param to configure shop display
       settings: {
