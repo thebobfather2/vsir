@@ -40,17 +40,23 @@ const Navbar = () => {
             <br></br><br></br>
             <Link to='/' onClick={toggleNav}> <li className='listItem'>Home</li></Link>
             <Link to='/Shop' onClick={toggleNav}> <li className='listItem'>The Shop</li></Link>
-            <Link to='/Custom' onClick={toggleNav}> <li className='listItem'>Custom</li></Link>
-            <Link to='/Send' onClick={toggleNav}> <li className='listItem'>Send $CAROT</li></Link>
+            <br></br>
+            <h1 style={{ textDecoration: 'underline', fontSize: '1.8em', color: 'orange' }}>Solana Tools</h1>
+            <br></br>
             <Link to='/BulkSend' onClick={toggleNav} > <li className='listItem'>Bulk Send</li></Link>
             <Link to='/Cleaner' onClick={toggleNav}> <li className='listItem'>Wallet Cleaner</li></Link>
             <Link to='/Gallery' onClick={toggleNav}> <li className='listItem'>Gallery</li></Link>
+            <Link to='/Uploader' onClick={toggleNav}> <li className='listItem'>Arweave Uploader</li></Link>
+            <br></br>
+            <h1 style={{ textDecoration: 'underline', fontSize: '1.8em', color: 'orange' }}>Rabbit Tools</h1>
+            <br></br>
+            <Link to='/Custom' onClick={toggleNav}> <li className='listItem'>Custom</li></Link>
+            <Link to='/Send' onClick={toggleNav}> <li className='listItem'>Send $CAROT</li></Link>
             <Link to='/Slots' onClick={toggleNav}> <li className='listItem'>Slots</li></Link>
             <Link to='/Flip' onClick={toggleNav}> <li className='listItem'>Coin Flip</li></Link>
             <Link to='/Dashboard' onClick={toggleNav}> <li className='listItem'>Dashboard</li></Link>
             <Link to='/Carot-Market' onClick={toggleNav}> <li className='listItem'>$CAROT Marketplace</li></Link>
             <Link to='/Cans-Market' onClick={toggleNav}> <li className='listItem'>$CANS Marketplace</li></Link>
-            <Link to='/Uploader' onClick={toggleNav}> <li className='listItem'>Nft Minter</li></Link>
             <a href='https://magiceden.io/marketplace/bobbyrabbits' target="_blank" rel="noreferrer" onClick={toggleNav}> <li className='listItem'>Buy A Rabbit</li></a>
             <br></br>
             <WalletModalProvider>

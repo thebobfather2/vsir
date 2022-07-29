@@ -1,16 +1,4 @@
-:root {
-    --gradient-shadow: linear-gradient(45deg,
-            #fb0094,
-            #0000ff,
-            #00ff00,
-            #ffff00,
-            #ff0000,
-            #fb0094,
-            #0000ff,
-            #00ff00,
-            #ffff00,
-            #ff0000);
-}
+
 
 .CoinFlipMain {
     min-height: 100vh;
@@ -182,18 +170,19 @@
         transform: rotatex(90deg);
     }
 }
-@media screen and (max-width: 500 ) {
+@media (max-width: 500px) {
     .balances {
-        display: flex;
-        justify-content: center;
+        position: static !important;
+        justify-content: center !important;
         margin-bottom: 30px;
+        height: 50px;
         align-items: center;
     }
     .carotBalance {
         border-radius: 10px;
         border: 2px rgb(255, 255, 255) solid;
-        padding: 10px;
-        margin: 10px;
+        padding: 5px;
+        margin: 5px;
         color: white;
         font-weight: bold;
     }
