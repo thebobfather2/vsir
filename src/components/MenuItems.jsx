@@ -14,4 +14,9 @@ export const MenuItems = [
       path: '/Gallery',
       cName: 'dropdown-link'
     },
+    {
+      title: 'Arweave Uploader',
+      path: '/Uploader',
+      cName: 'dropdown-link'
+    },
   ];

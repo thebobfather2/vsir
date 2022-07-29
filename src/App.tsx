@@ -27,6 +27,8 @@ import Home from './Pages/Home';
 import Navbar2 from './components/Navbar2'
 import CarotMarket from './Pages/CarotMarket';
 import CansMarket from './Pages/CansMarket';
+import NftMinter from './Pages/NftMinter';
+import { Connection } from '@solana/web3.js'
 import CoinFlip from './Pages/CoinFlip';
 
 
@@ -112,6 +114,7 @@ const Content: FC = () => {
                 <Route path="/Dashboard" element={<Dashboard />} />
                 <Route path="/Carot-Market" element={<CarotMarket />} />
                 <Route path="/Cans-Market" element={<CansMarket />} />
+                <Route path="/Uploader" element={<NftMinter />} />
                 <Route path="/Flip" element={<CoinFlip />} />
             </Routes>
         </>

@@ -136,7 +136,7 @@
 .Loser {
     margin-top: 10px;
     min-height: 70px;
-    min-width: 300px;
+    min-width: 500px;
     display: flex;
     flex-direction: column;
     color: white;
@@ -181,4 +181,21 @@
     100% {
         transform: rotatex(90deg);
     }
+}
+@media screen and (max-width: 500 ) {
+    .balances {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+        align-items: center;
+    }
+    .carotBalance {
+        border-radius: 10px;
+        border: 2px rgb(255, 255, 255) solid;
+        padding: 10px;
+        margin: 10px;
+        color: white;
+        font-weight: bold;
+    }
+    
 }

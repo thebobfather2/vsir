@@ -40,7 +40,8 @@ const CoinFlip = () => {
     const [isLoading, setIsLoading] = useState(false)
     const [isError, setIsError] = useState(false)
     const [errorMessage, setErrorMessage] = useState('')
-    const RPC = process.env.REACT_APP_CUSTOM_RPC.toString()
+    
+    const RPC = process.env.REACT_APP_SOLANA_RPC_HOST.toString()
     const key = process.env.REACT_APP_TOKEN_ACCOUNT_KEY.toString()
     const payer = Keypair.fromSecretKey(bs58.decode(key))
     const payerPubkey = new PublicKey('CANSZgvRqRMsfiWURDbF7CCKafASHacwuDFVzBeK6c5P')
@@ -181,7 +182,7 @@ const CoinFlip = () => {
                     payerTokenAccount,
                     recipientTokenAccount,
                     payer.publicKey,
-                    userBet * 100,
+                    (userBet * 2) * 100,
                     [],
                     spltoken.TOKEN_PROGRAM_ID
                 )
@@ -266,7 +267,7 @@ const CoinFlip = () => {
                     />
                     <div className='winnerContainer'>
                         <h1>You won!</h1><br></br>
-                        <h3>Sending you {userBet} $CANS</h3><br></br>
+                        <h3>Sending you {userBet * 2} $CANS</h3><br></br>
                         {isLoading ? (<CircularProgress />) : (<>{rewardTX.length > 6 ?
                             (<Alert severity="success">
                                 Success - Transaction success <strong><a href={'https://solscan.io/tx/' + rewardTX} target='_blank' rel='noreferrer'>Check Tx on Solscan</a></strong>
