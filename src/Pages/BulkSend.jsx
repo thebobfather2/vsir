@@ -12,7 +12,7 @@ import * as spltoken from "@solana/spl-token";
 import CircularProgress from '@mui/material/CircularProgress';
 import rabbitFilter from '../filter.json'
 import refresh from '../images/refresh.png'
-import { set } from '@project-serum/anchor/dist/cjs/utils/features'
+
 
 const BulkSend = () => {
 

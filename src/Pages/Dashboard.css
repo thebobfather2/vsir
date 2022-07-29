@@ -56,7 +56,7 @@
 .DashboardTitle{
     font-size: 1.5em;
     position: absolute;
-    top: -70px;
+    top: -50px;
 }
 .DashboardTop{
     display: flex;
@@ -194,11 +194,10 @@
 .coinInfo{
     display: flex;
     flex-direction: column;
-    margin-top: 5px;
+    margin-top: 40px;
+    margin-bottom: 30px;
 }
-.SolPrice{
-    margin-top: -20px;
-}
+
 
 @keyframes fadeIn {
     0% { opacity: 0; }
@@ -237,15 +236,16 @@ z-index: 5;
 }
 .walletInfo{
     display: flex;
-    margin-top: 5px;
+    margin-top: 30px;
 }
 .walletUSD{
-    margin-top: -20px;
+    
     color: rgb(255, 255, 255);
+    margin-bottom: 10px;
 }
 .MyRabbitsText{
     position: absolute;
-    top: -10px;
+    top: 0;
     left: 10px;
 }
 .showRabbits{
@@ -373,6 +373,12 @@ z-index: 5;
   @media screen and (max-width: 500px) {
     .DashboardBottom{
         display: none;
+    }
+    .DashboardMainContainer{
+        width: 90%;
+    }
+    .pricesContainer{
+        margin-top: 300px;
     }
     .miniGallery{
         max-width: 50%;

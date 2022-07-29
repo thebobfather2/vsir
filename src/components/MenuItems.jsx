@@ -15,8 +15,8 @@ export const MenuItems = [
       cName: 'dropdown-link'
     },
     {
-      title: 'NFT Minter',
-      path: '/nft-minter',
+      title: 'Arweave Uploader',
+      path: '/Uploader',
       cName: 'dropdown-link'
     },
   ];

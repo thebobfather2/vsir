@@ -32,6 +32,7 @@
         "nft.storage": "^6.4.1",
         "path-browserify": "^1.0.1",
         "react": "^17.0.2",
+        "react-confetti": "^6.1.0",
         "react-countdown": "^2.3.2",
         "react-dom": "^17.0.2",
         "react-dropzone": "^14.2.2",
