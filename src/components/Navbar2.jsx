@@ -97,6 +97,17 @@ function Navbar() {
           </li>
           <li className='nav-item'>
             <a
+              href='https://staking.bobbyrabbits.com/Ez48cYcSD9frsKPkModPtWVmpHHSPnaBi5akzYacosgQ'
+              className='nav-links'
+              target="_blank"
+              rel='noreferrer'
+              onClick={closeMobileMenu}
+            >
+              Icy Staking
+            </a>
+          </li>
+          <li className='nav-item'>
+            <a
               href='https://magiceden.io/marketplace/bobbyrabbits'
               className='nav-links'
               target="_blank"
