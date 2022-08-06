@@ -161,7 +161,21 @@ const Shop = () => {
               <h3 className='Prices'>Typical Solana Transaction Fee</h3>
               </div>
               <div className='itemsUnderline'></div>
+              
           </div>
+          <div className='Category'>
+            <div className='CategoryTitle'>
+              <h2 className='CatTitle'>Icy Rabbits</h2>
+              <div className='underline'></div>
+            </div>
+            <div className='menuItems'>
+            <div className='items1'>
+              <a  href='https://staking.bobbyrabbits.com/Ez48cYcSD9frsKPkModPtWVmpHHSPnaBi5akzYacosgQ' target="_blank" rel='noreferrer'><h3 className='eachMenuItem'>Icy Rabbit Staking</h3></a>
+              <h3 className='Prices'>Must Own an Icy Rabbit</h3>
+              </div>
+              <div className='itemsUnderline'></div>
+            </div>
+            </div>
         </div>
       
       {/* <div className='toolsContainer'>
