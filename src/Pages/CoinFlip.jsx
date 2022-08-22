@@ -285,7 +285,7 @@ const CoinFlip = () => {
                 <br></br>
                 <h3>Use $CAROT to Win $CANS</h3>
                 <br></br>
-                {flipping ? (<img className='coinFlipping' src={carot} alt='coinflip' />) : (<>{(number === 0) ? (<img className='headOrTails' src={tailsCoin} alt='tailsCoin' />) : (number === 1) ? (<img className='headOrTails' src={headsCoin} alt='heads Coin' />) : (<img className='headOrTails' src={carot} alt='carotCoin' />)}</>)}
+                flipping{ ? (<img className='coinFlipping' src={carot} alt='coinflip' />) : (<>{(number === 0) ? (<img className='headOrTails' src={tailsCoin} alt='tailsCoin' />) : (number === 1) ? (<img className='headOrTails' src={headsCoin} alt='heads Coin' />) : (<img className='headOrTails' src={carot} alt='carotCoin' />)}</>)}
                 <br></br>
                 <h3>Heads or Tails?</h3>
                 <div className='choices'>
