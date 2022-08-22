@@ -62,11 +62,7 @@ function Navbar() {
           <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
         </div>
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-          <li className='nav-item'>
-            <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-              Home
-            </Link>
-          </li>
+
           <li
             className='nav-item'
             onMouseEnter={onMouseEnterTools}
@@ -95,6 +91,13 @@ function Navbar() {
             </Link>
             {dropdown2 && <Dropdown2 />}
           </li>
+
+          <li className='nav-item'>
+            <Link to='/EddFox' className='nav-links' onClick={closeMobileMenu}>
+              Edd Fox
+            </Link>
+          </li>
+
           <li className='nav-item'>
             <a
               href='https://staking.bobbyrabbits.com/Ez48cYcSD9frsKPkModPtWVmpHHSPnaBi5akzYacosgQ'
