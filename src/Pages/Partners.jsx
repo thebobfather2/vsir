@@ -8,7 +8,7 @@ const Partners = () => {
     {
       name: "Edd Fox",
       image: eddFox,
-      path: "/EddFox",
+      path: "/EddHome",
       primaryColor: "blue",
     },
   ];

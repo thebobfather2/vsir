@@ -1,0 +1,35 @@
+.EddHomeMainContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-image: url('../images/FoxFactory.png');
+    object-fit: contain;
+    height: 100vh;
+    color: antiquewhite;
+}
+
+.EddHomeTitle {
+    font-family: 'Fredoka One', cursive;
+    font-size: 4em;
+    text-align: center;
+    color: antiquewhite;
+}
+
+.family {
+    width: 200px;
+    height: 200px;
+}
+
+.EddGIF {
+    width: 300px;
+    height: 300px;
+}
+
+.Discord {
+    width: 274px;
+    height: 154px;
+}
