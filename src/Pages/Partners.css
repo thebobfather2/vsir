@@ -1,0 +1,24 @@
+.partnersMain {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+}
+.BulkTitle {
+  font-family: "Fredoka One", cursive;
+  font-size: 4em;
+  text-align: center;
+}
+.partnerContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 60%;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.partnerCard:hover {
+  cursor: pointer;
+}

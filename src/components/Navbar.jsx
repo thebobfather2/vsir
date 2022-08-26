@@ -35,65 +35,68 @@ const Navbar = () => {
       {toggleMenu || screenWidth > 755 ? (
         <>
           <Link to="/">
-            {" "}
             <img className="navlogo" src={br} alt="logo" />
           </Link>
           <ul className="list">
             <br></br>
             <br></br>
-            <Link to="/" onClick={toggleNav}>
-              <li className="listItem">Home</li>
-            </Link>
             <Link to="/Shop" onClick={toggleNav}>
-              <li className="listItem">The Shop</li>
+              <h1
+                style={{
+                  textDecoration: "underline",
+                  fontSize: "1.8em",
+                  color: "orange",
+                }}
+              >
+                Solana Tools
+              </h1>
             </Link>
             <br></br>
-            <h1
+            <Link to="/Shop" onClick={toggleNav}>
+              <h1
+                style={{
+                  textDecoration: "underline",
+                  fontSize: "1.8em",
+                  color: "orange",
+                }}
+              >
+                Utility
+              </h1>
+            </Link>
+            <br></br>
+            <Link to="/Partners" onClick={toggleNav}>
+              <h1
+                style={{
+                  textDecoration: "underline",
+                  fontSize: "1.8em",
+                  color: "orange",
+                }}
+              >
+                Partners
+              </h1>
+            </Link>
+            <br></br>
+
+            <a
+              href="https://staking.bobbyrabbits.com/"
+              target="_blank"
+              rel="noreferrer"
+              onClick={toggleNav}
               style={{
                 textDecoration: "underline",
                 fontSize: "1.8em",
                 color: "orange",
               }}
             >
-              Solana Tools
-            </h1>
-            <br></br>
-            <Link to="/Custom" onClick={toggleNav}>
-              {" "}
-              <li className="listItem">Custom</li>
-            </Link>
-            <Link to="/Send" onClick={toggleNav}>
-              {" "}
-              <li className="listItem">Send $CAROT</li>
-            </Link>
-            <Link to="/Slots" onClick={toggleNav}>
-              {" "}
-              <li className="listItem">Slots</li>
-            </Link>
-            <Link to="/Flip" onClick={toggleNav}>
-              {" "}
-              <li className="listItem">Coin Flip</li>
-            </Link>
-            <Link to="/Dashboard" onClick={toggleNav}>
-              {" "}
-              <li className="listItem">Dashboard</li>
-            </Link>
-            <Link to="/Carot-Market" onClick={toggleNav}>
-              {" "}
-              <li className="listItem">$CAROT Marketplace</li>
-            </Link>
-            <Link to="/Cans-Market" onClick={toggleNav}>
-              {" "}
-              <li className="listItem">$CANS Marketplace</li>
-            </Link>
-            <a
-              href="https://staking.bobbyrabbits.com/"
-              target="_blank"
-              rel="noreferrer"
-              onClick={toggleNav}
-            >
-              {" "}
-              <li className="listItem">Icy Staking</li>
+              <h1
+                style={{
+                  textDecoration: "underline",
+                  fontSize: "1em",
+                  color: "orange",
+                }}
+              >
+                Staking
+              </h1>
             </a>
             <br></br>
             <h1
@@ -112,7 +115,6 @@ const Navbar = () => {
               rel="noreferrer"
               onClick={toggleNav}
             >
-              {" "}
               <li className="listItem">Buy An Icy Rabbit</li>
             </a>
             <a
@@ -121,7 +123,6 @@ const Navbar = () => {
               rel="noreferrer"
               onClick={toggleNav}
             >
-              {" "}
               <li className="listItem">Buy A Rabbit</li>
             </a>
             <br></br>
