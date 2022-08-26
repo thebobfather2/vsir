@@ -57,12 +57,11 @@ const Navbar = () => {
             <Link to='/Dashboard' onClick={toggleNav}> <li className='listItem'>Dashboard</li></Link>
             <Link to='/Carot-Market' onClick={toggleNav}> <li className='listItem'>$CAROT Marketplace</li></Link>
             <Link to='/Cans-Market' onClick={toggleNav}> <li className='listItem'>$CANS Marketplace</li></Link>
+            <a href='https://staking.bobbyrabbits.com/' target="_blank" rel="noreferrer" onClick={toggleNav}> <li className='listItem'>Icy Staking</li></a>
             <br></br>
-            <h1 style={{ textDecoration: 'underline', fontSize: '1.8em', color: 'orange' }}>Icy Rabbits</h1>
+            <h1 style={{ textDecoration: 'underline', fontSize: '1.8em', color: 'orange' }}>Buy Rabbits</h1>
             <br></br>
-            <a href='https://staking.bobbyrabbits.com/Ez48cYcSD9frsKPkModPtWVmpHHSPnaBi5akzYacosgQ' target="_blank" rel="noreferrer" onClick={toggleNav}> <li className='listItem'>Icy Staking</li></a>
             <a href='https://magiceden.io/marketplace/icyrabbits' target="_blank" rel="noreferrer" onClick={toggleNav}> <li className='listItem'>Buy An Icy Rabbit</li></a>
-            <br></br>
             <a href='https://magiceden.io/marketplace/bobbyrabbits' target="_blank" rel="noreferrer" onClick={toggleNav}> <li className='listItem'>Buy A Rabbit</li></a>
             <br></br>
             <WalletModalProvider>

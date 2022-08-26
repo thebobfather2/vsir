@@ -97,13 +97,13 @@ function Navbar() {
           </li>
           <li className='nav-item'>
             <a
-              href='https://staking.bobbyrabbits.com/Ez48cYcSD9frsKPkModPtWVmpHHSPnaBi5akzYacosgQ'
+              href='https://staking.bobbyrabbits.com/'
               className='nav-links'
               target="_blank"
               rel='noreferrer'
               onClick={closeMobileMenu}
             >
-              Icy Staking
+              Staking
             </a>
           </li>
           <li className='nav-item'>
