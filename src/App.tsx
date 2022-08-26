@@ -30,6 +30,7 @@ import CansMarket from './Pages/CansMarket';
 import NftMinter from './Pages/NftMinter';
 import { Connection } from '@solana/web3.js'
 import CoinFlip from './Pages/CoinFlip';
+import EddFox from './Pages/EddFox';
 
 
 require('./App.css')
@@ -116,6 +117,7 @@ const Content: FC = () => {
                 <Route path="/Cans-Market" element={<CansMarket />} />
                 <Route path="/Uploader" element={<NftMinter />} />
                 <Route path="/Flip" element={<CoinFlip />} />
+                <Route path="/EddFox" element={<EddFox />} />
             </Routes>
         </>
     );
