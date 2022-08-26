@@ -288,6 +288,7 @@ const CoinFlip = () => {
                 {flipping ? (<img className='coinFlipping' src={carot} alt='coinflip' />) : (<>{(number === 0) ? (<img className='headOrTails' src={tailsCoin} alt='tailsCoin' />) : (number === 1) ? (<img className='headOrTails' src={headsCoin} alt='heads Coin' />) : (<img className='headOrTails' src={carot} alt='carotCoin' />)}</>)}
                 <br></br>
                 <h3>Heads or Tails?</h3>
+                <h3>Heads or Tails?</h3>
                 <div className='choices'>
                     {(userSelection === 'heads') ? (<><Button className='flipchosen'>Heads</Button>
                         <Button className='flip' onClick={() => { setUserSelection("tails") }}>Tails</Button>
