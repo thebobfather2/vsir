@@ -58,6 +58,9 @@ const Navbar = () => {
             <Link to='/Carot-Market' onClick={toggleNav}> <li className='listItem'>$CAROT Marketplace</li></Link>
             <Link to='/Cans-Market' onClick={toggleNav}> <li className='listItem'>$CANS Marketplace</li></Link>
             <br></br>
+            <h1 style={{ textDecoration: 'underline', fontSize: '1.8em', color: 'orange' }}>Edd Fox</h1>
+            <Link to='/EddFox' onClick={toggleNav} > <li className='listItem'>Edd Fox</li></Link>
+            <br></br>
             <h1 style={{ textDecoration: 'underline', fontSize: '1.8em', color: 'orange' }}>Icy Rabbits</h1>
             <br></br>
             <a href='https://staking.bobbyrabbits.com/Ez48cYcSD9frsKPkModPtWVmpHHSPnaBi5akzYacosgQ' target="_blank" rel="noreferrer" onClick={toggleNav}> <li className='listItem'>Icy Staking</li></a>
