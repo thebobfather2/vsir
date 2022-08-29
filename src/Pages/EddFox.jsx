@@ -1,16 +1,26 @@
 import React from "react";
 import family from "../images/family.png";
-import nftc from "../images/nftc.png";
+import EddGIF from "../images/EddGIF.gif";
 import "./EddFox.css";
 
 const EddFox = () => {
   return (
     <div className="EddFoxMain">
-      <h1 className="EddFoxTitle">Edd Fox </h1>
-      <h3 style={{ marginTop: "-1px" }}>Rabbits are friends, not food!</h3>
+      <h1 className="EddFoxTitle" style={{ marginTop: "30px" }}>Edd Fox </h1>
+
+      <h3 style={{ marginTop: "15px" }}>Minting September 27, 2022</h3>
+      <a href="https://nftcalendar.io/event/edd-fox/">
+        <img
+          className="EddGIF"
+          src={EddGIF}
+          alt="EddGIF"
+          style={{ marginTop: "30px", maxHeight: "300px" }}
+        ></img>
+      </a>
+
       <br></br>
+      <h1 style={{ marginTop: "30px", marginBottom: "15px"}}>Meet Reuben</h1>
       <img className="family" src={family} alt="family" />
-      <h3 style={{ marginTop: "15px" }}>Meet Reuben</h3>
       <br></br>
 
       <div
@@ -20,6 +30,7 @@ const EddFox = () => {
           borderRadius: "20px",
           color: "white",
           padding: "20px",
+          marginBottom: "30px",
         }}
       >
         Reuben Lacy, who holds a degree in industrial design from Auburn
@@ -42,16 +53,6 @@ const EddFox = () => {
           https://discord.gg/GQgN7kSDVn{" "}
         </a>
       </div>
-      <h3 style={{ marginTop: "30px" }}>Minting September 27, 2022</h3>
-      <div style={{ marginTop: "10px" }}>As Seen On:</div>
-      <a href="https://nftcalendar.io/event/edd-fox/">
-        <img
-          className="nftc"
-          src={nftc}
-          alt="nftc"
-          style={{ marginTop: "15px", marginBottom: "30px" }}
-        ></img>
-      </a>
     </div>
   );
 };

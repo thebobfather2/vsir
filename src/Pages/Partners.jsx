@@ -10,7 +10,7 @@ const Partners = () => {
     {
       name: "Edd Fox",
       image: eddFox,
-      path: "/EddHome",
+      path: "/EddFox",
     },
     {
       name: "Baad Goats",
