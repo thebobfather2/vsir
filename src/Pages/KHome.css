@@ -1,4 +1,4 @@
-.BaadMainContainer {
+.k24MainContainer {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -6,27 +6,27 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    background-image: url('../images/BaadBG.png');
+    background-image: none;
     object-fit: contain;
     height: 100vh;
     color: antiquewhite;
 }
 
-.BaadTitle {
+.k24Main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.k24Title {
     font-family: 'Fredoka One', cursive;
     font-size: 4em;
     text-align: center;
-    color: antiquewhite;
-}
-
-.family {
-    width: 200px;
-    height: 200px;
-}
-
-.EddGIF {
-    width: 300px;
-    height: 300px;
 }
 
 .Discord {
@@ -34,7 +34,7 @@
     height: 154px;
 }
 
-.BaadLogo {
+.k24logo {
     width: 300px;
     height: 300px;
 }

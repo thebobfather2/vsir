@@ -1,10 +1,9 @@
 import React from "react";
 import BaadLogo from "../images/BaadLogo.png";
-import EddGIF from "../images/EddGIF.gif";
 import Discord from "../images/Discord.png";
 import "./Baad.css";
 
-const EddHome = () => {
+const Baad = () => {
   return (
   
   <div className="BaadMainContainer">
@@ -20,7 +19,7 @@ const EddHome = () => {
       </a>
     </div>
      
-      <a href="https://discord.gg/GQgN7kSDVn/">
+      <a href="https://discord.gg/GspeH23eFb/">
         <img
           className="Discord"
           src={Discord}
@@ -32,4 +31,4 @@ const EddHome = () => {
   );
 };
 
-export default EddHome;
+export default Baad;

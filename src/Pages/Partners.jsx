@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import eddFox from "../images/eddFoxLogo.png";
+import BaadLogo from "../images/BaadLogo.png";
+import k24logo from "../images/k24logo.png";
 import "./Partners.css";
 
 const Partners = () => {
@@ -9,7 +11,16 @@ const Partners = () => {
       name: "Edd Fox",
       image: eddFox,
       path: "/EddHome",
-      primaryColor: "blue",
+    },
+    {
+      name: "Baad Goats",
+      image: BaadLogo,
+      path: "/Baad",
+    },
+    {
+      name: "24 Carrot Bunny Club",
+      image: k24logo,
+      path: "/KHome",
     },
   ];
   return (

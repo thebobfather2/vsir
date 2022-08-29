@@ -10,5 +10,11 @@ export const MenuItems3 = [
     path: "/Baad",
     cName: "dropdown-link",
   },
+  
+  {
+    title: "24 Carrot Bunny Club",
+    path: "/KHome",
+    cName: "dropdown-link",
+  },
 
 ];
