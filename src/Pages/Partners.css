@@ -17,7 +17,7 @@
 .partnerContainer {
   display: flex;
   flex-wrap: wrap;
-  width: 60%;
+  width: 80%;
   padding: 20px;
   justify-content: center;
   align-items: center;

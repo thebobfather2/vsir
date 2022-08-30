@@ -24,7 +24,7 @@ const Partners = () => {
     },
   ];
   return (
-    <div className="partnersMain" style={{marginTop: "30px"}}>
+    <div className="partnersMain" style={{marginTop: "20px"}}>
       <h1 className="BulkTitle">Partners</h1>
       <h4>Click for information on each of our fantastic partners!!</h4>
       <div className="partnerContainer">
@@ -36,7 +36,7 @@ const Partners = () => {
                   backgroundColor: partner.primaryColor,
                   padding: "20px",
                   margin: "10px",
-                  borderRadius: "20px",
+                  borderRadius: "10px",
                 }}
                 className="partnerCard"
               >
