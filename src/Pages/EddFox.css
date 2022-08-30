@@ -7,11 +7,27 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    background-image: url('../images/FoxFactory.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    color: antiquewhite;
+}
+
+.EddMain2 {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    align-items: baseline;
+    justify-content: center;
+    position: relative;
+    background-image: none;
+    object-fit: contain;
+    color: antiquewhite;
 }
 
 .EddFoxTitle {
-    font-family: 'Fredoka One', cursive;
-    font-size: 4em;
+    font-family: 'Titan One';
+    font-size: 5em;
     text-align: center;
 }
 

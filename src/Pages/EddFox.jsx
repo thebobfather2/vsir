@@ -1,26 +1,53 @@
 import React from "react";
 import family from "../images/family.png";
 import EddGIF from "../images/EddGIF.gif";
+import nftc from "../images/nftc.png";
 import "./EddFox.css";
 
 const EddFox = () => {
   return (
     <div className="EddFoxMain">
-      <h1 className="EddFoxTitle" style={{ marginTop: "30px" }}>Edd Fox </h1>
+      <h1 className="EddFoxTitle" style={{ marginTop: "15px", 
+          width: "40%",
+          backgroundColor: "black",
+          borderRadius: "20px",
+          color: "white",
+          padding: "20px", }}>Edd Fox </h1>
 
-      <h3 style={{ marginTop: "15px" }}>Minting September 27, 2022</h3>
+      <h3 style={{ marginTop: "15px",           
+          width: "40%",
+          backgroundColor: "black",
+          borderRadius: "20px",
+          color: "white",
+          padding: "20px", }}>Minting September 27, 2022</h3>
+
+      <div className="EddMain2">
       <a href="https://nftcalendar.io/event/edd-fox/">
         <img
           className="EddGIF"
           src={EddGIF}
           alt="EddGIF"
-          style={{ marginTop: "30px", maxHeight: "300px" }}
+          style={{ marginTop: "15px", maxHeight: "300px" }}
         ></img>
       </a>
 
+      <a href="https://nftcalendar.io/event/edd-fox/">
+        <img
+          className="nftc"
+          src={nftc}
+          alt="nftc"
+          style={{ marginTop: "15px", maxHeight: "300px" }}
+        ></img>
+      </a></div>
+
       <br></br>
-      <h1 style={{ marginTop: "30px", marginBottom: "15px"}}>Meet Reuben</h1>
-      <img className="family" src={family} alt="family" />
+      <h1 style={{  
+          width: "40%",
+          backgroundColor: "black",
+          borderRadius: "20px",
+          color: "white",
+          padding: "20px",}}>Meet Reuben
+      <img className="family" src={family} alt="family" /></h1>
       <br></br>
 
       <div
