@@ -7,6 +7,7 @@ import {
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import br from "./img/poweredwhite.png";
+import Logo from "./img/poweredwhite.png";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -139,9 +140,16 @@ const Navbar = () => {
           </Button>
         </>
       ) : (
+        <nav className="nav">
+          
+        <Link to="/" className="navbar-logo">
+          <img src={Logo} className="navLogo" />
+        </Link>
+
         <button onClick={toggleNav} className="btn" style={{ marginTop: "15px", marginRight: "10px", color: "white" }}>
           Menu
         </button>
+        </nav>
       )}
     </nav>
   );
