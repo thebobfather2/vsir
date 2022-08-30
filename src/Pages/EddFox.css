@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    background-image: url('../images/FoxFactory.png');
+    background-image: url('../images/FoxBG.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
 
@@ -34,18 +34,23 @@
 }
 
 .family {
+    width: 150px;
+    height:150px;
+}
+
+.FoxFactory2 {
     width: 200px;
-    height: 200px;
+    height: 150px;
 }
 
 .EddGIF {
-    width: 500px;
-    height: 500px;
+    max-width: 80%;
+    height: auto;
 }
 
 .nftc {
-    width: 200px;
-    height: 200px;
+    max-width: 80%;
+    height: auto;
 }
   
   
@@ -66,8 +71,20 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background-image: url('../images/FoxCrop.png');
+      background-image: url('../images/FoxBG.png');
       object-fit: scale-down;
+    }
+
+    .EddMain2 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        background-image: none;
+        color: antiquewhite;
     }
   
 }
