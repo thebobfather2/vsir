@@ -7,7 +7,11 @@ const Baad = () => {
   return (
   
   <div className="BaadMainContainer">
-      <h1 style={{ marginTop: "-200px" }} className="BaadTitle">Baad Goats</h1>
+
+      <h1 className="BaadTitle" 
+      style={{marginTop: "0px",
+      borderRadius: "20px",
+      padding: "50px" }}>Baad Goats</h1>
      
       <div className="BaadMain2">
       <a href="https://stake.cardinal.so/7CMdsPLuo23LXA7An2jh6At859n3PFWFFzfVAccd1wYu/">
@@ -15,9 +19,9 @@ const Baad = () => {
           className="BaadLogo"
           src={BaadLogo}
           alt="BaadLogo"
-          style={{marginTop: "20px", marginRight: "40px" }}>
-          </img>
-        <h3 style={{ marginTop: "-10px",  marginRight: "40px", color: "white" }}>Staking</h3>
+          style={{ marginTop: "0px", marginRight: "10px" }}
+      ></img>
+         <h3 style={{ marginTop: "0px", marginRight: "10px", color: "white" }}>Staking</h3>
       </a>
      
       <a href="https://discord.gg/GspeH23eFb/">
@@ -25,9 +29,9 @@ const Baad = () => {
           className="Discord0"
           src={Discord0}
           alt="Discord0"
-          style={{ marginTop: "20px", marginLeft: "40px" }}>
+          style={{ marginTop: "0px", marginLeft: "10px" }}>
           </img>
-        <h3 style={{ marginTop: "-10px",  marginLeft: "40px", color: "white" }}>Discord</h3>
+          <h3 style={{ marginTop: "0px", marginLeft: "10px", color: "white" }}>Discord</h3>
       </a>
       </div>
 

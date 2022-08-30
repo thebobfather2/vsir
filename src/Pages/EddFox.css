@@ -1,5 +1,4 @@
 .EddFoxMain {
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -10,6 +9,7 @@
     background-image: url('../images/FoxFactory.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
+
     color: antiquewhite;
 }
 
@@ -17,18 +17,20 @@
     display: flex;
     width: 100%;
     text-align: center;
-    align-items: baseline;
+    align-items: center;
     justify-content: center;
     position: relative;
     background-image: none;
-    object-fit: contain;
     color: antiquewhite;
 }
 
 .EddFoxTitle {
+    display: flex;
     font-family: 'Titan One';
-    font-size: 5em;
+    font-size: 4em;
     text-align: center;
+    justify-content: center;
+    color: rgb(255, 176, 48);
 }
 
 .family {
@@ -37,11 +39,35 @@
 }
 
 .EddGIF {
-    width: 300px;
-    height: 300px;
+    width: 500px;
+    height: 500px;
 }
 
 .nftc {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
+}
+  
+  
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+@media screen and (max-width: 900px) {
+  .EddFoxMain{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-image: url('../images/FoxCrop.png');
+      object-fit: scale-down;
+    }
+  
 }

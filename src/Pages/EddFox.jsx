@@ -7,53 +7,44 @@ import "./EddFox.css";
 const EddFox = () => {
   return (
     <div className="EddFoxMain">
-      <h1 className="EddFoxTitle" style={{ marginTop: "15px", 
-          width: "40%",
-          backgroundColor: "black",
-          borderRadius: "20px",
-          color: "white",
-          padding: "20px", }}>Edd Fox </h1>
+    <div style={{  
+      width: "80%",
+      marginTop: "20px",
+      borderRadius: "20px",
+      backgroundColor: "rgba(0, 0, 0, 0.7)",
+      padding: "20px",}}>
 
-      <h3 style={{ marginTop: "15px",           
-          width: "40%",
-          backgroundColor: "black",
-          borderRadius: "20px",
-          color: "white",
-          padding: "20px", }}>Minting September 27, 2022</h3>
+          <h1 className="EddFoxTitle">Edd Fox</h1>
+      <h3 style={{ marginTop: "10px", marginBottom: "20px" }}>Minting September 27, 2022</h3>
 
-      <div className="EddMain2">
+
+    <div className="EddMain2">
       <a href="https://nftcalendar.io/event/edd-fox/">
         <img
           className="EddGIF"
           src={EddGIF}
           alt="EddGIF"
-          style={{ marginTop: "15px", maxHeight: "300px" }}
+          style={{marginTop: "0px" }}
         ></img>
       </a>
 
-      <a href="https://nftcalendar.io/event/edd-fox/">
-        <img
-          className="nftc"
-          src={nftc}
-          alt="nftc"
-          style={{ marginTop: "15px", maxHeight: "300px" }}
-        ></img>
-      </a></div>
+    </div>
+    </div>
 
       <br></br>
-      <h1 style={{  
-          width: "40%",
-          backgroundColor: "black",
+      <div style={{  
+          width: "80%",
+          backgroundColor: "rgba(0, 0, 0, 0.7)",
           borderRadius: "20px",
           color: "white",
-          padding: "20px",}}>Meet Reuben
-      <img className="family" src={family} alt="family" /></h1>
+          padding: "20px",}}><h1>Meet Reuben</h1>
+      <img className="family" src={family} alt="family" /></div>
       <br></br>
 
       <div
         style={{
           width: "80%",
-          backgroundColor: "black",
+          backgroundColor: "rgba(0, 0, 0, 0.7)",
           borderRadius: "20px",
           color: "white",
           padding: "20px",

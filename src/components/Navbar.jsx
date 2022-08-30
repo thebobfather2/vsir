@@ -139,7 +139,7 @@ const Navbar = () => {
           </Button>
         </>
       ) : (
-        <button onClick={toggleNav} className="btn">
+        <button onClick={toggleNav} className="btn" style={{ marginTop: "15px", marginRight: "10px", color: "white" }}>
           Menu
         </button>
       )}

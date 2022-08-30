@@ -1,4 +1,4 @@
-.k24MainContainer {
+.ShopMainContainer {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    background-image: url('../images/kbg2.png');
+    background-image: none;
     background-size: 100% 100%;
     background-repeat: no-repeat;
     height: 100vh;
@@ -40,17 +40,17 @@
 .k24Title {
     display: flex;
     font-family: 'Rockwell', cursive;
-    font-size: 3em;
+    font-size: 4em;
     text-align: center;
-    color: rgb(255, 227, 48);
+    color: rgb(0, 0, 0);
 }
 
-.DiscordGray {
-    width: 150px;
-    height: 150px;
+.CarotCoin {
+    width: 200px;
+    height: 200px;
 }
 
-.GhostBunny {
-    width: 150px;
-    height: 150px;
+.Merch {
+    width: 200px;
+    height: 200px;
 }
