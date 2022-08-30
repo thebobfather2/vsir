@@ -4,6 +4,7 @@ import EddGIF from "../images/EddGIF.gif";
 import nftc from "../images/nftc.png";
 import "./EddFox.css";
 
+
 const EddFox = () => {
   return (
     <div className="EddFoxMain">
