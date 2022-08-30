@@ -24,7 +24,7 @@ const Partners = () => {
     },
   ];
   return (
-    <div className="partnersMain">
+    <div className="partnersMain" style={{marginTop: "30px"}}>
       <h1 className="BulkTitle">Partners</h1>
       <h4>Click for information on each of our fantastic partners!!</h4>
       <div className="partnerContainer">

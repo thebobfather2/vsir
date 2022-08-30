@@ -7,9 +7,12 @@
   align-items: center;
 }
 .BulkTitle {
-  font-family: "Fredoka One", cursive;
-  font-size: 4em;
+  display: flex;
+  font-family: 'Badrips', sans-serif;
+  font-size: 4.5em;
   text-align: center;
+  justify-content: center;
+  color: rgb(0, 0, 0);
 }
 .partnerContainer {
   display: flex;
