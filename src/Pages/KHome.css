@@ -12,6 +12,19 @@
     color: antiquewhite;
 }
 
+.k24Main2 {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    align-items: baseline;
+    justify-content: center;
+    position: relative;
+    background-image: none;
+    object-fit: contain;
+    height: 100vh;
+    color: antiquewhite;
+}
+
 .k24Main {
     min-height: 100vh;
     display: flex;
@@ -24,17 +37,19 @@
 }
 
 .k24Title {
-    font-family: 'Fredoka One', cursive;
+    display: flex;
+    font-family: 'Rockwell', cursive;
     font-size: 4em;
     text-align: center;
+    color: rgb(255, 227, 48);
 }
 
 .Discord {
-    width: 274px;
-    height: 154px;
+    width: 350px;
+    height: 210px;
 }
 
 .k24logo {
-    width: 300px;
-    height: 300px;
+    width: 225px;
+    height: 225px;
 }

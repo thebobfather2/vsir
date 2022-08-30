@@ -7,15 +7,16 @@ const Baad = () => {
   return (
   
   <div className="BaadMainContainer">
-      <h1 className="BaadTitle">Baad Goats</h1>
+      <h1  style={{ marginTop: "100px" }} className="BaadTitle">Baad Goats</h1>
       <div>
       <a href="https://stake.cardinal.so/7CMdsPLuo23LXA7An2jh6At859n3PFWFFzfVAccd1wYu/">
         <img
           className="BaadLogo"
           src={BaadLogo}
           alt="BaadLogo"
-          style={{ marginTop: "30px", marginBottom: "30px", maxHeight: "300px" }}
+          style={{ marginTop: "30px", marginBottom: "-10px", maxHeight: "300px" }}
         ></img>
+                     <h3 style={{ marginBottom: "10px", color: "white" }}>Staking</h3>
       </a>
     </div>
      
@@ -24,8 +25,9 @@ const Baad = () => {
           className="Discord"
           src={Discord}
           alt="Discord"
-          style={{ marginTop: "30px", marginBottom: "30px", maxHeight: "300px" }}
+          style={{ marginTop: "30px", marginBottom: "5px", maxHeight: "300px" }}
         ></img>
+                     <h3 style={{ marginBottom: "30px", color: "white" }}>Discord</h3>
       </a>
     </div>
   );
