@@ -1,5 +1,4 @@
 .EddFoxMain {
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -7,9 +6,10 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    background-image: url('../images/FoxFactory.png');
+    background-image: url('../images/FoxBG.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
+
     color: antiquewhite;
 }
 
@@ -17,31 +17,74 @@
     display: flex;
     width: 100%;
     text-align: center;
-    align-items: baseline;
+    align-items: center;
     justify-content: center;
     position: relative;
     background-image: none;
-    object-fit: contain;
     color: antiquewhite;
 }
 
 .EddFoxTitle {
-    font-family: 'Titan One';
-    font-size: 5em;
+    display: flex;
+    font-family: 'Badrips', sans-serif;
+    font-size: 4.5em;
     text-align: center;
+    justify-content: center;
+    color: rgb(255, 176, 48);
 }
 
 .family {
+    width: 150px;
+    height:150px;
+}
+
+.FoxFactory2 {
     width: 200px;
-    height: 200px;
+    height: 150px;
 }
 
 .EddGIF {
-    width: 300px;
-    height: 300px;
+    max-width: auto;
+    height: auto;
 }
 
 .nftc {
-    width: 300px;
-    height: 300px;
+    max-width: 60%;
+    height: auto;
+}
+  
+  
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+@media screen and (max-width: 900px) {
+  .EddFoxMain{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-image: url('../images/FoxBG.png');
+      object-fit: scale-down;
+    }
+
+    .EddMain2 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        background-image: none;
+        color: antiquewhite;
+    }
+  
 }

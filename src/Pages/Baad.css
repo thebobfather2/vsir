@@ -22,12 +22,14 @@
     position: relative;
     background-image: none;
     object-fit: contain;
+    height: 100vh;
     color: antiquewhite;
 }
 
 .BaadTitle {
+    display: flex;
     font-family: 'Titan One';
-    font-size: 5em;
+    font-size: 3.5em;
     text-align: center;
     color: rgb(0, 0, 0);
 }
@@ -43,11 +45,11 @@
 }
 
 .Discord0 {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
 }
 
 .BaadLogo {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
 }

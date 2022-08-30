@@ -1,26 +1,25 @@
 .App{
-  min-height: 100vh;
-  min-width: 100%;
-   background: #FDC830;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #F37335, #FDC830,#a83d08);  
-  background: linear-gradient(to right, #F37335, #FDC830,#ff6214); 
-  animation: gradient 10s ease infinite;
-  background-size: 400% 400%;  
-}
-
-
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
-
+	min-height: 100vh;
+	min-width: 100%;
+	 background: #FDC830;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #F37335, #FDC830,#a83d08);  
+	background: linear-gradient(to right, #F37335, #FDC830,#ff6214); 
+	animation: gradient 10s ease infinite;
+	background-size: 400% 400%;  
+  }
+  
+  
+  @keyframes gradient {
+	  0% {
+		  background-position: 0% 50%;
+	  }
+	  50% {
+		  background-position: 100% 50%;
+	  }
+	  100% {
+		  background-position: 0% 50%;
+	  }
+  }
   
 
 

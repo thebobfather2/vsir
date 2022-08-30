@@ -7,6 +7,7 @@ import {
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import br from "./img/poweredwhite.png";
+import Logo from "./img/poweredwhite.png";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -37,7 +38,7 @@ const Navbar = () => {
           <Link to="/">
             <img className="navlogo" src={br} alt="logo" />
           </Link>
-          <ul className="list">
+          <ul className="list"close  style={{marginTop: "30px"}}>
             <br></br>
             <br></br>
             <Link to="/Shop" onClick={toggleNav}>
@@ -134,14 +135,21 @@ const Navbar = () => {
               </li>
             </WalletModalProvider>
           </ul>
-          <Button className="close" onClick={toggleNav}>
+          <Button className="close" onClick={toggleNav} style={{marginTop: "20px"}}>
             Close
           </Button>
         </>
       ) : (
-        <button onClick={toggleNav} className="btn">
+        <nav className="nav">
+          
+        <Link to="/" className="navbar-logo">
+          <img src={Logo} className="navLogo"/>
+        </Link>
+
+        <button onClick={toggleNav} className="btn" style={{ marginTop: "22px", color: "white" }}>
           Menu
         </button>
+        </nav>
       )}
     </nav>
   );

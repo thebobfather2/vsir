@@ -5,18 +5,24 @@ import "./KHome.css";
 
 const KHome = () => {
   return (
- 
     <div className="k24MainContainer">
-    <h1 style={{ marginTop: "40px" }} className="k24Title">24 Carrot Bunny Club</h1>
+    <div style={{  
+      marginTop: "20px",
+      borderRadius: "20px",
+      padding: "20px",}}>
+      <h1 className="k24Title">24 Carrot Bunny Club</h1>
+  </div>
+
     <div className="k24Main2">
+
     <a href="https://24carrotbunnyclub.com/">
       <img
         className="GhostBunny"
         src={GhostBunny}
         alt="GhostBunny"
-        style={{ marginTop: "40px", marginRight: "40px" }}
+        style={{ marginTop: "0px", marginRight: "10px" }}
       ></img>
-       <h3 style={{ marginTop: "10px", marginRight: "40px", color: "white" }}>Official Website</h3>
+       <h3 style={{ marginTop: "0px", marginRight: "10px", color: "white" }}>Official Website</h3>
     </a>
    
     <a href="https://discord.gg/GspeH23eFb/">
@@ -24,10 +30,13 @@ const KHome = () => {
         className="DiscordGray"
         src={DiscordGray}
         alt="DiscordGray"
-        style={{ marginTop: "40px", marginLeft: "40px" }}
+        style={{ marginTop: "0px", marginLeft: "10px" }}
       ></img>
-             <h3 style={{ marginTop: "10px",  marginLeft: "40px", color: "white" }}>Discord</h3>
-    </a>   </div>
+         <h3 style={{ marginTop: "0px", marginLeft: "10px", color: "white" }}>Discord</h3>
+    </a>  
+    
+    </div>
+
   </div>
 );
 };
