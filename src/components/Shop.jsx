@@ -114,14 +114,6 @@ const Shop = () => {
                   </h3>
                 </div>
                 <div className="itemsUnderline"></div>
-                <div className="items1">
-                  <Link to="/Uploader">
-                    <h3 className="eachMenuItem">Arweave Uploader</h3>
-                  </Link>
-                  <h3 className="Prices">
-                    0.001 SOL per Image or Metadata Uploaded
-                  </h3>
-                </div>
                 <div className="itemsUnderline"></div>
                 <div className="items1">
                   <Link to="/Gallery">
