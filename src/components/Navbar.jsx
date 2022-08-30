@@ -38,7 +38,7 @@ const Navbar = () => {
           <Link to="/">
             <img className="navlogo" src={br} alt="logo" />
           </Link>
-          <ul className="list">
+          <ul className="list"close  style={{marginTop: "30px"}}>
             <br></br>
             <br></br>
             <Link to="/Shop" onClick={toggleNav}>
@@ -135,7 +135,7 @@ const Navbar = () => {
               </li>
             </WalletModalProvider>
           </ul>
-          <Button className="close" onClick={toggleNav}>
+          <Button className="close" onClick={toggleNav} style={{marginTop: "20px"}}>
             Close
           </Button>
         </>
@@ -143,10 +143,10 @@ const Navbar = () => {
         <nav className="nav">
           
         <Link to="/" className="navbar-logo">
-          <img src={Logo} className="navLogo" />
+          <img src={Logo} className="navLogo"/>
         </Link>
 
-        <button onClick={toggleNav} className="btn" style={{ marginTop: "15px", marginRight: "10px", color: "white" }}>
+        <button onClick={toggleNav} className="btn" style={{ marginTop: "22px", color: "white" }}>
           Menu
         </button>
         </nav>
