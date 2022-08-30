@@ -19,7 +19,7 @@ const EddFox = () => {
           width: "80%",
           borderRadius: "20px",
           color: "white",
-          padding: "20px",
+          padding: "50px",
           backgroundColor: "black",
         }}
       >
@@ -31,7 +31,7 @@ const EddFox = () => {
         ></img>
       </a>
 
-<div style={{padding: "20px", width: "80%", borderRadius: "20px",}}>      
+<div style={{padding: "20px", width: "100%", borderRadius: "10px",}}>      
 Edd Fox will be available to the general public on Tuesday, September 27th, 2022, at 5 pm EST, 2 pm PT. Whitelist spots can be earned through participation in our discord! WL will be 0.25 SOL, and public sales will be at .7 SOL. Additionally, the top 22 ranked members in the discord the day of launch will be air dropped a free Edd Fox! The mint button will be added to the homepage of bobbyrabbits.com at the time of release. Come join in on the fun and see what we have been creating at the fox factory!
 </div>
 </div>
@@ -42,7 +42,7 @@ Edd Fox will be available to the general public on Tuesday, September 27th, 2022
           width: "80%",
           borderRadius: "20px",
           color: "white",
-          padding: "20px",}}><h1>Meet Reuben</h1>
+          padding: "40px",}}><h1>Meet Reuben</h1>
      
       <img className="family" src={family} alt="family" style={{marginTop: "15px" }} /></div>
       <div style={{
