@@ -4,4 +4,17 @@ export const MenuItems3 = [
     path: "/EddFox",
     cName: "dropdown-link",
   },
+
+  {
+    title: "Baad Goats",
+    path: "/Baad",
+    cName: "dropdown-link",
+  },
+  
+  {
+    title: "24 Carrot Bunny Club",
+    path: "/KHome",
+    cName: "dropdown-link",
+  },
+
 ];

@@ -1,5 +1,4 @@
-.EddFoxMain {
-    min-height: 100vh;
+.BaadMainContainer {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -7,13 +6,14 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    background-image: url('../images/FoxFactory.png');
+    background-image: url('../images/BaadBG.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    height: 100vh;
     color: antiquewhite;
 }
 
-.EddMain2 {
+.BaadMain2 {
     display: flex;
     width: 100%;
     text-align: center;
@@ -25,10 +25,11 @@
     color: antiquewhite;
 }
 
-.EddFoxTitle {
+.BaadTitle {
     font-family: 'Titan One';
     font-size: 5em;
     text-align: center;
+    color: rgb(0, 0, 0);
 }
 
 .family {
@@ -41,7 +42,12 @@
     height: 300px;
 }
 
-.nftc {
-    width: 300px;
-    height: 300px;
+.Discord0 {
+    width: 200px;
+    height: 200px;
+}
+
+.BaadLogo {
+    width: 200px;
+    height: 200px;
 }

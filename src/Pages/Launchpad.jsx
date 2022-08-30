@@ -3,7 +3,7 @@ import './Launchpad.css'
 import Baad from '../images/baad.png'
 import nftc from '../images/nftc.png'
 
-const EddFox = () => {
+const Launchpad = () => {
     return (
 
         <div className='LaunchpadMain'>
@@ -26,4 +26,4 @@ const EddFox = () => {
 
 
 
-export default EddFox
+export default Launchpad

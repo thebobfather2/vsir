@@ -1,5 +1,4 @@
-.EddFoxMain {
-    min-height: 100vh;
+.k24MainContainer {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -7,13 +6,14 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    background-image: url('../images/FoxFactory.png');
+    background-image: url('../images/kbg2.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    height: 100vh;
     color: antiquewhite;
 }
 
-.EddMain2 {
+.k24Main2 {
     display: flex;
     width: 100%;
     text-align: center;
@@ -22,26 +22,35 @@
     position: relative;
     background-image: none;
     object-fit: contain;
+    height: 100vh;
     color: antiquewhite;
 }
 
-.EddFoxTitle {
-    font-family: 'Titan One';
-    font-size: 5em;
+.k24Main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
-.family {
+.k24Title {
+    display: flex;
+    font-family: 'Rockwell', cursive;
+    font-size: 4em;
+    text-align: center;
+    color: rgb(255, 227, 48);
+}
+
+.DiscordGray {
     width: 200px;
     height: 200px;
 }
 
-.EddGIF {
-    width: 300px;
-    height: 300px;
-}
-
-.nftc {
-    width: 300px;
-    height: 300px;
+.GhostBunny {
+    width: 200px;
+    height: 200px;
 }

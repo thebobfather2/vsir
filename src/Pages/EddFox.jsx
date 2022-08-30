@@ -1,16 +1,53 @@
 import React from "react";
 import family from "../images/family.png";
+import EddGIF from "../images/EddGIF.gif";
 import nftc from "../images/nftc.png";
 import "./EddFox.css";
 
 const EddFox = () => {
   return (
     <div className="EddFoxMain">
-      <h1 className="EddFoxTitle">Edd Fox </h1>
-      <h3 style={{ marginTop: "-1px" }}>Rabbits are friends, not food!</h3>
+      <h1 className="EddFoxTitle" style={{ marginTop: "15px", 
+          width: "40%",
+          backgroundColor: "black",
+          borderRadius: "20px",
+          color: "white",
+          padding: "20px", }}>Edd Fox </h1>
+
+      <h3 style={{ marginTop: "15px",           
+          width: "40%",
+          backgroundColor: "black",
+          borderRadius: "20px",
+          color: "white",
+          padding: "20px", }}>Minting September 27, 2022</h3>
+
+      <div className="EddMain2">
+      <a href="https://nftcalendar.io/event/edd-fox/">
+        <img
+          className="EddGIF"
+          src={EddGIF}
+          alt="EddGIF"
+          style={{ marginTop: "15px", maxHeight: "300px" }}
+        ></img>
+      </a>
+
+      <a href="https://nftcalendar.io/event/edd-fox/">
+        <img
+          className="nftc"
+          src={nftc}
+          alt="nftc"
+          style={{ marginTop: "15px", maxHeight: "300px" }}
+        ></img>
+      </a></div>
+
       <br></br>
-      <img className="family" src={family} alt="family" />
-      <h3 style={{ marginTop: "15px" }}>Meet Reuben</h3>
+      <h1 style={{  
+          width: "40%",
+          backgroundColor: "black",
+          borderRadius: "20px",
+          color: "white",
+          padding: "20px",}}>Meet Reuben
+      <img className="family" src={family} alt="family" /></h1>
       <br></br>
 
       <div
@@ -20,6 +57,7 @@ const EddFox = () => {
           borderRadius: "20px",
           color: "white",
           padding: "20px",
+          marginBottom: "30px",
         }}
       >
         Reuben Lacy, who holds a degree in industrial design from Auburn
@@ -42,16 +80,6 @@ const EddFox = () => {
           https://discord.gg/GQgN7kSDVn{" "}
         </a>
       </div>
-      <h3 style={{ marginTop: "30px" }}>Minting September 27, 2022</h3>
-      <div style={{ marginTop: "10px" }}>As Seen On:</div>
-      <a href="https://nftcalendar.io/event/edd-fox/">
-        <img
-          className="nftc"
-          src={nftc}
-          alt="nftc"
-          style={{ marginTop: "15px", marginBottom: "30px" }}
-        ></img>
-      </a>
     </div>
   );
 };
