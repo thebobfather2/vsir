@@ -58,7 +58,7 @@ const Partners = () => {
           padding: "50px",
           backgroundColor: "black"}}>Our mission is to provide a space for trusted projects and their communities to network and engage
           with each other, interact, and work towards common goals in Web3. Our ultimate vision is to provide a Launchpad for smaller 
-          projects to mint, stake, and participate in interactive games and utilities which will be accessible collectively through all of our collections. 
+          projects to mint, stake, and participate in interactive games and utilities which will be accessible collectively through all of our NFTs. 
           <br></br>
           <h4 style={{marginTop: "15px"}}>-The Bobby Rabbits Team</h4>
           </h4>
