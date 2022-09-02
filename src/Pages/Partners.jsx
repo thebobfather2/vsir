@@ -51,6 +51,17 @@ const Partners = () => {
           );
         })}
       </div>
+      <h3 className="BulkTitle" style={{fontFamily: "Titan One", fontSize: "50px"}}>Our Mission</h3>
+      <h4 style={{marginTop: "15px", marginBottom: "30px", width: "80%",
+          borderRadius: "20px",
+          color: "white",
+          padding: "50px",
+          backgroundColor: "black"}}>Our mission is to provide a space for trusted projects and their communities to network and engage
+          with each other, interact, and work towards common goals in Web3. Our ultimate vision is to provide a Launchpad for smaller 
+          projects to mint, stake, and participate in interactive games and utilities which will be accessible collectively through all of our collections. 
+          <br></br>
+          <h4 style={{marginTop: "15px"}}>-The Bobby Rabbits Team</h4>
+          </h4>
     </div>
   );
 };
