@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import eddFox from "../images/eddFoxLogo.png";
 import BaadLogo from "../images/BaadLogo.png";
 import k24logo from "../images/k24logo.png";
+import Launch from "../images/launch.png";
+import apply from "../images/apply.png";
 import "./Partners.css";
 
 const Partners = () => {
@@ -25,6 +27,8 @@ const Partners = () => {
   ];
   return (
     <div className="partnersMain" style={{marginTop: "20px"}}>
+
+      
       <h1 className="BulkTitle">Partners</h1>
       <h4>Click for information on each of our fantastic partners!!</h4>
       <div className="partnerContainer">
@@ -42,7 +46,7 @@ const Partners = () => {
               >
                 <img
                   src={partner.image}
-                  style={{ maxWidth: "100px" }}
+                  style={{ maxWidth: "200px" }}
                   alt="partner logo"
                 />
                 <h3 style={{ color: "white" }}>{partner.name}</h3>
@@ -51,8 +55,20 @@ const Partners = () => {
           );
         })}
       </div>
-      <h3 className="BulkTitle" style={{fontFamily: "Titan One", fontSize: "50px"}}>Our Mission</h3>
-      <h4 style={{marginTop: "15px", marginBottom: "30px", width: "80%",
+      
+      <div className="Launch"  style={{width: "80%", marginTop: "20px"}}>
+       <Link to='/Launchpad'>
+        <img
+          className="Launch"
+          src={Launch}
+          alt="Launch"
+          style={{ marginTop: "0px", marginRight: "0px", borderRadius: "20px" }}
+      ></img>
+      </Link>
+      </div>
+
+      <h3 className="BulkTitle" style={{marginTop: "50px", fontFamily: "Titan One", fontSize: "50px"}}>Our Mission</h3>
+      <h4 style={{marginTop: "15px", marginBottom: "50px", width: "80%",
           borderRadius: "20px",
           color: "white",
           padding: "50px",
@@ -60,9 +76,24 @@ const Partners = () => {
           with each other, interact, and work towards common goals in Web3. Our ultimate vision is to provide a Launchpad for smaller 
           projects to mint, stake, and participate in interactive games and utilities which will be accessible collectively through all of our NFTs. 
           <br></br>
-          <h4 style={{marginTop: "15px"}}>-The Bobby Rabbits Team</h4>
+          <h4 style={{marginTop: "30px"}}>-The Bobby Rabbits Team</h4>
           </h4>
+
+
+      <div className="applyMain" style={{width: "80%"}}>
+      <a href="https://docs.google.com/spreadsheets/d/1YWXpEebA1JiREUdKg1HgLbPM-t8q_zuHr6vRlmBXgmA/edit?usp=sharing">
+        <img
+          className="apply"
+          src={apply}
+          alt="apply"
+          style={{ marginTop: "30px", marginRight: "0px", borderRadius: "20px"}}
+      ></img>
+      </a>
+      </div>
+
     </div>
+
+    
   );
 };
 
