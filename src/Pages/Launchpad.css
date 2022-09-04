@@ -41,14 +41,14 @@ align-items: center;
     color: antiquewhite;
 }
 
-.Baad {
-    width: 300px;
-    height: 300px;
+.BaadLogo {
+    width: 50%;
+    height: 50%;
 }
 
 .launchimg {
-    width: 95%;
-    height: 95%;
+    width: 80%;
+    height: 80%;
 }
 
 @media screen and (max-width: 700px) {

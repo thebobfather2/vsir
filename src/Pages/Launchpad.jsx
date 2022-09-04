@@ -18,9 +18,8 @@ const Launchpad = () => {
           className="BaadLogo"
           src={BaadLogo}
           alt="BaadLogo"
-          style={{ marginTop: "0px", marginRight: "10px" }}
       ></img>
-         <h3 style={{ marginTop: "0px", marginRight: "10px", color: "white" }}>Mint Baad Goats</h3>
+         <h3 style={{fontSize: "2em", color: "white" }}>Mint Baad Goats</h3>
       </a>
       </div>
 
