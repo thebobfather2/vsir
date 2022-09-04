@@ -20,7 +20,7 @@ const Partners = () => {
       path: "/Baad",
     },
     {
-      name: "24 Carrot Bunny Club",
+      name: "24 Carrot",
       image: k24logo,
       path: "/KHome",
     },
@@ -56,7 +56,7 @@ const Partners = () => {
         })}
       </div>
       
-      <div className="Launch"  style={{width: "80%", marginTop: "20px"}}>
+      <div className="Launch"  style={{width: "60%", marginTop: "20px"}}>
        <Link to='/Launchpad'>
         <img
           className="Launch"
