@@ -41,14 +41,14 @@ align-items: center;
     color: antiquewhite;
 }
 
-.BaadLogo2 {
+.BaadGif {
     width: 30%;
     height: 30%;
 }
 
 .launchimg {
-    width: 80%;
-    height: 80%;
+    width: 60%;
+    height: 60%;
 }
 
 @media screen and (max-width: 700px) {
