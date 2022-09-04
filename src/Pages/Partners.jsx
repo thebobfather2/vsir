@@ -5,6 +5,7 @@ import BaadLogo from "../images/BaadLogo.png";
 import k24logo from "../images/k24logo.png";
 import Launch from "../images/launch.png";
 import apply from "../images/apply.png";
+import partnerimg from "../images/partners.png";
 import "./Partners.css";
 
 const Partners = () => {
@@ -28,9 +29,12 @@ const Partners = () => {
   return (
     <div className="partnersMain" style={{marginTop: "20px"}}>
 
-      
-      <h1 className="BulkTitle">Partners</h1>
-      <h4>Click for information on each of our fantastic partners!!</h4>
+      <img className="partnerimg"
+          src={partnerimg}
+          alt="partnerimg"
+          ></img>
+
+      <h4 style={{fontSize: "1.2em", width: "75%", marginTop: "-30px"}}>Click for information on each of our fantastic partners!!</h4>
       <div className="partnerContainer">
         {partners.map((partner) => {
           return (
@@ -56,7 +60,7 @@ const Partners = () => {
         })}
       </div>
       
-      <div className="Launch"  style={{width: "60%", marginTop: "20px"}}>
+      <div className="Launch"  style={{width: "80%", marginTop: "20px"}}>
        <Link to='/Launchpad'>
         <img
           className="Launch"
@@ -81,7 +85,7 @@ const Partners = () => {
 
 
       <div className="applyMain" style={{width: "80%"}}>
-      <a href="https://docs.google.com/spreadsheets/d/1YWXpEebA1JiREUdKg1HgLbPM-t8q_zuHr6vRlmBXgmA/edit?usp=sharing">
+      <a href="https://form.jotform.com/222465387255159">
         <img
           className="apply"
           src={apply}

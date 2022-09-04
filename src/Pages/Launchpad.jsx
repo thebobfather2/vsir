@@ -1,20 +1,31 @@
-import React from 'react'
-import './Launchpad.css'
-
+import React from "react";
+import launchimg from "../images/launchimg.png";
+import BaadLogo from "../images/BaadLogo.png";
+import "./Launchpad.css";
 
 const Launchpad = () => {
-    return (
-        <div className="LaunchpadMain">
-        <div style={{  
-          width: "80%",
-          borderRadius: "20px",
-          padding: "20px",}}>
-    
-              <h1 className="LaunchpadTitle">Launchpad</h1>
-          <h3 style={{ marginTop: "10px", marginBottom: "30px" }}>Minting September 27, 2022</h3></div>
-        </div>
-      );
-    };
-    
+  return (
+    <div className="LaunchpadMain">
 
-export default Launchpad
+<img className="launchimg"
+          src={launchimg}
+          alt="launchimg"
+          ></img>
+     
+      <div className="LaunchpadMain2">
+      <a href="https://baadgoats.vercel.app/">
+        <img
+          className="BaadLogo"
+          src={BaadLogo}
+          alt="BaadLogo"
+          style={{ marginTop: "0px", marginRight: "10px" }}
+      ></img>
+         <h3 style={{ marginTop: "0px", marginRight: "10px", color: "white" }}>Mint Baad Goats</h3>
+      </a>
+      </div>
+
+    </div>
+  );
+};
+
+export default Launchpad;

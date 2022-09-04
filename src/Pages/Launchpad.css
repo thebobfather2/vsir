@@ -7,15 +7,58 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    background-image: url('../images/launchbg.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.LaunchpadMain2 {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    align-items: baseline;
+    justify-content: center;
+    position: relative;
+    background-image: none;
+    object-fit: contain;
+    height: 100vh;
+    color: antiquewhite;
+}
+
+.LaunchpadMain3 {
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+width: 100%;
+text-align: center;
+align-items: center;
 }
 
 .LaunchpadTitle {
     font-family: 'Fredoka One', cursive;
     font-size: 4em;
     text-align: center;
+    color: antiquewhite;
 }
 
 .Baad {
     width: 300px;
     height: 300px;
 }
+
+.launchimg {
+    width: 95%;
+    height: 95%;
+}
+
+@media screen and (max-width: 700px) {
+    .LaunchpadMain{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url('../images/launchcrop.png');
+        object-fit: scale-down;
+      }
+    
+  }

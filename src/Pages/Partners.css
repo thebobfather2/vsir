@@ -17,7 +17,7 @@
 }
 
 .applyMain {
-  min-height: 40vh;
+
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -53,4 +53,9 @@
 .apply {
   width: 100%;
   height: 100%;
+}
+
+.partnerimg {
+  width: 95%;
+  height: 95%;
 }

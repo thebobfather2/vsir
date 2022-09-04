@@ -37,6 +37,7 @@ import Slots from "./Pages/Slots";
 import EddHome from "./Pages/EddHome";
 import Baad from "./Pages/Baad";
 import KHome from "./Pages/KHome";
+import Launchpad from "./Pages/Launchpad";
 
 require("./App.css");
 require("@solana/wallet-adapter-react-ui/styles.css");
@@ -123,6 +124,7 @@ const Content: FC = () => {
         <Route path="/EddHome" element={<EddHome />} />
         <Route path="/Baad" element={<Baad />} />
         <Route path="/KHome" element={<KHome />} />
+        <Route path="/Launchpad" element={<Launchpad />} />
       </Routes>
     </>
   );
