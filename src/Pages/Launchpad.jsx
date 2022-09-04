@@ -1,6 +1,6 @@
 import React from "react";
 import launchimg from "../images/launchimg.png";
-import BaadLogo from "../images/BaadLogo.png";
+import BaadLogo2 from "../images/BaadLogo.png";
 import "./Launchpad.css";
 
 const Launchpad = () => {
@@ -15,9 +15,9 @@ const Launchpad = () => {
       <div className="LaunchpadMain2">
       <a href="https://baadgoats.vercel.app/">
         <img
-          className="BaadLogo"
-          src={BaadLogo}
-          alt="BaadLogo"
+          className="BaadLogo2"
+          src={BaadLogo2}
+          alt="BaadLogo2"
       ></img>
          <h3 style={{fontSize: "2em", color: "white" }}>Mint Baad Goats</h3>
       </a>

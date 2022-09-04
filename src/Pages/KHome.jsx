@@ -10,7 +10,7 @@ const KHome = () => {
       marginTop: "20px",
       borderRadius: "20px",
       padding: "20px",}}>
-      <h1 className="k24Title">24 Carrot Bunny Club</h1>
+      <h1 className="k24Title" style={{marginBottom: "50px"}}>24 Carrot Bunny Club</h1>
   </div>
 
     <div className="k24Main2">
@@ -20,9 +20,9 @@ const KHome = () => {
         className="GhostBunny"
         src={GhostBunny}
         alt="GhostBunny"
-        style={{ marginTop: "0px", marginRight: "10px" }}
+        style={{ marginTop: "0px"}}
       ></img>
-       <h3 style={{ marginTop: "0px", marginRight: "10px", color: "white" }}>Official Website</h3>
+       <h3 style={{ marginTop: "0px", color: "white" }}>Official Website</h3>
     </a>
    
     <a href="https://discord.gg/GspeH23eFb/">
@@ -30,9 +30,9 @@ const KHome = () => {
         className="DiscordGray"
         src={DiscordGray}
         alt="DiscordGray"
-        style={{ marginTop: "0px", marginLeft: "10px" }}
+        style={{ marginTop: "0px"}}
       ></img>
-         <h3 style={{ marginTop: "0px", marginLeft: "10px", color: "white" }}>Discord</h3>
+         <h3 style={{ marginTop: "0px", color: "white" }}>Discord</h3>
     </a>  
     
     </div>

@@ -46,11 +46,27 @@
 }
 
 .DiscordGray {
-    width: 80%;
-    height: 80%;
+    width: 50%;
+    height: 50%;
 }
 
 .GhostBunny {
-    width: 80%;
-    height: 80%;
+    width: 50%;
+    height: 50%;
 }
+
+@media screen and (max-width: 500px) {
+    .k24Main2 {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        text-align: center;
+        align-items: baseline;
+        justify-content: center;
+        position: relative;
+        background-image: none;
+        object-fit: contain;
+        height: 100vh;
+        color: antiquewhite;
+    }
+  }
