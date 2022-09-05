@@ -6,6 +6,7 @@ import k24logo from "../images/k24logo.png";
 import Launch from "../images/launch.png";
 import apply from "../images/apply.png";
 import partnerimg from "../images/partners.png";
+import grouchy from "../images/grouchy.png";
 import "./Partners.css";
 
 const Partners = () => {
@@ -16,15 +17,21 @@ const Partners = () => {
       path: "/EddFox",
     },
     {
+      name: "24 Carrot",
+      image: k24logo,
+      path: "/KHome",
+    },
+    {
       name: "Baad Goats",
       image: BaadLogo,
       path: "/Baad",
     },
     {
-      name: "24 Carrot",
-      image: k24logo,
-      path: "/KHome",
+      name: "Grouchy Tigers",
+      image: grouchy,
+      path: "/GrouchyTigers",
     },
+
   ];
   return (
     <div className="partnersMain" style={{marginTop: "20px"}}>

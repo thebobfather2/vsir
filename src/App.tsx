@@ -38,6 +38,7 @@ import EddHome from "./Pages/EddHome";
 import Baad from "./Pages/Baad";
 import KHome from "./Pages/KHome";
 import Launchpad from "./Pages/Launchpad";
+import GrouchyTigers from "./Pages/GrouchyTigers";
 
 require("./App.css");
 require("@solana/wallet-adapter-react-ui/styles.css");
@@ -125,6 +126,7 @@ const Content: FC = () => {
         <Route path="/Baad" element={<Baad />} />
         <Route path="/KHome" element={<KHome />} />
         <Route path="/Launchpad" element={<Launchpad />} />
+        <Route path="/GrouchyTigers" element={<GrouchyTigers />} />
       </Routes>
     </>
   );
