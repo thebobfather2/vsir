@@ -1,9 +1,9 @@
 import React from "react";
 import GhostBunny from "../images/ghostbunny.png";
 import DiscordGray from "../images/DiscordGray.png";
-import "./KHome.css";
+import "./BunnyClub.css";
 
-const KHome = () => {
+const BunnyClub = () => {
   return (
     <div className="k24MainContainer">
     <div style={{  
@@ -41,4 +41,4 @@ const KHome = () => {
 );
 };
 
-export default KHome;
+export default BunnyClub;

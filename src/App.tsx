@@ -36,7 +36,7 @@ import Send from "./Pages/Send";
 import Slots from "./Pages/Slots";
 import EddHome from "./Pages/EddHome";
 import Baad from "./Pages/Baad";
-import KHome from "./Pages/KHome";
+import BunnyClub from "./Pages/BunnyClub";
 import Launchpad from "./Pages/Launchpad";
 import GrouchyTigers from "./Pages/GrouchyTigers";
 
@@ -124,7 +124,7 @@ const Content: FC = () => {
         <Route path="/Partners" element={<Partners />} />
         <Route path="/EddHome" element={<EddHome />} />
         <Route path="/Baad" element={<Baad />} />
-        <Route path="/KHome" element={<KHome />} />
+        <Route path="/BunnyClub" element={<BunnyClub />} />
         <Route path="/Launchpad" element={<Launchpad />} />
         <Route path="/GrouchyTigers" element={<GrouchyTigers />} />
       </Routes>

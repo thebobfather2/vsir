@@ -19,7 +19,7 @@ const Partners = () => {
     {
       name: "24 Carrot",
       image: k24logo,
-      path: "/KHome",
+      path: "/BunnyClub",
     },
     {
       name: "Baad Goats",
