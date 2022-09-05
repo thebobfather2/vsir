@@ -19,6 +19,7 @@ import Navbar from "./components/Navbar";
 import Navbar2 from "./components/Navbar2";
 import Shop from "./components/Shop";
 import Auctions from "./Pages/Auctions";
+import Baad from "./Pages/Baad";
 import BulkSend from "./Pages/BulkSend";
 import CansMarket from "./Pages/CansMarket";
 import CarotMarket from "./Pages/CarotMarket";
@@ -27,8 +28,10 @@ import CoinFlip from "./Pages/CoinFlip";
 import Custom from "./Pages/Custom";
 import Dashboard from "./Pages/Dashboard";
 import EddFox from "./Pages/EddFox";
+import EddHome from "./Pages/EddHome";
 import Gallery from "./Pages/Gallery";
 import Home from "./Pages/Home";
+import KHome from "./Pages/KHome";
 import NftMinter from "./Pages/NftMinter";
 import Partners from "./Pages/Partners";
 import Raffles from "./Pages/Raffles";
@@ -38,6 +41,7 @@ import Baad from "./Pages/Baad";
 import BunnyClub from "./Pages/BunnyClub";
 import Launchpad from "./Pages/Launchpad";
 import GrouchyTigers from "./Pages/GrouchyTigers";
+
 
 require("./App.css");
 require("@solana/wallet-adapter-react-ui/styles.css");
@@ -117,7 +121,6 @@ const Content: FC = () => {
         <Route path="/Dashboard" element={<Dashboard />} />
         <Route path="/Carot-Market" element={<CarotMarket />} />
         <Route path="/Cans-Market" element={<CansMarket />} />
-        <Route path="/Uploader" element={<NftMinter />} />
         <Route path="/Flip" element={<CoinFlip />} />
         <Route path="/EddFox" element={<EddFox />} />
         <Route path="/Partners" element={<Partners />} />
