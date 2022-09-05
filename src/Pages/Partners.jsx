@@ -41,7 +41,6 @@ const Partners = () => {
           alt="partnerimg"
           ></img>
 
-      <h4 style={{fontSize: "1.2em", width: "75%", marginTop: "-30px"}}>Click for information on each of our fantastic partners!!</h4>
       <div className="partnerContainer">
         {partners.map((partner) => {
           return (

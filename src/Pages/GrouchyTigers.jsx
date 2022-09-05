@@ -35,7 +35,7 @@ const GrouchyTigers = () => {
         alt="gtos"
         style={{ marginTop: "0px"}}
       ></img>
-       <h3 style={{ marginTop: "0px", color: "white" }}>Buy Tigers On OpenSea</h3>
+       <h3 style={{ marginTop: "0px", color: "white" }}>Buy Tigers</h3>
     </a>
 
     <a href="https://opensea.io/collection/grouchy-cubs-social-club">
@@ -45,7 +45,7 @@ const GrouchyTigers = () => {
         alt="gtcubs"
         style={{ marginTop: "0px"}}
       ></img>
-       <h3 style={{ marginTop: "0px", color: "white" }}>Buy Cubs On OpenSea</h3>
+       <h3 style={{ marginTop: "0px", color: "white" }}>Buy Cubs</h3>
     </a>
    
     <a href="https://mint.grouchytigersocialclub.com">
