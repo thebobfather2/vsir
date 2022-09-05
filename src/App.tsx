@@ -35,7 +35,6 @@ import Partners from "./Pages/Partners";
 import Raffles from "./Pages/Raffles";
 import Send from "./Pages/Send";
 import Slots from "./Pages/Slots";
-import Baad from "./Pages/Baad";
 import BunnyClub from "./Pages/BunnyClub";
 import Launchpad from "./Pages/Launchpad";
 import GrouchyTigers from "./Pages/GrouchyTigers";
