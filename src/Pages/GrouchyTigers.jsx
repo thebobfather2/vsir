@@ -14,12 +14,12 @@ const GrouchyTigers = () => {
       marginTop: "20px",
       borderRadius: "20px",
       padding: "20px",}}>
-      <h1 className="GTTitle" style={{marginBottom: "30px", fontSize: "4em"}}>Grouchy Tiger Social Club</h1>
+      <h1 className="GTTitle" style={{marginBottom: "30px"}}>Grouchy Tiger Social Club</h1>
   </div>
 
     <div className="GTMain2">
 
-    <a href="grouchytigersocialclub.com">
+    <a href="https://grouchytigersocialclub.com/">
       <img
         className="site"
         src={site}
@@ -58,7 +58,7 @@ const GrouchyTigers = () => {
          <h3 style={{ marginTop: "0px", color: "white" }}>Mint A Tigress</h3>
     </a>  
 
-    <a href="discord.gg/grouchytigers">
+    <a href="http://discord.gg/grouchytigers/">
       <img
         className="DiscordGT"
         src={DiscordGT}

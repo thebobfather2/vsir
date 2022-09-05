@@ -3,13 +3,13 @@
     flex-direction: column;
     width: 100%;
     text-align: center;
-    align-items: center;
-    justify-content: center;
+    align-items: top;
+    justify-content: top;
     position: relative;
     background-image: none;
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    height: 120vh;
+    height: 250vh;
     color: antiquewhite;
 }
 
