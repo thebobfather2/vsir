@@ -2,6 +2,8 @@ import React from "react";
 import family from "../images/family.png";
 import EddGIF from "../images/EddGIF.gif";
 import nftc from "../images/nftc.png";
+import eddtitle from "../images/eddtitle.png";
+
 import "./EddFox.css";
 
 
@@ -13,7 +15,11 @@ const EddFox = () => {
       borderRadius: "20px",
       padding: "20px",}}>
 
-          <h1 className="EddFoxTitle">Edd Fox</h1>
+<img className="eddtitle"
+          src={eddtitle}
+          alt="eddtitle"
+          ></img>
+
       <h3 style={{ marginTop: "10px", marginBottom: "30px" }}>Minting September 27, 2022</h3></div>
 
 <div className="EddMain2" style={{
@@ -24,7 +30,7 @@ const EddFox = () => {
           backgroundColor: "black",
         }}
       >
-    <a href="https://nftcalendar.io/event/edd-fox/">
+    <a href="https://nftcalendar.io/event/edd-fox/" style={{marginTop: "30px"}}>
         <img
           className="EddGIF"
           src={EddGIF}
@@ -45,13 +51,15 @@ Edd Fox will be available to the general public on Tuesday, September 27th, 2022
           color: "white",
           padding: "40px",}}><h1>Meet Reuben</h1>
      
-      <img className="family" src={family} alt="family" style={{marginTop: "15px" }} /></div>
+      <img className="family" src={family} alt="family" style={{marginTop: "30px", textalign: "center",
+    alignitems: "center",
+    justifycontent: "center"}} /></div>
       <div style={{
           width: "80%",
           borderRadius: "20px",
           color: "white",
           padding: "12px",
-          marginBottom: "30px",
+          marginBottom: "50px",
         }}
       >
         Reuben Lacy, who holds a degree in industrial design from Auburn
@@ -80,7 +88,7 @@ Edd Fox will be available to the general public on Tuesday, September 27th, 2022
           src={nftc}
           alt="nftc" 
           style={{
-          marginBottom: "30px",
+          marginBottom: "70px",
           }}
         ></img>
       </a>

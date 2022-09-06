@@ -52,6 +52,11 @@
     max-width: 60%;
     height: auto;
 }
+
+.eddtitle {
+    width: 90%;
+    height: 90%;
+  }
   
   
 @keyframes gradient {

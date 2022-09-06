@@ -1,29 +1,31 @@
-import React from 'react'
-import './Launchpad.css'
-import Baad from '../images/baad.png'
-import nftc from '../images/nftc.png'
+import React from "react";
+import launchimg from "../images/launchimg.png";
+import BaadGif from "../images/baad.gif";
+import "./Launchpad.css";
 
 const Launchpad = () => {
-    return (
+  return (
+    <div className="LaunchpadMain">
 
-        <div className='LaunchpadMain'>
-            <h1 className='LaunchpadTitle'> Launchpad </h1>
-            <h3 style={{ marginTop: '-1px' }}>Teamwork makes the Dream Work</h3>
-            <br></br>
-            <img className='Baad' src={Baad} alt='Baad' />
-            <h3 style={{ marginTop: '15px' }}>Baad Goats</h3>
-            <br></br>
+<img className="launchimg"
+          src={launchimg}
+          alt="launchimg"
+          style={{marginTop: "20px"}}
+          ></img>
+     
+      <div className="LaunchpadMain2">
+      <a href="https://baadgoats.vercel.app/">
+        <img
+          className="BaadGif"
+          src={BaadGif}
+          alt="BaadGif"
+      ></img>
+         <h3 style={{fontSize: "1.5em", color: "white", marginTop: "10px" }}>Mint Baad Goats</h3>
+      </a>
+      </div>
 
-           <div style={{  width: '80%' }}>1 Sol</div>
-            <h3 style={{ marginTop: '30px' }}>Now</h3>
-            <div style={{ marginTop: '10px' }}>As Seen On:</div>
-            <a href="https://nftcalendar.io/event/edd-fox/">
-                <img className='Baad' src={Baad} alt='Baad'  style={{ marginTop: '15px', marginBottom: '30px' }}></img></a>
-        </div>
+    </div>
+  );
+};
 
-    )
-}
-
-
-
-export default Launchpad
+export default Launchpad;

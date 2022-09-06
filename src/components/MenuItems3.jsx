@@ -6,14 +6,20 @@ export const MenuItems3 = [
   },
 
   {
+    title: "24 Carrot Bunny Club",
+    path: "/BunnyClub",
+    cName: "dropdown-link",
+  },
+
+  {
     title: "Baad Goats",
     path: "/Baad",
     cName: "dropdown-link",
   },
   
   {
-    title: "24 Carrot Bunny Club",
-    path: "/KHome",
+    title: "Grouchy Tiger Social Club",
+    path: "/GrouchyTigers",
     cName: "dropdown-link",
   },
 

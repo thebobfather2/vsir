@@ -45,11 +45,27 @@
 }
 
 .Discord0 {
-    width: 150px;
-    height: 150px;
+    width: 30%;
+    height: 30%;
 }
 
-.BaadLogo {
-    width: 150px;
-    height: 150px;
+.BaadLogo3 {
+    width: 30%;
+    height: 30%;
 }
+
+@media screen and (max-width: 500px) {
+    .BaadMain2 {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        text-align: center;
+        align-items: baseline;
+        justify-content: center;
+        position: relative;
+        background-image: none;
+        object-fit: contain;
+        height: 100vh;
+        color: antiquewhite;
+    }
+  }

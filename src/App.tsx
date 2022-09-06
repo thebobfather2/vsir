@@ -28,15 +28,17 @@ import CoinFlip from "./Pages/CoinFlip";
 import Custom from "./Pages/Custom";
 import Dashboard from "./Pages/Dashboard";
 import EddFox from "./Pages/EddFox";
-import EddHome from "./Pages/EddHome";
 import Gallery from "./Pages/Gallery";
 import Home from "./Pages/Home";
-import KHome from "./Pages/KHome";
 import NftMinter from "./Pages/NftMinter";
 import Partners from "./Pages/Partners";
 import Raffles from "./Pages/Raffles";
 import Send from "./Pages/Send";
 import Slots from "./Pages/Slots";
+import BunnyClub from "./Pages/BunnyClub";
+import Launchpad from "./Pages/Launchpad";
+import GrouchyTigers from "./Pages/GrouchyTigers";
+
 
 require("./App.css");
 require("@solana/wallet-adapter-react-ui/styles.css");
@@ -119,9 +121,10 @@ const Content: FC = () => {
         <Route path="/Flip" element={<CoinFlip />} />
         <Route path="/EddFox" element={<EddFox />} />
         <Route path="/Partners" element={<Partners />} />
-        <Route path="/EddHome" element={<EddHome />} />
         <Route path="/Baad" element={<Baad />} />
-        <Route path="/KHome" element={<KHome />} />
+        <Route path="/BunnyClub" element={<BunnyClub />} />
+        <Route path="/Launchpad" element={<Launchpad />} />
+        <Route path="/GrouchyTigers" element={<GrouchyTigers />} />
       </Routes>
     </>
   );
