@@ -136,7 +136,7 @@ function Navbar() {
           </li>
 
         </ul>
-        <WalletMultiButton />
+        <WalletMultiButton/>
       </nav>
     </>
   );

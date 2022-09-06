@@ -1,4 +1,10 @@
 export const MenuItems2 = [
+
+  {
+    title: "Staking",
+    path: "/Staking",
+    cName: "dropdown-link",
+  },
   {
     title: "Custom Bobby Rabbit",
     path: "/Custom",
