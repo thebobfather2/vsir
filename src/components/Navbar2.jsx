@@ -5,6 +5,8 @@ import Dropdown from "./Dropdown";
 import Dropdown2 from "./Dropdown2";
 import Dropdown3 from "./Dropdown3";
 import Logo from "./img/poweredwhite.png";
+import MELogo from "./img/MELogo.png";
+import DiscordLogo from "./img/Discord.png";
 import "./Navbar2.css";
 
 function Navbar() {
@@ -65,10 +67,22 @@ function Navbar() {
   return (
     <>
       <nav className="navbar">
+
         <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
           <img src={Logo} className="navLogo" />
           <i class="fab fa-firstdraft" />
         </Link>
+
+        <a href="https://magiceden.io/creators/bobbyrabbits/" className="navbar-logo" onClick={closeMobileMenu}>
+          <img src={MELogo} className="MELogo" />
+          <i class="fab fa-firstdraft" />
+        </a>
+
+        <a href="https://discord.gg/PfGQnKZqNa/" className="navbar-logo" onClick={closeMobileMenu}>
+          <img src={DiscordLogo} className="MELogo" />
+          <i class="fab fa-firstdraft" />
+        </a>
+
         <div className="menu-icon" onClick={handleClick}>
           <i className={click ? "fas fa-times" : "fas fa-bars"} />
         </div>
@@ -93,6 +107,19 @@ function Navbar() {
             </Link>
             {dropdown2 && <Dropdown2 />}
           </li>
+
+          <li
+            className="nav-item"
+          >
+            <Link
+              to="/Launchpad"
+              className="nav-links"
+              onClick={closeMobileMenu}
+            >
+              Launchpad <i className="fas fa-caret-down" />
+            </Link>
+          </li>
+
           <li
             className="nav-item"
             onMouseEnter={onMouseEnterPartners}
@@ -107,28 +134,7 @@ function Navbar() {
             </Link>
             {dropdown3 && <Dropdown3 />}
           </li>
-          <li className="nav-item">
-            <a
-              href="https://staking.bobbyrabbits.com/"
-              className="nav-links"
-              target="_blank"
-              rel="noreferrer"
-              onClick={closeMobileMenu}
-            >
-              Staking
-            </a>
-          </li>
-          <li className="nav-item">
-            <a
-              href="https://magiceden.io/marketplace/bobbyrabbits"
-              className="nav-links"
-              target="_blank"
-              rel="noreferrer"
-              onClick={closeMobileMenu}
-            >
-              Buy a Rabbit
-            </a>
-          </li>
+
         </ul>
         <WalletMultiButton />
       </nav>

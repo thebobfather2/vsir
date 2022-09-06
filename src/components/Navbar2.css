@@ -5,11 +5,14 @@
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
-    
-  
   }
+
   .navLogo{
     max-width: 150px;
+  }
+
+  .MELogo{
+    max-width: 75px;
   }
   
   .navbar-logo {
@@ -22,7 +25,7 @@
   }
   
   .fa-firstdraft {
-    margin-left: 0.5rem;
+    margin-left: 0rem;
     font-size: 1.6rem;
   }
   
