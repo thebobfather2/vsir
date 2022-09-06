@@ -7,6 +7,7 @@ import Launch from "../images/launch.png";
 import apply from "../images/apply.png";
 import partnerimg from "../images/partners.png";
 import grouchy from "../images/grouchy.png";
+import jtlogo from "../images/jtlogo.png";
 import "./Partners.css";
 
 const Partners = () => {
@@ -30,6 +31,11 @@ const Partners = () => {
       name: "Grouchy Tigers",
       image: grouchy,
       path: "/GrouchyTigers",
+    },
+    {
+      name: "Jack Tuber",
+      image: jtlogo,
+      path: "/JackTuber",
     },
 
   ];
