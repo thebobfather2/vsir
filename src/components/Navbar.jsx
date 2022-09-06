@@ -8,6 +8,8 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import br from "./img/poweredwhite.png";
 import Logo from "./img/poweredwhite.png";
+import MELogo from "./img/MELogo.png";
+import DiscordLogo from "./img/Discord.png";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -41,6 +43,12 @@ const Navbar = () => {
           <ul className="list"close  style={{marginTop: "30px"}}>
             <br></br>
             <br></br>
+
+            <Link to="/" className="navbar-logo2" onClick={toggleNav}>
+          <img src={Logo} className="navLogo2" />
+          <i class="fab fa-firstdraft" />
+        </Link>
+
             <Link to="/Shop" onClick={toggleNav}>
               <h1
                 style={{
@@ -53,6 +61,7 @@ const Navbar = () => {
               </h1>
             </Link>
             <br></br>
+
             <Link to="/Shop" onClick={toggleNav}>
               <h1
                 style={{
@@ -65,6 +74,43 @@ const Navbar = () => {
               </h1>
             </Link>
             <br></br>
+
+            <a
+  href="https://staking.bobbyrabbits.com/"
+  rel="noreferrer"
+  onClick={toggleNav}
+  style={{
+    textDecoration: "underline",
+    fontSize: "1.8em",
+    color: "orange",
+  }}
+>
+  <h1
+    style={{
+      textDecoration: "underline",
+      fontSize: "1em",
+      color: "orange",
+    }}
+  >
+    Staking
+  </h1>
+</a>
+<br></br>
+
+<Link to="/Launchpad" onClick={toggleNav}>
+              <h1
+                style={{
+                  textDecoration: "underline",
+                  fontSize: "1.8em",
+                  color: "orange",
+                }}
+              >
+                Launchpad
+              </h1>
+            </Link>
+            <br></br>
+
+
             <Link to="/Partners" onClick={toggleNav}>
               <h1
                 style={{
@@ -78,55 +124,18 @@ const Navbar = () => {
             </Link>
             <br></br>
 
-            <a
-              href="https://staking.bobbyrabbits.com/"
-              target="_blank"
-              rel="noreferrer"
-              onClick={toggleNav}
-              style={{
-                textDecoration: "underline",
-                fontSize: "1.8em",
-                color: "orange",
-              }}
-            >
-              <h1
-                style={{
-                  textDecoration: "underline",
-                  fontSize: "1em",
-                  color: "orange",
-                }}
-              >
-                Staking
-              </h1>
-            </a>
+        <a href="https://magiceden.io/creators/bobbyrabbits/" className="navbar-logo2" onClick={toggleNav}>
+          <img src={MELogo} className="MELogo" />
+          <i class="fab fa-firstdraft" />
+        </a>
+
+        <a href="https://discord.gg/PfGQnKZqNa/" className="navbar-logo2" onClick={toggleNav}>
+          <img src={DiscordLogo} className="MELogo" />
+          <i class="fab fa-firstdraft" />
+        </a>
+
             <br></br>
-            <h1
-              style={{
-                textDecoration: "underline",
-                fontSize: "1.8em",
-                color: "orange",
-              }}
-            >
-              Buy Rabbits
-            </h1>
-            <br></br>
-            <a
-              href="https://magiceden.io/marketplace/icyrabbits"
-              target="_blank"
-              rel="noreferrer"
-              onClick={toggleNav}
-            >
-              <li className="listItem">Buy An Icy Rabbit</li>
-            </a>
-            <a
-              href="https://magiceden.io/marketplace/bobbyrabbits"
-              target="_blank"
-              rel="noreferrer"
-              onClick={toggleNav}
-            >
-              <li className="listItem">Buy A Rabbit</li>
-            </a>
-            <br></br>
+
             <WalletModalProvider>
               <li>
                 <WalletMultiButton

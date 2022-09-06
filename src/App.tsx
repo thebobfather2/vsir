@@ -38,6 +38,7 @@ import Slots from "./Pages/Slots";
 import BunnyClub from "./Pages/BunnyClub";
 import Launchpad from "./Pages/Launchpad";
 import GrouchyTigers from "./Pages/GrouchyTigers";
+import JackTuber from "./Pages/JackTuber";
 
 
 require("./App.css");
@@ -125,6 +126,7 @@ const Content: FC = () => {
         <Route path="/BunnyClub" element={<BunnyClub />} />
         <Route path="/Launchpad" element={<Launchpad />} />
         <Route path="/GrouchyTigers" element={<GrouchyTigers />} />
+        <Route path="/JackTuber" element={<JackTuber />} />
       </Routes>
     </>
   );

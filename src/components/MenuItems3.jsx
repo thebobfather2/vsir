@@ -22,5 +22,11 @@ export const MenuItems3 = [
     path: "/GrouchyTigers",
     cName: "dropdown-link",
   },
+    
+  {
+    title: "Jack Tuber",
+    path: "/JackTuber",
+    cName: "dropdown-link",
+  },
 
 ];
