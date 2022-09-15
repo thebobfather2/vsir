@@ -1,6 +1,7 @@
 import React from "react";
 import launchimg from "../images/launchimg.png";
 import BaadGif from "../images/baad.gif";
+import EddGif from "../images/EddGIF.gif";
 import "./Launchpad.css";
 
 const Launchpad = () => {
@@ -10,9 +11,22 @@ const Launchpad = () => {
 <img className="launchimg"
           src={launchimg}
           alt="launchimg"
-          style={{marginTop: "20px"}}
+          style={{marginTop: "50px", marginBottom: "50px"}}
           ></img>
+
+     <br></br>
      
+     <div className="LaunchpadMain2">
+      <a href="https://eddfox.vercel.app/">
+        <img
+          className="EddGif"
+          src={EddGif}
+          alt="EddGif"
+      ></img>
+         <h3 style={{fontSize: "1.5em", color: "white", marginTop: "10px" }}>Mint Edd Fox</h3>
+      </a>
+      </div>
+
       <div className="LaunchpadMain2">
       <a href="https://baadgoats.vercel.app/">
         <img
@@ -20,7 +34,7 @@ const Launchpad = () => {
           src={BaadGif}
           alt="BaadGif"
       ></img>
-         <h3 style={{fontSize: "1.5em", color: "white", marginTop: "10px" }}>Mint Baad Goats</h3>
+         <h3 style={{fontSize: "1.5em", color: "white", marginTop: "10px"}}>Mint Baad Goats</h3>
       </a>
       </div>
 
