@@ -11,10 +11,10 @@ const Launchpad = () => {
 <img className="launchimg"
           src={launchimg}
           alt="launchimg"
-          style={{marginTop: "50px", marginBottom: "50px"}}
           ></img>
 
      <br></br>
+     <div className="Projects">
      
      <div className="LaunchpadMain2">
       <a href="https://eddfox.vercel.app/">
@@ -37,7 +37,7 @@ const Launchpad = () => {
          <h3 style={{fontSize: "1.5em", color: "white", marginTop: "10px"}}>Mint Baad Goats</h3>
       </a>
       </div>
-
+      </div>
     </div>
   );
 };

@@ -1,5 +1,5 @@
 .LaunchpadMain {
-    min-height: 100vh;
+    min-height: 91vh;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -12,6 +12,12 @@
     background-repeat: no-repeat;
 }
 
+.Projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .LaunchpadMain2 {
     display: flex;
     width: 100%;
@@ -21,7 +27,7 @@
     position: relative;
     background-image: none;
     object-fit: contain;
-    height: 50vh;
+    height: 35vh;
     color: antiquewhite;
 }
 
@@ -42,18 +48,24 @@ align-items: center;
 }
 
 .BaadGif {
-    width: 300px;
-    height: 300px;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 1rem;
+    width: 200px;
+    height: 200px;
 }
 
 .EddGif {
-    width: 300px;
-    height: 300px;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 1rem;
+    width: 200px;
+    height: 200px;
 }
 
 .launchimg {
-    width: 60%;
-    height: 60%;
+    width: 80%;
+    height: 80%;
 }
 
 @media screen and (max-width: 700px) {
@@ -65,5 +77,23 @@ align-items: center;
         background-image: url('../images/launchcrop.png');
         object-fit: scale-down;
       }
+
+      .Projects {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .BaadGif {
+        width: 200px;
+        height: 200px;
+        margin-top: 10px;
+    }
+    
+    .EddGif {
+        width: 200px;
+        height: 200px;
+    }
     
   }
