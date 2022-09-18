@@ -20,7 +20,7 @@ const EddFox = () => {
           alt="eddtitle"
           ></img>
 
-      <h3 style={{ marginTop: "10px", marginBottom: "30px" }}>Public Minting Begins September 27, 2022</h3></div>
+      <h3 style={{ marginTop: "10px", marginBottom: "30px", color: "orange" }}>Public Minting Begins September 27, 2022</h3></div>
 
 <div className="EddMain2" style={{
           width: "80%",
