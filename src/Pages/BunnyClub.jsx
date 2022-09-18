@@ -2,6 +2,7 @@ import React from "react";
 import GhostBunny from "../images/ghostbunny.png";
 import DiscordGray from "../images/DiscordGray.png";
 import Carrot24 from "../images/k24logo.png";
+import Gem from "../images/gem.png";
 
 
 import "./BunnyClub.css";
@@ -26,6 +27,16 @@ const BunnyClub = () => {
         style={{ marginTop: "0px"}}
       ></img>
        <h3 style={{marginBottom: "40px", color: "white" }}>Mint Ghost Bunny</h3>
+    </a>
+
+    <a href=" https://stake.cardinal.so/BbhGccmag4C9SrEituginjFmVkNudAATdefRgFKzBpQw">
+      <img
+        className="GhostBunny"
+        src={Gem}
+        alt="GhostBunny"
+        style={{ marginTop: "0px"}}
+      ></img>
+       <h3 style={{marginBottom: "40px", color: "white" }}>Ghost Bunny Staking</h3>
     </a>
 
     <a href="https://24carrotbunnyclub.com/">
