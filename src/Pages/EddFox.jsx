@@ -3,6 +3,7 @@ import family from "../images/family.png";
 import EddGIF from "../images/EddGIF.gif";
 import nftc from "../images/nftc.png";
 import eddtitle from "../images/eddtitle.png";
+import fieldcoin from "../images/fieldcoin.png";
 
 import "./EddFox.css";
 
@@ -30,7 +31,7 @@ const EddFox = () => {
           backgroundColor: "black",
         }}
       >
-              <h3 style={{ marginTop: "0px", marginBottom: "30px", }}>...BUT WHITELIST MINT IS LIVE!</h3>
+              <h3 style={{ marginTop: "0px", marginBottom: "30px", color: "yellow" }}>...BUT WHITELIST MINT IS LIVE!</h3>
               <h4 style={{ marginTop: "10px", marginBottom: "10px" }}>click below if you have been deemed worthy:</h4>
     <a href="https://eddfox.vercel.app/" style={{marginTop: "30px", marginBottom: "40px"}}>
         <img
@@ -43,6 +44,17 @@ const EddFox = () => {
 <div style={{padding: "10px", width: "100%", borderRadius: "10px",}}>      
 Edd Fox will be available to the general public on Tuesday, September 27th, 2022, at 5 pm EST, 2 pm PT. Whitelist spots can be earned through participation in our discord! WL will be 0.25 SOL, and public sales will be at .7 SOL. Additionally, the top 22 ranked members in the discord the day of launch will be air dropped a free Edd Fox! The mint button will be added to the homepage of bobbyrabbits.com at the time of release. Come join in on the fun and see what we have been creating at the fox factory!
 </div>
+
+<h3 style={{ marginTop: "50px", marginBottom: "0px", color: "yellow" }}>STAKING IS LIVE TOO!!!!</h3>
+<a href="https://stake.cardinal.so/HXnHeFBrByshnrLMdKXurzekfma2QJaV2HPnGX3Do6Rj" style={{marginTop: "30px", marginBottom: "40px"}}>
+        <img
+          className="EddGIF"
+          src={fieldcoin}
+          alt="EddGIF"
+        ></img>
+         <h4 style={{ marginTop: "-10px", marginBottom: "-10px", color: "yellow" }}>click to stake for field coin</h4>
+      </a>
+
 </div>
 
 
