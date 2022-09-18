@@ -21,7 +21,7 @@ const EddFox = () => {
           alt="eddtitle"
           ></img>
 
-      <h3 style={{ marginTop: "10px", marginBottom: "30px", color: "orange" }}>Public Minting Begins September 27, 2022</h3></div>
+    </div>
 
 <div className="EddMain2" style={{
           width: "80%",
@@ -31,8 +31,7 @@ const EddFox = () => {
           backgroundColor: "black",
         }}
       >
-              <h3 style={{ marginTop: "0px", marginBottom: "30px", color: "yellow" }}>...BUT WHITELIST MINT IS LIVE!</h3>
-              <h4 style={{ marginTop: "10px", marginBottom: "10px" }}>click below if you have been deemed worthy:</h4>
+    <h3 style={{ marginTop: "-20px", marginBottom: "0px", color: "yellow" }}>WHITELIST MINT NOW!</h3>
     <a href="https://eddfox.vercel.app/" style={{marginTop: "30px", marginBottom: "40px"}}>
         <img
           className="EddGIF"
@@ -40,21 +39,29 @@ const EddFox = () => {
           alt="EddGIF"
         ></img>
       </a>
-
-<div style={{padding: "10px", width: "100%", borderRadius: "10px",}}>      
-Edd Fox will be available to the general public on Tuesday, September 27th, 2022, at 5 pm EST, 2 pm PT. Whitelist spots can be earned through participation in our discord! WL will be 0.25 SOL, and public sales will be at .7 SOL. Additionally, the top 22 ranked members in the discord the day of launch will be air dropped a free Edd Fox! The mint button will be added to the homepage of bobbyrabbits.com at the time of release. Come join in on the fun and see what we have been creating at the fox factory!
+      <h1 style={{ marginTop: "-10px", marginBottom: "0px", color: "white" }}>INFO</h1>
+<div style={{padding: "20px", width: "100%", borderRadius: "10px",}}>      
+Edd Fox will be available to the general public on Tuesday, September 27th, 2022, at 5 pm EST. 
+</div>
+<div style={{marginBottom: "10px", padding: "10px", width: "100%", borderRadius: "10px",}}>
+  Whitelist spots can be earned through participation in our discord! Those holding "Edd Fox WL" tokens 
+  will have immediate access to mint foxes for only 0.25 SOL. If there are any foxes remaining by September 27th, public sale will 
+  go live for 0.7 SOL. 
+  </div>
+  <div style={{padding: "10px", width: "100%", borderRadius: "10px",}}>
+    Additionally, the top 22 ranked members in the Discord the day of launch will be air dropped a free Edd Fox! Come join in on the fun and see what we have been creating at The Fox Factory!
 </div>
 
-<h3 style={{ marginTop: "50px", marginBottom: "0px", color: "yellow" }}>STAKING IS LIVE TOO!!!!</h3>
+
 <a href="https://stake.cardinal.so/HXnHeFBrByshnrLMdKXurzekfma2QJaV2HPnGX3Do6Rj" style={{marginTop: "30px", marginBottom: "40px"}}>
-        <img
+<h1 style={{ marginTop: "0px", marginBottom: "0px", color: "yellow" }}>STAKING</h1>
+ <img
           className="EddGIF"
           src={fieldcoin}
           alt="EddGIF"
         ></img>
-         <h4 style={{ marginTop: "-10px", marginBottom: "-10px", color: "yellow" }}>click to stake for field coin</h4>
+         <h4 style={{ marginTop: "-10px", marginBottom: "-50px", color: "yellow" }}>click here to stake for field coin</h4>
       </a>
-
 </div>
 
 
@@ -63,9 +70,11 @@ Edd Fox will be available to the general public on Tuesday, September 27th, 2022
           width: "80%",
           borderRadius: "20px",
           color: "white",
-          padding: "40px",}}><h1>Meet Reuben</h1>
+          padding: "40px",}}>
+      
+      <h1 style={{fontSize: "3em", marginTop: "0px"}}>Meet Reuben</h1>
      
-      <img className="family" src={family} alt="family" style={{marginTop: "30px", textalign: "center",
+      <img className="family" src={family} alt="family" style={{marginTop: "20px", marginBottom: "-30px", textalign: "center",
     alignitems: "center",
     justifycontent: "center"}} /></div>
       <div style={{
@@ -73,7 +82,7 @@ Edd Fox will be available to the general public on Tuesday, September 27th, 2022
           borderRadius: "20px",
           color: "white",
           padding: "12px",
-          marginBottom: "50px",
+          marginBottom: "40px",
         }}
       >
         Reuben Lacy, who holds a degree in industrial design from Auburn
@@ -102,7 +111,7 @@ Edd Fox will be available to the general public on Tuesday, September 27th, 2022
           src={nftc}
           alt="nftc" 
           style={{
-          marginBottom: "70px",
+          marginBottom: "60px",
           }}
         ></img>
       </a>
