@@ -20,7 +20,7 @@ const EddFox = () => {
           alt="eddtitle"
           ></img>
 
-      <h3 style={{ marginTop: "10px", marginBottom: "30px" }}>Minting September 27, 2022</h3></div>
+      <h3 style={{ marginTop: "10px", marginBottom: "30px" }}>Public Minting Begins September 27, 2022</h3></div>
 
 <div className="EddMain2" style={{
           width: "80%",
@@ -30,7 +30,9 @@ const EddFox = () => {
           backgroundColor: "black",
         }}
       >
-    <a href="https://nftcalendar.io/event/edd-fox/" style={{marginTop: "30px"}}>
+              <h3 style={{ marginTop: "0px", marginBottom: "30px", }}>...BUT WHITELIST MINT IS LIVE!</h3>
+              <h4 style={{ marginTop: "10px", marginBottom: "10px" }}>click below if you have been deemed worthy:</h4>
+    <a href="https://eddfox.vercel.app/" style={{marginTop: "30px", marginBottom: "40px"}}>
         <img
           className="EddGIF"
           src={EddGIF}
@@ -38,7 +40,7 @@ const EddFox = () => {
         ></img>
       </a>
 
-<div style={{padding: "20px", width: "100%", borderRadius: "10px",}}>      
+<div style={{padding: "10px", width: "100%", borderRadius: "10px",}}>      
 Edd Fox will be available to the general public on Tuesday, September 27th, 2022, at 5 pm EST, 2 pm PT. Whitelist spots can be earned through participation in our discord! WL will be 0.25 SOL, and public sales will be at .7 SOL. Additionally, the top 22 ranked members in the discord the day of launch will be air dropped a free Edd Fox! The mint button will be added to the homepage of bobbyrabbits.com at the time of release. Come join in on the fun and see what we have been creating at the fox factory!
 </div>
 </div>
