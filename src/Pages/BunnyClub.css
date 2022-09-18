@@ -4,12 +4,12 @@
     width: 100%;
     text-align: center;
     align-items: center;
-    justify-content: center;
+    justify-content: first baseline;
     position: relative;
     background-image: url('../images/kbg2.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 115vh;
     color: antiquewhite;
 }
 
@@ -42,7 +42,7 @@
     font-family: 'Rockwell', cursive;
     font-size: 3em;
     text-align: center;
-    color: rgb(255, 227, 48);
+    color:  rgb(214, 181, 12);
 }
 
 .DiscordGray {

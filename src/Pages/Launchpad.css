@@ -1,11 +1,11 @@
 .LaunchpadMain {
-    min-height: 91vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     width: 100%;
     text-align: center;
     align-items: center;
-    justify-content: center;
+    justify-content: first baseline;
     position: relative;
     background-image: url('../images/launchbg.png');
     background-size: 100% 100%;
@@ -63,7 +63,16 @@ align-items: center;
     height: 200px;
 }
 
+.CarrotGif {
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 1rem;
+    width: 200px;
+    height: 200px;
+}
+
 .launchimg {
+    margin-top: 30px;
     width: 80%;
     height: 80%;
 }
