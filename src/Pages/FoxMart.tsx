@@ -31,7 +31,7 @@ const FoxMart: React.FC = () => {
     })
   );
   return (
-    <div className='CarotMarketMain' style={{padding: 80}}>
+    <div className='CarotMarketMain' style={{padding: 40}}>
       { wallet? (
 
           <CandyShopDataValidator>
