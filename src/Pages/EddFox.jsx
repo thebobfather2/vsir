@@ -1,29 +1,28 @@
 import React from "react";
-import family from "../images/family.png";
 import EddGIF from "../images/EddGIF.gif";
-import nftc from "../images/nftc.png";
 import eddtitle from "../images/eddtitle.png";
+import family from "../images/family.png";
 import fieldcoin from "../images/fieldcoin.png";
+import nftc from "../images/nftc.png";
 
 import "./EddFox.css";
-
 
 const EddFox = () => {
   return (
     <div className="EddFoxMain">
-    <div style={{  
-      width: "80%",
-      borderRadius: "20px",
-      padding: "20px",}}>
+      <div
+        style={{
+          width: "80%",
+          borderRadius: "20px",
+          padding: "20px",
+        }}
+      >
+        <img className="eddtitle" src={eddtitle} alt="eddtitle"></img>
+      </div>
 
-<img className="eddtitle"
-          src={eddtitle}
-          alt="eddtitle"
-          ></img>
-
-    </div>
-
-<div className="EddMain2" style={{
+      <div
+        className="EddMain2"
+        style={{
           width: "80%",
           borderRadius: "20px",
           color: "white",
@@ -31,53 +30,93 @@ const EddFox = () => {
           backgroundColor: "black",
         }}
       >
-    <h3 style={{ marginTop: "-20px", marginBottom: "0px", color: "yellow" }}>WHITELIST MINT NOW!</h3>
-    <a href="https://eddfox.vercel.app/" style={{marginTop: "30px", marginBottom: "40px"}}>
-        <img
-          className="EddGIF"
-          src={EddGIF}
-          alt="EddGIF"
-        ></img>
-      </a>
-      <h1 style={{ marginTop: "-10px", marginBottom: "0px", color: "white" }}>INFO</h1>
-<div style={{padding: "20px", width: "100%", borderRadius: "10px",}}>      
-Edd Fox will be available to the general public on Tuesday, September 27th, 2022, at 5 pm EST. 
-</div>
-<div style={{marginBottom: "10px", padding: "10px", width: "100%", borderRadius: "10px",}}>
-  Whitelist spots can be earned through participation in our discord! Those holding "Edd Fox WL" tokens 
-  will have immediate access to mint foxes for only 0.25 SOL. If there are any foxes remaining by September 27th, public sale will 
-  go live for 0.7 SOL. 
-  </div>
-  <div style={{padding: "10px", width: "100%", borderRadius: "10px",}}>
-    Additionally, the top 22 ranked members in the Discord the day of launch will be air dropped a free Edd Fox! Come join in on the fun and see what we have been creating at The Fox Factory!
-</div>
+        <h3
+          style={{ marginTop: "-20px", marginBottom: "0px", color: "yellow" }}
+        >
+          WHITELIST MINT NOW!
+        </h3>
+        <a
+          href="https://eddfox.vercel.app/"
+          style={{ marginTop: "30px", marginBottom: "40px" }}
+        >
+          <img className="EddGIF" src={EddGIF} alt="EddGIF"></img>
+        </a>
+        <h1 style={{ marginTop: "-10px", marginBottom: "0px", color: "white" }}>
+          INFO
+        </h1>
+        <div style={{ padding: "20px", width: "100%", borderRadius: "10px" }}>
+          Edd Fox will be available to the general public on Tuesday, September
+          27th, 2022, at 5 pm EST.
+        </div>
+        <div
+          style={{
+            marginBottom: "10px",
+            padding: "10px",
+            width: "100%",
+            borderRadius: "10px",
+          }}
+        >
+          Whitelist spots can be earned through participation in our discord!
+          Those holding "Edd Fox WL" tokens will have immediate access to mint
+          foxes for only 0.25 SOL. If there are any foxes remaining by September
+          27th, public sale will go live for 0.7 SOL.
+        </div>
+        <div style={{ padding: "10px", width: "100%", borderRadius: "10px" }}>
+          Additionally, the top 22 ranked members in the Discord the day of
+          launch will be air dropped a free Edd Fox! Come join in on the fun and
+          see what we have been creating at The Fox Factory!
+        </div>
 
-
-<a href="https://stake.cardinal.so/HXnHeFBrByshnrLMdKXurzekfma2QJaV2HPnGX3Do6Rj" style={{marginTop: "30px", marginBottom: "40px"}}>
-<h1 style={{ marginTop: "0px", marginBottom: "0px", color: "yellow" }}>STAKING</h1>
- <img
-          className="EddGIF"
-          src={fieldcoin}
-          alt="EddGIF"
-        ></img>
-         <h4 style={{ marginTop: "-10px", marginBottom: "-50px", color: "yellow" }}>click here to stake for field coin</h4>
-      </a>
-</div>
-
+        <a
+          href="https://staking.bobbyrabbits.com/eddfox"
+          style={{ marginTop: "30px", marginBottom: "40px" }}
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <h1
+            style={{ marginTop: "0px", marginBottom: "0px", color: "yellow" }}
+          >
+            STAKING
+          </h1>
+          <img className="EddGIF" src={fieldcoin} alt="EddGIF"></img>
+          <h4
+            style={{
+              marginTop: "-10px",
+              marginBottom: "-50px",
+              color: "yellow",
+            }}
+          >
+            click here to stake for field coin
+          </h4>
+        </a>
+      </div>
 
       <br></br>
-      <div style={{  
+      <div
+        style={{
           width: "80%",
           borderRadius: "20px",
           color: "white",
-          padding: "40px",}}>
-      
-      <h1 style={{fontSize: "3em", marginTop: "0px"}}>Meet Reuben</h1>
-     
-      <img className="family" src={family} alt="family" style={{marginTop: "20px", marginBottom: "-30px", textalign: "center",
-    alignitems: "center",
-    justifycontent: "center"}} /></div>
-      <div style={{
+          padding: "40px",
+        }}
+      >
+        <h1 style={{ fontSize: "3em", marginTop: "0px" }}>Meet Reuben</h1>
+
+        <img
+          className="family"
+          src={family}
+          alt="family"
+          style={{
+            marginTop: "20px",
+            marginBottom: "-30px",
+            textalign: "center",
+            alignitems: "center",
+            justifycontent: "center",
+          }}
+        />
+      </div>
+      <div
+        style={{
           width: "80%",
           borderRadius: "20px",
           color: "white",
@@ -100,7 +139,11 @@ Edd Fox will be available to the general public on Tuesday, September 27th, 2022
         everything is used for inspiration. He enjoys camping with his family
         and his favorite hobby is fishing, by any means necessary. Join the
         Discord and get to know him here:{" "}
-        <a href="https://discord.gg/GQgN7kSDVn/" target="_blank" style={{color: "yellow"}}>
+        <a
+          href="https://discord.gg/GQgN7kSDVn/"
+          target="_blank"
+          style={{ color: "yellow" }}
+        >
           {" "}
           https://discord.gg/GQgN7kSDVn{" "}
         </a>
@@ -109,9 +152,9 @@ Edd Fox will be available to the general public on Tuesday, September 27th, 2022
         <img
           className="nftc"
           src={nftc}
-          alt="nftc" 
+          alt="nftc"
           style={{
-          marginBottom: "60px",
+            marginBottom: "60px",
           }}
         ></img>
       </a>
