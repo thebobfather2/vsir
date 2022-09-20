@@ -56,8 +56,8 @@ const EddFox = () => {
     <div className="EddBody2">
     <div
         style={{
-          marginTop: "20px",
-          marginBottom: "0px",
+          marginTop: "10px",
+          marginBottom: "-10px",
           borderRadius: "20px",
           color: "white",
           padding: "40px",
