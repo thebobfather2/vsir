@@ -1,4 +1,59 @@
-.EddFoxMain {
+.EddMainContainer {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+}
+
+.EddTitleContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.EddBody {
+    margin-top: 25px;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.EddBody2 {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 25px;
+
+}
+
+.EddBody3 {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 25px;
+
+}
+
+.EddBody4 {
+    color: black;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -6,47 +61,24 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    background-image: url('../images/FoxBG.png');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
+    margin-top: 25px;
 
-    color: antiquewhite;
 }
 
-.EddMain2 {
-    display: flex;
-    flex-direction: column;
+.eddtitle {
+    margin-top: 25px;
     width: 100%;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    background-image: none;
-    color: antiquewhite;
+    height: 100%;
+  }
+
+.Stakefox {
+    width: 60%;
+    height: 60%;
 }
 
-.EddFoxTitle {
-    display: flex;
-    font-family: 'Badrips', sans-serif;
-    font-size: 4.5em;
-    text-align: center;
-    justify-content: center;
-    color: rgb(255, 176, 48);
-}
-
-.family {
-    width: 100%;
-    height:100%;
-}
-
-.FoxFactory2 {
-    width: 200px;
-    height: 150px;
-}
-
-.EddGIF {
-    max-width: auto;
-    height: auto;
+.Mintfox {
+    width: 60%;
+    height: 60%;
 }
 
 .nftc {
@@ -54,36 +86,23 @@
     height: auto;
 }
 
-.eddtitle {
-    color: orange;
-    margin-top: 10px;
-    width: 110%;
-    height: 110%;
-  }
-  
-  
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+.family {
+    width: 80%;
+    height:80%;
 }
-@media screen and (max-width: 900px) {
-  .EddFoxMain{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background-image: url('../images/FoxBG.png');
-      object-fit: scale-down;
-    }
 
-    .EddMain2 {
+@media screen and (max-width: 500px) {
+
+    .EddTitleContainer {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+     .EddBody {
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -91,8 +110,60 @@
         align-items: center;
         justify-content: center;
         position: relative;
-        background-image: none;
-        color: antiquewhite;
     }
-  
-}
+
+    .EddBody2 {
+        color: black;
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin-top: 25px;
+    
+    }
+
+    .EddBody4 {
+        color: black;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin-top: 25px;
+    
+    }
+
+    .EddBody3 {
+        color: black;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin-top: 25px;
+    
+    }
+
+    .Stakefox {
+        width: 40%;
+        height: 40%;
+    }
+    
+    .Mintfox {
+        width: 40%;
+        height: 40%;
+    }
+
+    .family {
+        width: 100%;
+        height:100%;
+    }
+
+  }

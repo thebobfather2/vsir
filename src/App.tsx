@@ -39,6 +39,8 @@ import BunnyClub from "./Pages/BunnyClub";
 import Launchpad from "./Pages/Launchpad";
 import GrouchyTigers from "./Pages/GrouchyTigers";
 import JackTuber from "./Pages/JackTuber";
+import FoxMart from "./Pages/FoxMart";
+import EddHome from "./Pages/EddHome";
 
 
 require("./App.css");
@@ -127,6 +129,8 @@ const Content: FC = () => {
         <Route path="/Launchpad" element={<Launchpad />} />
         <Route path="/GrouchyTigers" element={<GrouchyTigers />} />
         <Route path="/JackTuber" element={<JackTuber />} />
+        <Route path="/FoxMart" element={<FoxMart />} />
+        <Route path="/EddHome" element={<EddHome />} />
       </Routes>
     </>
   );
