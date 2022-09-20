@@ -44,10 +44,7 @@ const Navbar = () => {
             <br></br>
             <br></br>
 
-            <Link to="/" className="navbar-logo2" onClick={toggleNav}>
-          <img src={Logo} className="navLogo2" />
-          <i class="fab fa-firstdraft" />
-        </Link>
+
 
             <Link to="/Shop" onClick={toggleNav}>
               <h1
@@ -124,7 +121,7 @@ const Navbar = () => {
             </Link>
             <br></br>
 
-        <a href="https://magiceden.io/creators/bobbyrabbits/" className="navbar-logo2" onClick={toggleNav}>
+        <a href="https://magiceden.io/creators/bobbyrabbits/" style={{marginTop: "-10px"}} className="navbar-logo2" onClick={toggleNav}>
           <img src={MELogo} className="MELogo" />
           <i class="fab fa-firstdraft" />
         </a>
@@ -135,6 +132,13 @@ const Navbar = () => {
         </a>
 
             <br></br>
+
+            <Link to="/" className="navbar-logo2" onClick={toggleNav}>
+          <img src={Logo} className="navLogo2" />
+          <i class="fab fa-firstdraft" />
+        </Link>
+
+        <br></br>
 
             <WalletModalProvider>
               <li>

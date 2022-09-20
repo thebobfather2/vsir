@@ -45,7 +45,7 @@ const EddFox = () => {
         alt="Potion"
         style={{ marginTop: "0px"}}
       ></img>
-         <h3 style={{ marginBottom: "40px", color: "white" }}>Fox Mart</h3>
+         <h3 style={{ marginBottom: "20px", color: "white" }}>Fox Mart</h3>
     </Link>
      
     </div>
@@ -146,7 +146,9 @@ const EddFox = () => {
           src={nftc}
           alt="nftc"
           style={{
-            marginBottom: "30px",
+            borderRadius: "20px",
+            backgroundColor: "black",
+            marginBottom: "60px",
             marginTop: "30px",
           }}
         ></img>
