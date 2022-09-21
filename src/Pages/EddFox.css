@@ -6,7 +6,7 @@
   text-align: center;
   align-items: center;
   background-image: url("../images/FoxBG.png");
-  background-size: fill;
+  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
