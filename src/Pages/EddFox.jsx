@@ -5,6 +5,7 @@ import family from "../images/family.png";
 import Mintfox from "../images/mintfox.png";
 import nftc from "../images/nftc.png";
 import Potion from "../images/potion.png";
+import feed from "../images/feed.png";
 import Stakefox from "../images/stakefox.png";
 
 import "./EddFox.css";
@@ -53,6 +54,17 @@ const EddFox = () => {
           ></img>
           <h3 style={{ marginBottom: "20px", color: "white" }}>Fox Mart</h3>
         </Link>
+
+        <Link to="/FeedAFox">
+      <img
+        className="Stakefox"
+        src={feed}
+        alt="Feed"
+        style={{ marginTop: "0px"}}
+      ></img>
+         <h3 style={{ marginBottom: "20px", color: "white" }}>Feed Your Fox</h3>
+    </Link>
+
       </div>
 
       <div className="EddBody2">
