@@ -212,7 +212,7 @@ const FeedAFox = () => {
               return (
                 <Grid item key={index} md={6} lg={4}>
                   <Paper className='images' elevation={8}>
-                    <img src={nft[1].image} className='BobbyRabbits' alt='rabbits' onClick2={(e) => onClick2(e, index)} />
+                    <img src={nft[1].image} className='BobbyRabbits' alt='rabbits' onClick={(e) => onClick2(e, index)} />
                     {selected2.includes(result2[index][0]) &&
                       <div className='clicked'><h1 className='selectedText'>Selected</h1></div>}
                   </Paper>
@@ -225,7 +225,7 @@ const FeedAFox = () => {
 
         <div className='completePurchase'>
           <img className='transactionCarot' src={fieldcoin} alt='field coin' />
-          {(selected.length === 2) ? (<><h1 className='carots' style={{marginBottom: "10px"}}>Pay 10 $FIELD to feed your Fox a Potion and initiate a transformation!</h1><h3>After the transaction completes, your fox may go into temporary hibernation while he digests his meal.</h3>
+          {(selected.length === 1 && selected2.length === 1) ? (<><h1 className='carots' style={{marginBottom: "10px"}}>Pay 10 $FIELD to feed your Fox a Potion and initiate a transformation!</h1><h3>After the transaction completes, your fox may go into temporary hibernation while he digests his meal.</h3>
             {!isLoading ? (<Button size="large" className='transactionBtn'  style={{marginBottom: "30px"}} onClick={onSPLClick} disabled={!publicKey} >Feed Your Fox!</Button>) :
               (<Button size="large" variant='outlined' className='transactionBtn'><CircularProgress /></Button>)}</>) :
             (<h1 className='carots' style={{marginBottom: "20px"}}>Make Your Selections</h1>)}
