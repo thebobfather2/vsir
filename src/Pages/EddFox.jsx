@@ -28,7 +28,6 @@ const EddFox = () => {
             className="Mintfox"
             src={Mintfox}
             alt="Mintfox"
-            style={{ maxWidth: "300px" }}
           ></img>
           <h3 style={{ marginBottom: "40px", color: "white" }}>Mint Edd Fox</h3>
         </a>
@@ -38,7 +37,7 @@ const EddFox = () => {
             className="Stakefox"
             src={Stakefox}
             alt="Stakefox"
-            style={{ marginTop: "0px", maxWidth: "300px" }}
+            style={{ marginTop: "0px"}}
           ></img>
           <h3 style={{ marginBottom: "40px", color: "white" }}>
             Stake for Field Coins
@@ -50,9 +49,9 @@ const EddFox = () => {
             className="Stakefox"
             src={Potion}
             alt="Potion"
-            style={{ marginTop: "0px", maxWidth: "300px" }}
+            style={{ marginTop: "0px"}}
           ></img>
-          <h3 style={{ marginBottom: "20px", color: "white" }}>Fox Mart</h3>
+          <h3 style={{ marginBottom: "40px", color: "white" }}>Fox Mart</h3>
         </Link>
 
         <Link to="/FeedAFox">
@@ -62,7 +61,7 @@ const EddFox = () => {
             alt="Feed"
             style={{ marginTop: "0px"}}
           ></img>
-         <h3 style={{ marginBottom: "20px", color: "white" }}>Feed Your Fox</h3>
+         <h3 style={{ marginBottom: "40px", color: "white" }}>Feed Your Fox</h3>
         </Link>
 
       </div>
