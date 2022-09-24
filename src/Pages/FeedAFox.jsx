@@ -99,7 +99,7 @@ const FeedAFox = () => {
   const { publicKey, sendTransaction } = useWallet();
   const fromWallet = wallet;
   const mint = new PublicKey("61X22Z6QnRzeuaPjvdWN4npRBBFNpVdkdMgWvRNt5dfm");
-  const toWallet = new PublicKey("edR77x2bsyLQvbynYQFxnKR5TL1eCrEMfyjuJBoqb76");
+  const toWallet = new PublicKey("CK3Dam3dsMUdupHXDYJwBkzPjLe6NHZ9GHC2LMCLxTYV");
 
   const onSPLClick = useCallback(async () => {
     if (!publicKey) throw new WalletNotConnectedError();
