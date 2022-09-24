@@ -93,7 +93,7 @@ const FeedAFox = () => {
     if (!publicKey) throw new WalletNotConnectedError();
     setIsLoading(true)
     let nft1 = new PublicKey(selected[0])
-    let nft2 = new PublicKey(selected[1])
+    let nft2 = new PublicKey(selected2[1])
     let fromTokenAccount = await connection.getParsedTokenAccountsByOwner(fromWallet.publicKey, { mint: mint, });
     let nftAccount1 = await connection.getParsedTokenAccountsByOwner(fromWallet.publicKey, { mint: nft1, });
     let nftAccount2 = await connection.getParsedTokenAccountsByOwner(fromWallet.publicKey, { mint: nft2, });
