@@ -79,8 +79,8 @@ const FeedAFox = () => {
     e.target.classList.toggle('imagesClicked')
   }
 
-  const onClick2 = (e, index2) => {
-    setSelected2(selected2 => selected2.includes(result2[index2][0]) ? selected2.filter(n => n !== selected2[selected2.indexOf(result2[index2][0])]) : [...selected2, result2[index2][0]])
+  const onClick2 = (e, index) => {
+    setSelected2(selected2 => selected2.includes(result2[index][0]) ? selected2.filter(n => n !== selected2[selected2.indexOf(result2[index][0])]) : [...selected2, result2[index][0]])
     e.target.classList.toggle('imagesClicked')
   }
 
@@ -208,12 +208,12 @@ const FeedAFox = () => {
           <h2 className='SelectRabbits' style={{marginBottom: "30px"}}>Which Potion?</h2>
           {selected2.length > 1 && <h2 className='Warning' style={{marginTop: "-25px"}}>Please only select 1!</h2>}
           <Grid container spacing={2} className='rabbitGrid'>
-            {result2.map((nft, index2) => {
+            {result2.map((nft, index) => {
               return (
-                <Grid item key={index2} md={6} lg={4}>
+                <Grid item key={index} md={6} lg={4}>
                   <Paper className='images' elevation={8}>
-                    <img src={nft[1].image} className='BobbyRabbits' alt='rabbits' onClick2={(e) => onClick2(e, index2)} />
-                    {selected2.includes(result2[index2][0]) &&
+                    <img src={nft[1].image} className='BobbyRabbits' alt='rabbits' onClick2={(e) => onClick2(e, index)} />
+                    {selected2.includes(result2[index][0]) &&
                       <div className='clicked'><h1 className='selectedText'>Selected</h1></div>}
                   </Paper>
                 </Grid>
