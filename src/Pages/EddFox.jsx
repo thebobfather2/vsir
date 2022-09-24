@@ -56,14 +56,14 @@ const EddFox = () => {
         </Link>
 
         <Link to="/FeedAFox">
-      <img
-        className="Stakefox"
-        src={feed}
-        alt="Feed"
-        style={{ marginTop: "0px"}}
-      ></img>
+          <img
+            className="Stakefox"
+            src={feed}
+            alt="Feed"
+            style={{ marginTop: "0px"}}
+          ></img>
          <h3 style={{ marginBottom: "20px", color: "white" }}>Feed Your Fox</h3>
-    </Link>
+        </Link>
 
       </div>
 
@@ -78,7 +78,7 @@ const EddFox = () => {
             backgroundColor: "black",
           }}
         >
-          <h3 style={{ fontSize: "2.2em", color: "yellow" }}>WL MINT NOW!</h3>
+          <h3 style={{ fontSize: "2.2em", color: "yellow" }}>WL MINT IS NOW!</h3>
 
           <h1
             style={{ marginTop: "20px", marginBottom: "20px", color: "white" }}
