@@ -23,13 +23,13 @@ const EddFox = () => {
       </div>
 
       <div className="EddBody">
-        <a href="https://eddfox.vercel.app/">
+        <a href="https://magiceden.io/marketplace/eddfox">
           <img
             className="Mintfox"
             src={Mintfox}
             alt="Mintfox"
           ></img>
-          <h3 style={{ marginBottom: "40px", color: "white" }}>Mint Edd Fox</h3>
+          <h3 style={{ marginBottom: "40px", color: "white" }}>Trade Edd Fox</h3>
         </a>
 
         <a href="https://staking.bobbyrabbits.com/eddfox">
