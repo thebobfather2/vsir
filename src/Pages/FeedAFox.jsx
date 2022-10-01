@@ -240,7 +240,7 @@ const FeedAFox = () => {
           </Grid>
         </div>
 
-        <div className="RabbitSelect">
+        <div className="RabbitSelect" style={{minWidth: "30%"}}>
           <h2 className="SelectRabbits" style={{ marginBottom: "30px" }}>
             Which Potion?
           </h2>

@@ -18,7 +18,7 @@
 }
 
 .RabbitSelect {
-    min-width: 300px;
+    min-width: 30%;
     background-color: rgba(255, 255, 255, 0.315);
     padding: 20px;
     border-radius: 20px;
@@ -71,8 +71,6 @@
     right: 25px;
 }
 
-
-
 .clicked {
     position: absolute;
     width: 95%;
@@ -89,7 +87,6 @@
 .selectedText {
     text-align: center;
     color: white;
-
 }
 
 .completePurchase {
