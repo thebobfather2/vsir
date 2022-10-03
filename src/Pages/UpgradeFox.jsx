@@ -9,10 +9,10 @@ import { Connection, PublicKey, Transaction } from "@solana/web3.js";
 import { useCallback, useEffect, useState } from "react";
 import filter from "../foxfilter.json";
 import fieldcoin from "../images/fieldcoin.png";
-import filter2 from "../potionfilter.json";
-import "./FeedAFox.css";
+import filter2 from "../upgradefilter.json";
+import "./UpgradeFox.css";
 
-const FeedAFox = () => {
+const UpgradeFox = () => {
   let walletAddress = "";
   const wallet = useAnchorWallet();
   walletAddress = wallet?.publicKey.toString();
@@ -202,15 +202,15 @@ const FeedAFox = () => {
   return (
     <div className="CustomMain">
       <div className="CustomHeader">
-        <h1 className="title" style={{ marginBottom: "40px" }}>
-          Feed Your Fox
+        <h1 className="title" style={{marginTop: "-40px", marginBottom: "40px" }}>
+          Upgrade Your Fox
         </h1>
       </div>
 
       <div className="MainContainer">
         <div className="RabbitSelect">
           <h2 className="SelectRabbits" style={{ marginBottom: "30px" }}>
-            Which Edd Fox would you like to feed?
+            Which Edd Fox would you like to upgrade?
           </h2>
           {selected.length > 1 && (
             <h2 className="Warning" style={{ marginTop: "-25px" }}>
@@ -242,7 +242,7 @@ const FeedAFox = () => {
 
         <div className="RabbitSelect" style={{minWidth: "30%"}}>
           <h2 className="SelectRabbits" style={{ marginBottom: "30px" }}>
-            Which Potion?
+            Choose a power up:
           </h2>
           {selected2.length > 1 && (
             <h2 className="Warning" style={{ marginTop: "-25px" }}>
@@ -277,12 +277,10 @@ const FeedAFox = () => {
           {selected.length === 1 && selected2.length === 1 ? (
             <>
               <h1 className="carots" style={{ marginBottom: "10px" }}>
-                Pay 10 $FIELD to feed your Fox a Potion and initiate a
-                transformation!
+                Pay 10 $FIELD to upgrade your Fox!
               </h1>
               <h3>
-                After the transaction completes, your fox may go into temporary
-                hibernation while he digests his meal.
+                After the transaction completes, we will transform your fox and send him back. If you have any questions, ping us in the Discord!
               </h3>
               {!isLoading ? (
                 <Button
@@ -292,7 +290,7 @@ const FeedAFox = () => {
                   onClick={onSPLClick}
                   disabled={!publicKey}
                 >
-                  Feed Your Fox!
+                  Upgrade Your Fox!
                 </Button>
               ) : (
                 <Button
@@ -353,4 +351,4 @@ const FeedAFox = () => {
   );
 };
 
-export default FeedAFox;
+export default UpgradeFox;
