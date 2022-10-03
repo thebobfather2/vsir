@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import eddFox from "../images/eddFoxLogo.png";
 import BaadLogo from "../images/BaadLogo.png";
 import k24logo from "../images/k24logo.png";
-import Launch from "../images/launch.png";
+import Launch from "../images/launch.jpeg";
 import apply from "../images/apply.png";
 import partnerimg from "../images/partners.png";
 import grouchy from "../images/grouchy.png";
@@ -62,7 +62,7 @@ const Partners = () => {
               >
                 <img
                   src={partner.image}
-                  style={{ maxWidth: "200px" }}
+                  style={{ maxWidth: "130px" }}
                   alt="partner logo"
                 />
                 <h3 style={{ color: "white" }}>{partner.name}</h3>
@@ -72,7 +72,7 @@ const Partners = () => {
         })}
       </div>
       
-      <div className="Launch"  style={{width: "80%", marginTop: "20px"}}>
+      <div className="Launch"  style={{marginTop: "20px", marginBottom: "20px"}}>
        <Link to='/Launchpad'>
         <img
           className="Launch"

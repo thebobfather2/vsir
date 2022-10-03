@@ -51,17 +51,17 @@ const EddFox = () => {
             alt="Potion"
             style={{ marginTop: "0px"}}
           ></img>
-          <h3 style={{ marginBottom: "40px", color: "white" }}>Fox Mart</h3>
+          <h3 style={{ marginBottom: "40px", color: "white" }}>FoxMart (Buy Upgrades)</h3>
         </Link>
 
-        <Link to="/FeedAFox">
+        <Link to="/UpgradeFox">
           <img
             className="Stakefox"
             src={feed}
-            alt="Feed"
+            alt="Upgrade"
             style={{ marginTop: "0px"}}
           ></img>
-         <h3 style={{ marginBottom: "40px", color: "white" }}>Feed Your Fox</h3>
+         <h3 style={{ marginBottom: "40px", color: "white" }}>Upgrade Your Fox</h3>
         </Link>
 
       </div>

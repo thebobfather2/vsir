@@ -10,6 +10,8 @@ import {
 } from "../components/candy-shop-fox";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 import styled from "styled-components";
+import { Sell } from '@liqnft/candy-shop';
+
 import './CarotMarket.css'
 
 const FoxMart: React.FC = () => {
@@ -40,15 +42,25 @@ const FoxMart: React.FC = () => {
         candyShop={candyShopRef.current}
         title={"Fox Mart"}
         description={
-          "Use Field Coin to purchase potions for Edd!"
+          "Use Field Coin to purchase upgrades for Edd!"
         }
         style={{ paddingBottom: 50 }}
       />
+      
+      <h2 style={{marginBottom: "20px", background: "black", color: "white", borderRadius: "20px", padding: "10px"}}>Purchase upgrades for your fox:</h2>
       <Orders
         wallet={wallet}
         candyShop={candyShopRef.current}
         walletConnectComponent={<WalletMultiButton />}
       />
+      <h2 style={{marginBottom: "20px", background: "black", color: "white", borderRadius: "20px", padding: "10px"}}>List your upgrades for sale in $FIELD:</h2>
+      <Sell 
+      wallet={wallet} 
+      candyShop={candyShopRef.current} 
+      walletConnectComponent={<WalletMultiButton />} 
+      enableCacheNFT={true}
+      />
+    
     </DesContainer></CandyShopDataValidator>) :
      (<>
     <h1>Please Connect Wallet</h1>
