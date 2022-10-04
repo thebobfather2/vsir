@@ -126,7 +126,7 @@ const Navbar = () => {
           <i class="fab fa-firstdraft" />
         </a>
 
-        <a href="https://discord.gg/PfGQnKZqNa/" className="navbar-logo2" onClick={toggleNav}>
+        <a href="https://discord.gg/PfGQnKZqNa" className="navbar-logo2" onClick={toggleNav}>
           <img src={DiscordLogo} className="MELogo" />
           <i class="fab fa-firstdraft" />
         </a>

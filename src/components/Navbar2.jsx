@@ -78,7 +78,7 @@ function Navbar() {
           <i class="fab fa-firstdraft" />
         </a>
 
-        <a href="https://discord.gg/PfGQnKZqNa/" className="navbar-logo" onClick={closeMobileMenu}>
+        <a href="https://discord.gg/PfGQnKZqNa" className="navbar-logo" onClick={closeMobileMenu}>
           <img src={DiscordLogo} className="MELogo" />
           <i class="fab fa-firstdraft" />
         </a>
