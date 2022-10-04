@@ -18,7 +18,7 @@ const EddFox = () => {
           className="eddtitle"
           src={eddtitle}
           alt="eddtitle"
-          style={{ maxWidth: "800px" }}
+          style={{ maxWidth: "90%" }}
         ></img>
       </div>
 
@@ -69,38 +69,14 @@ const EddFox = () => {
       <div className="EddBody2">
         <div
           style={{
-            marginTop: "10px",
             marginBottom: "-10px",
-            borderRadius: "20px",
-            color: "white",
-            padding: "40px",
+            borderRadius: "10px",
+            padding: "10px",
+            width: "80%",
+            maxHeight: "5px",
             backgroundColor: "black",
           }}
         >
-          <h3 style={{ fontSize: "2.2em", color: "yellow" }}>WL MINT IS NOW!</h3>
-
-          <h1
-            style={{ marginTop: "20px", marginBottom: "20px", color: "white" }}
-          >
-            INFO
-          </h1>
-
-          <div style={{ marginBottom: "10px" }}>
-            Edd Fox will be available to the general public on Tuesday,
-            September 27th, 2022, at 5 pm EST.
-          </div>
-
-          <div style={{ marginBottom: "10px" }}>
-            Whitelist spots can be earned through participation in our discord!
-            Those holding "Edd Fox WL" tokens will have immediate access to mint
-            foxes for only 0.25 SOL. If there are any foxes remaining by
-            September 27th, public sale will go live for 0.7 SOL.
-          </div>
-          <div>
-            Additionally, the top 22 ranked members in the Discord the day of
-            launch will be air dropped a free Edd Fox! Come join in on the fun
-            and see what we have been creating at The Fox Factory!
-          </div>
         </div>
 
         <div
@@ -156,23 +132,6 @@ const EddFox = () => {
               https://discord.gg/GQgN7kSDVn{" "}
             </a>
           </div>
-        </div>
-
-        <div>
-          <a href="https://nftcalendar.io/event/edd-fox/">
-            <img
-              className="nftc"
-              src={nftc}
-              alt="nftc"
-              style={{
-                borderRadius: "20px",
-                backgroundColor: "black",
-                marginBottom: "60px",
-                marginTop: "30px",
-                maxWidth: "300px",
-              }}
-            ></img>
-          </a>
         </div>
       </div>
     </div>
