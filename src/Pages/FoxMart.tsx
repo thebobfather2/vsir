@@ -40,7 +40,7 @@ const FoxMart: React.FC = () => {
        <DesContainer>
       <Stat
         candyShop={candyShopRef.current}
-        title={"Fox Mart"}
+        title={"FoxMart"}
         description={
           "Use Field Coin to purchase upgrades for Edd!"
         }

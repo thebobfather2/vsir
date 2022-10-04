@@ -29,7 +29,7 @@ const EddFox = () => {
             src={Mintfox}
             alt="Mintfox"
           ></img>
-          <h3 style={{ marginBottom: "40px", color: "white" }}>Trade Edd Fox</h3>
+          <h3 style={{ marginBottom: "40px", color: "white", textShadow: "2px 2px #000000"}}>Buy A Fox</h3>
         </a>
 
         <a href="https://staking.bobbyrabbits.com/eddfox">
@@ -39,8 +39,8 @@ const EddFox = () => {
             alt="Stakefox"
             style={{ marginTop: "0px"}}
           ></img>
-          <h3 style={{ marginBottom: "40px", color: "white" }}>
-            Stake for Field Coins
+          <h3 style={{ marginBottom: "40px", color: "white", textShadow: "2px 2px #000000"}}>
+            Earn $FIELD
           </h3>
         </a>
 
@@ -51,7 +51,7 @@ const EddFox = () => {
             alt="Potion"
             style={{ marginTop: "0px"}}
           ></img>
-          <h3 style={{ marginBottom: "40px", color: "white" }}>FoxMart (Buy Upgrades)</h3>
+          <h3 style={{ marginBottom: "40px", color: "white", textShadow: "2px 2px #000000"}}>FoxMart</h3>
         </Link>
 
         <Link to="/UpgradeFox">
@@ -61,52 +61,24 @@ const EddFox = () => {
             alt="Upgrade"
             style={{ marginTop: "0px"}}
           ></img>
-         <h3 style={{ marginBottom: "40px", color: "white" }}>Upgrade Your Fox</h3>
+         <h3 style={{ marginBottom: "40px", color: "white", textShadow: "2px 2px #000000"}}>Upgrade Your Fox</h3>
         </Link>
-
       </div>
 
       <div className="EddBody2">
-        <div
-          style={{
-            marginBottom: "-10px",
-            borderRadius: "10px",
-            padding: "10px",
-            width: "80%",
-            maxHeight: "5px",
-            backgroundColor: "black",
-          }}
-        >
-        </div>
-
-        <div
-          className="EddBody2"
-          style={{
-            borderRadius: "20px",
-            color: "white",
-            padding: "40px",
-          }}
-        >
+          <h1 className="EddBody3">
+            Meet Reuben
+          </h1>
           <img
             className="family"
             src={family}
             alt="family"
             style={{
-              marginTop: "0px",
-              marginBottom: "10px",
-              textalign: "center",
-              alignitems: "center",
-              justifycontent: "center",
-              maxWidth: "400px",
+              marginTop: "10px"
             }}
           />
-          <h1
-            className="EddBody3"
-            style={{ fontSize: "2em", marginBottom: "0px", color: "white" }}
-          >
-            Meet Reuben
-          </h1>
-          <div className="EddBody4" style={{ color: "white" }}>
+
+          <div className="EddBody4" style={{ color: "white"}}>
             Reuben Lacy, who holds a degree in industrial design from Auburn
             University, is a designer to his core. When he began to engage on a
             deeper level with the Bobby Rabbits, so many ideas and concepts were
@@ -126,7 +98,7 @@ const EddFox = () => {
             <a
               href="https://discord.gg/GQgN7kSDVn/"
               target="_blank"
-              style={{ color: "yellow" }}
+              style={{ color: "yellow", marginBottom: "50px" }}
             >
               {" "}
               https://discord.gg/GQgN7kSDVn{" "}
@@ -134,7 +106,6 @@ const EddFox = () => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
 

@@ -43,7 +43,7 @@
 }
 
 .EddBody3 {
-  color: black;
+  color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
   width: 90%;
@@ -52,6 +52,8 @@
   justify-content: center;
   position: relative;
   margin-top: 25px;
+  font-size: 3.9em;
+  text-shadow:4px 4px #000000;
 }
 
 .EddBody4 {
@@ -90,8 +92,12 @@
 
 .family {
   width: 80%;
+  max-width: 400px;
   height: 80%;
+  align-items: center;
+  justify-content: center;
 }
+
 
 @media screen and (max-width: 500px) {
   .EddTitleContainer {
@@ -140,15 +146,16 @@
   }
 
   .EddBody3 {
-    color: black;
+    color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 90%;
     text-align: center;
     align-items: center;
     justify-content: center;
     position: relative;
     margin-top: 25px;
+    font-size: 3em;
   }
 
   .Stakefox {
