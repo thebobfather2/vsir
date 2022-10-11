@@ -25,6 +25,7 @@ const UpgradeFox = () => {
 
   const { nfts } = useWalletNfts({
     publicAddress: walletAddress,
+    connection: connection,
   });
 
   const [metadata, setMetadata] = useState({});
@@ -99,7 +100,9 @@ const UpgradeFox = () => {
   const { publicKey, sendTransaction } = useWallet();
   const fromWallet = wallet;
   const mint = new PublicKey("61X22Z6QnRzeuaPjvdWN4npRBBFNpVdkdMgWvRNt5dfm");
-  const toWallet = new PublicKey("CK3Dam3dsMUdupHXDYJwBkzPjLe6NHZ9GHC2LMCLxTYV");
+  const toWallet = new PublicKey(
+    "CK3Dam3dsMUdupHXDYJwBkzPjLe6NHZ9GHC2LMCLxTYV"
+  );
 
   const onSPLClick = useCallback(async () => {
     if (!publicKey) throw new WalletNotConnectedError();
@@ -202,7 +205,10 @@ const UpgradeFox = () => {
   return (
     <div className="CustomMain">
       <div className="CustomHeader">
-        <h1 className="title" style={{marginTop: "-40px", marginBottom: "40px" }}>
+        <h1
+          className="title"
+          style={{ marginTop: "-40px", marginBottom: "40px" }}
+        >
           Upgrade Your Fox
         </h1>
       </div>
@@ -240,7 +246,7 @@ const UpgradeFox = () => {
           </Grid>
         </div>
 
-        <div className="RabbitSelect" style={{minWidth: "30%"}}>
+        <div className="RabbitSelect" style={{ minWidth: "30%" }}>
           <h2 className="SelectRabbits" style={{ marginBottom: "30px" }}>
             Choose a power up:
           </h2>
@@ -280,7 +286,9 @@ const UpgradeFox = () => {
                 Pay 10 $FIELD to upgrade your Fox!
               </h1>
               <h3>
-                After the transaction completes, we will transform your fox and send him back. If you have any questions, ping us in the Discord!
+                After the transaction completes, we will transform your fox and
+                send him back. If you have any questions, ping us in the
+                Discord!
               </h3>
               {!isLoading ? (
                 <Button
