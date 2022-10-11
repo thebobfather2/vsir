@@ -19,7 +19,7 @@ const UpgradeFox = () => {
   const filterList = JSON.parse(JSON.stringify(filter));
   const filterList2 = JSON.parse(JSON.stringify(filter2));
   const connection = new Connection(
-    "https://bold-old-moon.solana-mainnet.quiknode.pro/ce6fe5d59cabd95814a4c61a6e69afbbfc625c9f/",
+    "https://solana-api.projectserum.com",
     "confirmed"
   );
 
