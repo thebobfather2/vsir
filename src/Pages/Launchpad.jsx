@@ -17,17 +17,6 @@ const Launchpad = () => {
      <div className="Projects">
 
       <div className="LaunchpadMain2">
-      <a href="https://ghostbunny.vercel.app/">
-        <img
-          className="CarrotGif"
-          src={CarrotGif}
-          alt="CarrotGif"
-      ></img>
-         <h3 style={{fontSize: "1.5em", color: "white", marginTop: "10px" }}>Mint Ghost Bunny</h3>
-      </a>
-      </div>
-
-      <div className="LaunchpadMain2">
       <a href="https://baadgoats.vercel.app/">
         <img
           className="BaadGif"

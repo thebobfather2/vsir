@@ -22,7 +22,7 @@ const BunnyClub = () => {
       </div>
 
       <div className="k24Main2">
-        <a href="https://ghostbunny.vercel.app/">
+        <a href="https://magiceden.io/marketplace/ghost_bunnies">
           <img
             className="GhostBunny"
             src={GhostBunny}
@@ -30,7 +30,7 @@ const BunnyClub = () => {
             style={{ marginTop: "0px" }}
           ></img>
           <h3 style={{ marginBottom: "40px", color: "white" }}>
-            Mint Ghost Bunny
+            Buy A Ghost Bunny
           </h3>
         </a>
 
