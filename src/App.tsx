@@ -131,6 +131,7 @@ const Content: FC = () => {
         <Route path="/JackTuber" element={<JackTuber />} />
         <Route path="/FoxMart" element={<FoxMart />} />
         <Route path="/UpgradeFox" element={<UpgradeFox />} />
+        <Route path="/NftMinter" element={<NftMinter />} />
       </Routes>
     </>
   );
