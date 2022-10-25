@@ -1,0 +1,286 @@
+.EddMainContainer {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    background-image: url(../images/gnarbg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  
+  .EddTitleContainer {
+    font-family: 'Noto Serif', serif;
+    font-size: 5vw;
+    font-weight: bolder;
+    background-color: #fad141;
+    color: #f725a0;
+    text-shadow: 3.2px 2.6px #672394;
+    border: 5px solid #672394;
+    box-shadow: 8px 8px #00000062;
+    border-radius: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    border-color: #672394;
+  }
+
+  .AboutContainer {
+    font-family: 'Noto Serif', serif;
+    font-size: 1vw;
+    font-weight: bolder;
+    background-color: #fad141;
+    color: #f725a0;
+    text-shadow: 1.2px 1.5px #672394;
+    border: 5px solid #672394;
+    box-shadow: 8px 8px #00000062;
+    border-radius: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    border-color: #672394;
+  }
+  
+  .GnarBody {
+    display: flex;
+    width: 70%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 20px;
+    padding: 30px;
+    background-color: #672394;
+    border: 5px solid #fad141;
+    box-shadow: 8px 8px #00000062;
+  }
+  
+  .GnarBody2 {
+    margin-top: 25px;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: #672394;
+  }
+  
+  .EddBody3 {
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 25px;
+    font-size: 3.9em;
+    text-shadow: 2.5px 2.5px #000000;
+  }
+  
+  .EddBody4 {
+    font-size: 1.5vw;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 25px;
+  }
+
+  .Subheading {
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-top: 10px;
+    border-radius: 15px;
+    color: #ffffff;
+    text-shadow: .5px .5px #f725a0;
+  }
+  
+  .eddtitle {
+    margin-top: 10px;
+    margin-bottom: -20px;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .Stakefox {
+    width: 60%;
+    height: 60%;
+  }
+  
+  .MintGnar {
+    width: 60%;
+    height: 60%;
+    border-radius: 20px;
+  }
+  
+  .nftc {
+    max-width: 60%;
+    height: auto;
+  }
+  
+  .family {
+    width: 80%;
+    max-width: 400px;
+    height: 80%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  @media screen and (max-width: 550px) {
+    .EddTitleContainer {
+        font-family: 'Noto Serif', serif;
+        font-size: 6.5vw;
+        font-weight: bolder;
+        background-color: #fad141;
+        color: #f725a0;
+        text-shadow: 3.2px 2.6px #672394;
+        border-radius: 60px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+  
+    .GnarBody {
+      display: flex;
+      flex-direction: column;
+      width: 70%;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      border-radius: 20px;
+      padding: 30px;
+      background-color: #672394;
+      border: 5px solid #fad141;
+      box-shadow: 8px 8px #00000062;
+    }
+  
+    .EddBody2 {
+      color: black;
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin-top: 25px;
+    }
+  
+    .EddBody4 {
+      color: black;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin-top: 25px;
+    }
+  
+    .EddBody3 {
+      color: rgb(255, 255, 255);
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin-top: 25px;
+      font-size: 3em;
+    }
+  
+    .Stakefox {
+      width: 40%;
+      height: 40%;
+    }
+  
+    .MintGnar {
+      width: 50%;
+      height: 50%;
+    }
+  
+    .family {
+      width: 100%;
+      height: 100%;
+    }
+
+    .Subheading {
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        margin-top: 5px;
+        margin-bottom: 30px;
+        border-radius: 15px;
+        color: #ffffff;
+        text-shadow: .5px .5px #f725a0;
+      }
+
+      .SubheadingG {
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        margin-top: 5px;
+        margin-bottom: 0px;
+        border-radius: 15px;
+        color: #ffffff;
+        text-shadow: .5px .5px #f725a0;
+      }
+  
+    .nftc {
+      max-width: 60%;
+      height: auto;
+    }
+  }
+
+  .AboutContainer {
+    font-family: 'Noto Serif', serif;
+    font-size: 2vw;
+    font-weight: bolder;
+    background-color: #fad141;
+    color: #f725a0;
+    text-shadow: 1.2px 1.5px #672394;
+    border: 5px solid #672394;
+    box-shadow: 8px 8px #00000062;
+    border-radius: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    border-color: #672394;
+  }
+  

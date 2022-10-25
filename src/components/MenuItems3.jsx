@@ -12,6 +12,12 @@ export const MenuItems3 = [
   },
 
   {
+    title: "GnarAF DAO",
+    path: "/GnarAFDAO",
+    cName: "dropdown-link",
+  },
+
+  {
     title: "Baad Goats",
     path: "/Baad",
     cName: "dropdown-link",
