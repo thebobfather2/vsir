@@ -1,5 +1,5 @@
-import { PublicKey, Cluster } from "@solana/web3.js";
 import { CandyShop } from "@liqnft/candy-shop-sdk";
+import { Cluster, PublicKey } from "@solana/web3.js";
 
 const CANDY_SHOP_CREATOR_ADDRESS_FOX = new PublicKey(
   process.env.REACT_APP_CANDY_SHOP_CREATOR_ADDRESS_FOX!
@@ -11,6 +11,7 @@ const CANDY_SHOP_PROGRAM_ID_FOX = new PublicKey(
   process.env.REACT_APP_CANDY_SHOP_PROGRAM_ID_FOX!
 );
 const NETWORK = process.env.REACT_APP_SOLANA_NETWORK! as Cluster;
+const RPC = 'https://solana-api.projectserum.com/'
 
 const candyShopFox = new CandyShop({
   candyShopCreatorAddress: CANDY_SHOP_CREATOR_ADDRESS_FOX,
@@ -20,6 +21,7 @@ const candyShopFox = new CandyShop({
   settings: {
     currencyDecimals: Number(0),
     currencySymbol: "$FIELD",
+    mainnetConnectionUrl: RPC,
   },
 });
 
@@ -30,3 +32,4 @@ export {
   CANDY_SHOP_PROGRAM_ID_FOX,
   NETWORK,
 };
+
