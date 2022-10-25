@@ -40,6 +40,7 @@ const Gallery = () => {
 
   const { nfts } = useWalletNfts({
     publicAddress: myWallet,
+    connection,
   });
 
   const [metadata, setMetadata] = useState({});
