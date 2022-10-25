@@ -34,7 +34,7 @@ const Gallery = () => {
   const wallet = useAnchorWallet();
   walletAddress = wallet?.publicKey.toString();
   const connection = new Connection(
-    "https://solana-api.projectserum.com/",
+    "https://api.mainnet-beta.solana.com",
     "confirmed"
   );
 

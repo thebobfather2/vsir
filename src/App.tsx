@@ -41,6 +41,7 @@ import GrouchyTigers from "./Pages/GrouchyTigers";
 import JackTuber from "./Pages/JackTuber";
 import FoxMart from "./Pages/FoxMart";
 import UpgradeFox from "./Pages/UpgradeFox";
+import GnarAFDAO from "./Pages/GnarAFDAO";
 
 
 require("./App.css");
@@ -132,6 +133,7 @@ const Content: FC = () => {
         <Route path="/FoxMart" element={<FoxMart />} />
         <Route path="/UpgradeFox" element={<UpgradeFox />} />
         <Route path="/NftMinter" element={<NftMinter />} />
+        <Route path="/GnarAFDAO" element={<GnarAFDAO />} />
       </Routes>
     </>
   );
