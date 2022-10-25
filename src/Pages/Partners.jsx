@@ -8,7 +8,9 @@ import apply from "../images/apply.png";
 import partnerimg from "../images/partners.png";
 import grouchy from "../images/grouchy.png";
 import jtlogo from "../images/jtlogo.png";
+import mintgnar from "../images/GnarDAOLogo.png"
 import "./Partners.css";
+import { borderRadius } from "@mui/system";
 
 const Partners = () => {
   const partners = [
@@ -21,6 +23,11 @@ const Partners = () => {
       name: "24 Carrot",
       image: k24logo,
       path: "/BunnyClub",
+    },
+    {
+      name: "GnarAF DAO",
+      image: mintgnar,
+      path: "/GnarAFDAO",
     },
     {
       name: "Baad Goats",

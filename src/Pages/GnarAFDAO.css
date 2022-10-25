@@ -117,6 +117,15 @@
     text-shadow: .5px .5px #f725a0;
   }
   
+  .SubheadingG {
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-top: 10px;
+    border-radius: 15px;
+    color: #ffffff;
+    text-shadow: .5px .5px #f725a0;
+  }
   .eddtitle {
     margin-top: 10px;
     margin-bottom: -20px;
@@ -251,7 +260,7 @@
         align-items: center;
         align-content: center;
         margin-top: 5px;
-        margin-bottom: 0px;
+        margin-bottom: 1px;
         border-radius: 15px;
         color: #ffffff;
         text-shadow: .5px .5px #f725a0;
