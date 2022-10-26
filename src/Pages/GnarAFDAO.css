@@ -17,7 +17,7 @@
     font-weight: bolder;
     background-color: #fad141;
     color: #f725a0;
-    text-shadow: 3.2px 2.6px #672394;
+    text-shadow: 7px 7px #672394;
     border: 5px solid #672394;
     box-shadow: 8px 8px #00000062;
     border-radius: 60px;
@@ -25,11 +25,20 @@
     flex-wrap: wrap;
     width: 70%;
     padding: 20px;
+    padding-top: 0px;
+    padding-bottom: 35px;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 27px;
     margin-bottom: 30px;
     border-color: #672394;
+  }
+
+  .Subtitle {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5vw;
+    color: #672394;
+    text-shadow: 2px 2px #f725a0;
   }
 
   .AboutContainer {
@@ -49,7 +58,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 40px;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
     border-color: #672394;
   }
   
@@ -90,7 +99,7 @@
     justify-content: center;
     position: relative;
     margin-top: 25px;
-    font-size: 3.9em;
+    font-size: 2.5em;
     text-shadow: 2.5px 2.5px #000000;
   }
   
@@ -142,6 +151,7 @@
     width: 60%;
     height: 60%;
     border-radius: 20px;
+    box-shadow: 8px 8px #00000062;
   }
   
   .nftc {
