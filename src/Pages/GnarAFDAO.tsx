@@ -47,6 +47,7 @@ const GnarAFDAO = () => {
       </div>
 
       <div className="AboutContainer">
+        
           <h1 className="EddBody3">
             About GnarAF DAO
           </h1>
