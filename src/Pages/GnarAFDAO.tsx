@@ -1,9 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import family from "../images/family.png";
 import MintGnar from "../images/MintGnar.png";
 import GnarTat from "../images/gnartat.png";
-import feed from "../images/feed.png";
 import GnarStaking from "../images/GnarStaking.png";
 
 import "./GnarAFDAO.css";
