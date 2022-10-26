@@ -169,9 +169,10 @@
   
   
   @media screen and (max-width: 650px) {
+      
     .EddTitleContainer {
         font-family: 'Permanent Marker', cursive;
-        font-size: 5.5vw;
+        font-size: 4.5vw;
         font-weight: bolder;
         background-color: #fad141;
         color: #f725a0;
