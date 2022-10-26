@@ -12,7 +12,7 @@ const GnarAFDAO = () => {
   return (
     <div className="EddMainContainer">
       <div className="EddTitleContainer">
-        <h1>GnarAF DAO</h1>
+        <h1>Gnar AF DAO</h1>
       </div>
 
       <div className="GnarBody">

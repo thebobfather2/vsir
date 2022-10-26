@@ -12,8 +12,8 @@
   }
   
   .EddTitleContainer {
-    font-family: 'Noto Serif', serif;
-    font-size: 5vw;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 4.5vw;
     font-weight: bolder;
     background-color: #fad141;
     color: #f725a0;
@@ -158,18 +158,18 @@
   }
   
   
-  @media screen and (max-width: 550px) {
+  @media screen and (max-width: 650px) {
     .EddTitleContainer {
-        font-family: 'Noto Serif', serif;
-        font-size: 6.5vw;
+        font-family: 'Permanent Marker', cursive;
+        font-size: 4.5vw;
         font-weight: bolder;
         background-color: #fad141;
         color: #f725a0;
-        text-shadow: 3.2px 2.6px #672394;
+        text-shadow: 2.2px 1.6px #672394;
         border-radius: 60px;
         display: flex;
         flex-wrap: wrap;
-        width: 90%;
+        width: 70%;
         padding: 20px;
         justify-content: center;
         align-items: center;
