@@ -8,8 +8,8 @@ import "./GnarAFDAO.css";
 
 const GnarAFDAO = () => {
   return (
-    <div className="EddMainContainer">
-      <div className="EddTitleContainer">
+    <div className="GnarMainContainer">
+      <div className="GnarTitleContainer">
         <h1>Gnar AF DAO</h1>
         <h6 className="Subtitle">Your Ticket to the DAO Bringing Web3 Art into Every Home</h6>
       </div>
@@ -25,7 +25,7 @@ const GnarAFDAO = () => {
             Mint Your DAO Card</h3>
         </a>
 
-        <a href="https://staking.bobbyrabbits.com">
+        <a href="https://stake.cardinal.so/3hdpn7vkfASdzWvqrLgT83TZLNWdhkG3C1LeubWk7RRZ">
           <img
             className="MintGnar"
             src={GnarStaking}
@@ -48,11 +48,11 @@ const GnarAFDAO = () => {
 
       <div className="AboutContainer">
         
-          <h1 className="EddBody3">
+          <h1 className="GnarBody3">
             About GnarAF DAO
           </h1>
 
-          <div className="EddBody4" style={{ color: "white", textShadow: "2px 2px #000000"}}>
+          <div className="GnarBody4" style={{ color: "white", textShadow: "2px 2px #000000"}}>
            Join the Discord here:{" "}
             <a
               href="https://discord.gg/wDrWEFDrpj"

@@ -1,4 +1,4 @@
-.EddMainContainer {
+.GnarMainContainer {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -11,7 +11,7 @@
     background-attachment: fixed;
   }
   
-  .EddTitleContainer {
+  .GnarTitleContainer {
     font-family: 'Permanent Marker', cursive;
     font-size: 4.5vw;
     font-weight: bolder;
@@ -89,7 +89,7 @@
     background-color: #672394;
   }
   
-  .EddBody3 {
+  .GnarBody3 {
     color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
@@ -103,7 +103,7 @@
     text-shadow: 2.5px 2.5px #000000;
   }
   
-  .EddBody4 {
+  .GnarBody4 {
     font-size: 1.5vw;
     color: black;
     display: flex;
@@ -135,14 +135,14 @@
     color: #ffffff;
     text-shadow: .5px .5px #f725a0;
   }
-  .eddtitle {
+  .Gnartitle {
     margin-top: 10px;
     margin-bottom: -20px;
     width: 70%;
     height: 100%;
   }
   
-  .Stakefox {
+  .Stakegnar {
     width: 60%;
     height: 60%;
   }
@@ -170,7 +170,7 @@
   
   @media screen and (max-width: 650px) {
       
-    .EddTitleContainer {
+    .GnarTitleContainer {
         font-family: 'Permanent Marker', cursive;
         font-size: 4.5vw;
         font-weight: bolder;
@@ -211,7 +211,7 @@
       box-shadow: 8px 8px #00000062;
     }
   
-    .EddBody2 {
+    .GnarBody2 {
       color: black;
       display: flex;
       flex-direction: column;
@@ -223,7 +223,7 @@
       margin-top: 25px;
     }
 
-    .EddBody3 {
+    .GnarBody3 {
       color: rgb(255, 255, 255);
       display: flex;
       flex-direction: column;
@@ -236,7 +236,7 @@
       font-size: 3em;
     }
 
-    .EddBody4 {
+    .GnarBody4 {
       display: flex;
       flex-direction: column;
       width: 100%;
@@ -248,7 +248,7 @@
       font-size: 2em;
     }
   
-    .Stakefox {
+    .Stakegnar {
       width: 40%;
       height: 40%;
     }
