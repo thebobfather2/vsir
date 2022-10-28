@@ -17,7 +17,7 @@ import React, { FC, ReactNode, useEffect, useMemo, useState } from "react";
 import { HashRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Navbar2 from "./components/Navbar2";
-import Shop from "./components/Shop";
+import VSNHome from "./components/VSNHome";
 import Auctions from "./Pages/Auctions";
 import Baad from "./Pages/Baad";
 import BulkSend from "./Pages/BulkSend";
@@ -110,7 +110,7 @@ const Content: FC = () => {
     <>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Shop" element={<Shop />} />
+        <Route path="/VSNHome" element={<VSNHome />} />
         <Route path="/Send" element={<Send />} />
         <Route path="/BulkSend" element={<BulkSend />} />
         <Route path="/Cleaner" element={<Cleaner />} />

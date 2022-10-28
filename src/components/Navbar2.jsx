@@ -4,9 +4,10 @@ import { Link } from "react-router-dom";
 import Dropdown from "./Dropdown";
 import Dropdown2 from "./Dropdown2";
 import Dropdown3 from "./Dropdown3";
-import Logo from "./img/poweredwhite.png";
-import MELogo from "./img/MELogo.png";
-import DiscordLogo from "./img/Discord.png";
+import Logo from "./img/vsn.png";
+import twtr from "./img/twitter.png";
+import youtube from "./img/youtube.png";
+import twitch from "./img/twitch.png";
 import "./Navbar2.css";
 
 function Navbar() {
@@ -69,17 +70,22 @@ function Navbar() {
       <nav className="navbar">
 
         <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-          <img src={Logo} className="navLogo" />
+          <img src={Logo} className="Nav-Logo" />
           <i class="fab fa-firstdraft" />
         </Link>
 
-        <a href="https://magiceden.io/creators/bobbyrabbits/" className="navbar-logo" onClick={closeMobileMenu}>
-          <img src={MELogo} className="MELogo" />
+        <a href="https://twitter.com/VibeStreamNet" className="navbar-logo" onClick={closeMobileMenu}>
+          <img src={twtr} className="Nav-Logo" />
           <i class="fab fa-firstdraft" />
         </a>
 
-        <a href="https://discord.gg/PfGQnKZqNa" className="navbar-logo" onClick={closeMobileMenu}>
-          <img src={DiscordLogo} className="MELogo" />
+        <a href="https://www.youtube.com/channel/UCuQMtadkhjYL9ZTtmqMRtng/videos" className="navbar-logo" onClick={closeMobileMenu}>
+          <img src={youtube} className="Nav-Logo" />
+          <i class="fab fa-firstdraft" />
+        </a>
+
+        <a href="https://www.twitch.tv/vibestreamnetwork" className="navbar-logo" onClick={closeMobileMenu}>
+          <img src={twitch} className="Nav-Logo" />
           <i class="fab fa-firstdraft" />
         </a>
 
@@ -87,27 +93,18 @@ function Navbar() {
           <i className={click ? "fas fa-times" : "fas fa-bars"} />
         </div>
         <ul className={click ? "nav-menu active" : "nav-menu"}>
-          <li
+        <li
             className="nav-item"
-            onMouseEnter={onMouseEnterTools}
-            onMouseLeave={onMouseLeaveTools}
           >
-            <Link to="/Shop" className="nav-links" onClick={closeMobileMenu}>
-              Tools <i className="fas fa-caret-down" />
+            <Link
+              to="/Launchpad"
+              className="nav-links"
+              onClick={closeMobileMenu}
+            >
+              VSN Radio <i className="fas fa-caret-down" />
             </Link>
-            {dropdown && <Dropdown />}
           </li>
-          <li
-            className="nav-item"
-            onMouseEnter={onMouseEnterUtils}
-            onMouseLeave={onMouseLeaveUtils}
-          >
-            <Link to="/Shop" className="nav-links" onClick={closeMobileMenu}>
-              Utility <i className="fas fa-caret-down" />
-            </Link>
-            {dropdown2 && <Dropdown2 />}
-          </li>
-
+          
           <li
             className="nav-item"
           >
@@ -116,7 +113,7 @@ function Navbar() {
               className="nav-links"
               onClick={closeMobileMenu}
             >
-              Launchpad <i className="fas fa-caret-down" />
+              Marketplace <i className="fas fa-caret-down" />
             </Link>
           </li>
 

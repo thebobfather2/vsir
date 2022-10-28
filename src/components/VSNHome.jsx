@@ -9,9 +9,9 @@ import dashboardIcon from "../images/icons/dashboard.png";
 import galleryIcon from "../images/icons/gallery.png";
 import slotIcon from "../images/icons/slots.png";
 import walletIcon from "../images/icons/wallet.png";
-import "./Shop.css";
+import "./VSNHome.css";
 
-const Shop = () => {
+const VSNHome = () => {
   const items = [
     {
       id: "1",
@@ -217,4 +217,4 @@ const Shop = () => {
   );
 };
 
-export default Shop;
+export default VSNHome;

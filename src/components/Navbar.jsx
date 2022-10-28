@@ -7,9 +7,10 @@ import {
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import br from "./img/poweredwhite.png";
-import Logo from "./img/poweredwhite.png";
-import MELogo from "./img/MELogo.png";
-import DiscordLogo from "./img/Discord.png";
+import Logo from "./img/vsn.png";
+import youtube from "./img/youtube.png";
+import twitter from "./img/twitter.png";
+import twitch from "./img/twitch.png";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -40,13 +41,27 @@ const Navbar = () => {
           <Link to="/">
             <img className="navlogo" src={br} alt="logo" />
           </Link>
-          <ul className="list"close  style={{marginTop: "30px"}}>
+          <ul className="list"close>
             <br></br>
             <br></br>
 
 
 
-            <Link to="/Shop" onClick={toggleNav}>
+            <Link to="/VSNHome" onClick={toggleNav}>
+              <h1
+                style={{
+                  textDecoration: "underline",
+                  fontSize: "1.8em",
+                  color: "orange",
+                  paddingTop: "30px",
+                }}
+              >
+                Home
+              </h1>
+            </Link>
+            <br></br>
+
+            <Link to="/VSNHome" onClick={toggleNav}>
               <h1
                 style={{
                   textDecoration: "underline",
@@ -54,12 +69,12 @@ const Navbar = () => {
                   color: "orange",
                 }}
               >
-                Solana Tools
+                VSN Radio
               </h1>
             </Link>
             <br></br>
 
-            <Link to="/Shop" onClick={toggleNav}>
+            <Link to="/VSNHome" onClick={toggleNav}>
               <h1
                 style={{
                   textDecoration: "underline",
@@ -67,48 +82,12 @@ const Navbar = () => {
                   color: "orange",
                 }}
               >
-                Utility
+                Marketplace
               </h1>
             </Link>
             <br></br>
 
-            <a
-  href="https://staking.bobbyrabbits.com/"
-  rel="noreferrer"
-  onClick={toggleNav}
-  style={{
-    textDecoration: "underline",
-    fontSize: "1.8em",
-    color: "orange",
-  }}
->
-  <h1
-    style={{
-      textDecoration: "underline",
-      fontSize: "1em",
-      color: "orange",
-    }}
-  >
-    Staking
-  </h1>
-</a>
-<br></br>
-
-<Link to="/Launchpad" onClick={toggleNav}>
-              <h1
-                style={{
-                  textDecoration: "underline",
-                  fontSize: "1.8em",
-                  color: "orange",
-                }}
-              >
-                Launchpad
-              </h1>
-            </Link>
-            <br></br>
-
-
-            <Link to="/Partners" onClick={toggleNav}>
+            <Link to="/VSNHome" onClick={toggleNav}>
               <h1
                 style={{
                   textDecoration: "underline",
@@ -121,22 +100,20 @@ const Navbar = () => {
             </Link>
             <br></br>
 
-        <a href="https://magiceden.io/creators/bobbyrabbits/" style={{marginTop: "-10px"}} className="navbar-logo2" onClick={toggleNav}>
-          <img src={MELogo} className="MELogo" />
+        <a href="https://twitter.com/VibeStreamNet" className="navbar-logo2" onClick={toggleNav}>
+          <img src={twitter} className="nav-logo" />
           <i class="fab fa-firstdraft" />
         </a>
 
-        <a href="https://discord.gg/PfGQnKZqNa" className="navbar-logo2" onClick={toggleNav}>
-          <img src={DiscordLogo} className="MELogo" />
+        <a href="https://www.youtube.com/channel/UCuQMtadkhjYL9ZTtmqMRtng/videos" style={{marginTop: "-10px"}} className="navbar-logo2" onClick={toggleNav}>
+          <img src={youtube} className="nav-logo" />
           <i class="fab fa-firstdraft" />
         </a>
 
-            <br></br>
-
-            <Link to="/" className="navbar-logo2" onClick={toggleNav}>
-          <img src={Logo} className="navLogo2" />
+        <a href="https://www.twitch.tv/vibestreamnetwork" style={{marginTop: "-10px"}} className="navbar-logo2" onClick={toggleNav}>
+          <img src={twitch} className="nav-logo" />
           <i class="fab fa-firstdraft" />
-        </Link>
+        </a>
 
         <br></br>
 
@@ -148,7 +125,7 @@ const Navbar = () => {
               </li>
             </WalletModalProvider>
           </ul>
-          <Button className="close" onClick={toggleNav} style={{marginTop: "20px"}}>
+          <Button className="close" onClick={toggleNav} style={{marginTop: "25px"}}>
             Close
           </Button>
         </>

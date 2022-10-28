@@ -13,8 +13,12 @@
     align-self: center;
 }
 
+.nav-logo{
+    max-width: 60px;
+}
+
 .close {
-    display: none !important;
+    color: white;
 }
 
 a {
@@ -106,13 +110,20 @@ a {
         text-overflow: ellipsis;
 
     }
+
+    .nav-logo{
+        max-width: 60px;
+    }
 }
 
 @media screen and (max-width: 900px) {
     .navlogo{
         display: none;
     }
-   
+
+    .nav-logo{
+        max-width: 60px;
+    }
     
 }
 @media screen and (max-width: 755px) {
@@ -163,13 +174,9 @@ nav{
         display: none;
 
     }
-
-    .navLogo2{
-        max-width: 175px;
-      }
     
-      .MELogo{
-        max-width: 75px;
+      .nav-logo{
+        max-width: 60px;
       }
       
       .navbar-logo2 {
