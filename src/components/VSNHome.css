@@ -1,405 +1,139 @@
-@font-face {
-  font-family: bubblegums;
-  src: url('./fonts/AGENTORANGE.TTF');
-}
-
-.ShopMain {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh !important;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-}
-
-.MainShopContainer {
-  display: flex;
+.partnersMain {
   min-height: 100vh;
+  display: flex;
   flex-direction: column;
-  align-items: center;
-  background-color: #FFE53B;
-  background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
-  animation: gradient 10s ease infinite;
-  background-size: 400% 400%;
-}
-
-.menuContainer {
-  width: 80%;
-  height: fit-content;
-  background-image: url('../images/chalkboard.jpg');
-  background-size: cover;
-  margin-top: 40px;
-  border: 15px rgba(255, 115, 0, 0.856) ridge;
-}
-
-.menuHeading {
-  font-family: chalk-outline;
-  font-size: 2rem;
-  color: white;
-  letter-spacing: 6px;
-  text-transform: uppercase;
-  text-align: center;
- 
-  display: block;
-  -webkit-mask-image: url('../images/texture.svg');
-  -moz-mask-image: url('../images/texture.svg');
-  -o-mask-image: url('../images/texture.svg');
-  mask-image: url('../images/texture.svg');
-  mix-blend-mode: difference;
-
-}
-
-.menuSubtitle {
-  font-size: 2rem;
-  
-}
-.Category{
-  margin-left: 40px;
-  margin-bottom: 50px;
-}
-.CatTitle {
-  font-family: menuItems;
-  color: white;
-  font-size: 2.5rem;
-  -webkit-mask-image: url('../images/texture.svg');
-  -moz-mask-image: url('../images/texture.svg');
-  -o-mask-image: url('../images/texture.svg');
-  mask-image: url('../images/texture.svg');
-  mix-blend-mode: difference;
-}
-
-.CategoryTitle {
-  width: fit-content;
-  -webkit-mask-image: url('../images/texture.svg');
-  -moz-mask-image: url('../images/texture.svg');
-  -o-mask-image: url('../images/texture.svg');
-  mask-image: url('../images/texture.svg');
-  mix-blend-mode: difference;
-}
-
-.underline {
   width: 100%;
-  height: 3px;
- 
-  background-color: white;
-  margin-left: 0px;
-  -webkit-mask-image: url('../images/texture.svg');
-  -moz-mask-image: url('../images/texture.svg');
-  -o-mask-image: url('../images/texture.svg');
-  mask-image: url('../images/texture.svg');
-  mix-blend-mode: difference;
+  text-align: center;
+  align-items: center;
 }
-.itemsUnderline {
-  width: 90%;
-  height: 3px;
-  
-  background-color: white;
-  margin-left: 40px;
-  -webkit-mask-image: url('../images/texture.svg');
-  -moz-mask-image: url('../images/texture.svg');
-  -o-mask-image: url('../images/texture.svg');
-  mask-image: url('../images/texture.svg');
-  mix-blend-mode: difference;
+
+.Title {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 4.5vw;
+  font-weight: bolder;
+  color: white;
+  text-shadow: 5px 5px #000000;
 }
-.items1{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: baseline;
-  margin-left: 40px;
-  margin-right: 40px;
-  margin-top: 10px;
-  -webkit-mask-image: url('../images/texture.svg');
-  -moz-mask-image: url('../images/texture.svg');
-  -o-mask-image: url('../images/texture.svg');
-  mask-image: url('../images/texture.svg');
-  mix-blend-mode: difference;
+
+.subTitle {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 3.5vw;
+  font-weight: bolder;
+  color: white;
+  text-shadow: 5px 5px #000000;
+  margin-bottom: 20px;
 }
-.menuPrice{
-  font-size: 1.2rem;
-  -webkit-mask-image: url('../images/texture.svg');
-  -moz-mask-image: url('../images/texture.svg');
-  -o-mask-image: url('../images/texture.svg');
-  mask-image: url('../images/texture.svg');
-  mix-blend-mode: difference;
+
+.TextBox {
+  border-radius: 20px;
+  margin-top: 15px;
+  margin-bottom: 50px;
+  width: 80%;
+  color: white;
+  padding: 50px;
+  text-shadow: 1px 1px #000000;
 }
-.menuItems{
+
+.launchMain {
+  min-height: 40vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-}
-.dotsImage{
-  max-height: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-.Prices{
-  font-family: menuItems;
-  color: white;
-  letter-spacing: 1px;
-  font-size: 1.5rem;
-  -webkit-mask-image: url('../images/texture.svg');
-  -moz-mask-image: url('../images/texture.svg');
-  -o-mask-image: url('../images/texture.svg');
-  mask-image: url('../images/texture.svg');
-  mix-blend-mode: difference;
-  margin-right: 40px;
-  text-align: right;
-  
-}
-.eachMenuItem{
-  color: white;
-  font-family: menuItems;
-  font-size: 2rem;
-  -webkit-mask-image: url('../images/texture.svg');
-  -moz-mask-image: url('../images/texture.svg');
-  -o-mask-image: url('../images/texture.svg');
-  mask-image: url('../images/texture.svg');
-  mix-blend-mode: difference;
-}
-.eachMenuItem:hover{
-  animation: gelatine ease .5s;
-  text-shadow: 0 0 5px rgb(255, 255, 255);
-}
-@font-face {
-  font-family: menuItems;
-  src: url('./fonts/DkMidnightChalkerRegular-lGWV.otf');
+  width: 100%;
+  text-align: center;
+  align-items: center;
 }
 
-@font-face {
-  font-family: chalk-outline;
-  src: url('../components/fonts/BobcatItalicPersonalUseBoldItalic-DOPY0.ttf');
+.applyMain {
 
-}
-
-/*Items*/
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
-
-.grid {
-  margin: auto !important;
-}
-
-.toolsContainer {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin: auto;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+}
+
+.BulkTitle {
+  display: flex;
+  font-family: 'Badrips', sans-serif;
+  font-size: 4.5em;
+  text-align: center;
   justify-content: center;
-  max-width: 80%;
+  color: rgb(0, 0, 0);
 }
-
-.item {
+.partnerContainer {
   display: flex;
-  flex-direction: column;
-  width: 200px;
-  height: 150px;
+  flex-wrap: wrap;
+  width: 80%;
   padding: 20px;
   justify-content: center;
   align-items: center;
-  background-color: #FFE53B;
-  background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
-  border-radius: 20px;
-  margin: 20px;
-
-  box-shadow: 0 0 10px 2px black;
 }
 
-.item:hover {
+.partnerCard:hover {
   cursor: pointer;
-  opacity: 60%;
-  animation: gelatine 0.4s;
+  background-color: #70707062;
+  box-shadow: 8px 8px #00000062;
 }
 
-@keyframes gelatine {
-
-  from,
-  to {
-    transform: scale(1, 1);
-  }
-
-  25% {
-    transform: scale(0.98, 1.02);
-  }
-
-  50% {
-    transform: scale(1.02, 0.98);
-  }
-
-  75% {
-    transform: scale(0.99, 1.01);
-  }
+.Launch {
+  width: 90%;
+  max-height: 70%;
 }
 
-.itemTitle {
-  font-family: 'Fredoka One', cursive;
-  margin: 15px auto;
-  text-align: center;
-  font-size: 1.5em;
+.apply {
+  width: 100%;
+  height: 100%;
 }
 
-.itemImage {
-  width: 50px;
-  height: 50px;
-  margin-left: auto;
-  margin-right: auto;
-
+.partnerimg {
+  border-radius: 20px;
+  width: 70%;
+  height: 70%;
+  box-shadow: 8px 8px #00000062;
 }
 
-/* .itemDescription {
-  font-family: 'Fredoka One', cursive;
-  text-align: center;
-}
-
-.itemPrice {
-  font-family: 'Fredoka One', cursive;
-  margin: 10px auto;
-  font-size: 1em;
-}
-
-.itemButton {
-  margin-top: 20px;
-} */
-
-.MainTitle {
-  font-family: bubblegums;
-  font-size: 5em;
-  color: rgb(42, 151, 42);
-  -webkit-text-stroke: 2px black;
-  text-align: center;
-  text-shadow: 2px 2px 5px black;
-
-}
-
-.header {
-  display: flex;
-  margin-top: 50px;
-}
-
-.carotGif {
-  max-width: 200px;
-}
-
-.CAROT {
-  margin-top: 50px;
-}
-
-@media screen and (max-width: 1130px) {
-  .CatTitle{
-    font-size: 2.2rem;
-  }
-  .eachMenuItem{
-    font-size: 1.5rem;
-  }
-  .Prices{
-    font-size: 1rem;
-    margin-right: 0;
-  }
-}
-
-@media screen and (max-width:900px) {
-  .carotGif {
-    display: none;
+@media screen and (max-width: 700px) {
+  
+  .Launch {
+    width: 80%;
+    height: 80%;
   }
 
-  .MainTitle {
-    font-size: 3em;
-    text-align: center
+  .partnerimg {
+    width: 90%;
+    height: 90%;
+    box-shadow: 8px 8px #00000062;
   }
 
-  .item {
-    max-width: 200px;
-    margin: 5 auto;
-  }
-
-  .itemImage {
-
-    margin-left: auto;
-    margin-right: auto;
-
-  }
-
-}
-
-@media screen and (max-width: 755px) {
-  .item {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    padding: 20px;
-    justify-content: center;
-    align-items: center;
-    margin: auto -10px;
-  }
-  .menuItems{
-    margin-left: 0px;
-  }
-  .items1{
-    margin-left: 0;
-  }
-  .itemsUnderline{
-    margin-left: 0;
+  .Title {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 10vw;
+    font-weight: bolder;
+    color: white;
+    text-shadow: 2px 2px #000000;
   }
   
-}
-
-@media screen and (max-width: 500px) {
-  .MainTitle {
-    font-size: 3em;
-    text-align: center
-  }
-  .menuContainer{
-    width:95%;
-  }
-  .menuTitle{
-    font-size: 1.2em;
-  }
-  .menuSubtitle{
-    font-size: .8em;
-    margin-top: -8px
+  .subTitle {
+    background-color: gray;
+    border-radius: 5px;
+    padding: 5px;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 6vw;
+    font-weight: bolder;
+    color: white;
+    text-shadow: 2px 2px #000000;
+    margin-bottom: 20px;
   }
 
-  .ShopMain {
-    width: 100%;
-  }
-
-  .item {
-    width: 300px !important;
-    margin-bottom: 10px;
-  }
-
-  .itemTitle {
-    font-family: 'Fredoka One', cursive;
-    margin: 15px auto;
-    text-align: center;
-    font-size: 1em;
-  }
-
-  .itemImage {
-
-    margin-left: auto;
-    margin-right: auto;
-
-  }
-
-  .itemDescription {
-    font-family: 'Fredoka One', cursive;
-    text-align: center;
-    font-size: .6em;
-  }
-
-  .itemPrice {
-    font-family: 'Fredoka One', cursive;
-    margin: 10px auto;
-  }
-
-  .itemButton {
-    margin-top: 20px;
-    max-width: 200px;
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
-  .Category{
-    margin-left: 10px;
-    margin-right: -30px;
+  .TextBox {
+    background-color: black;
+    border-radius: 20px;
+    margin-top: 15px;
+    margin-bottom: 50px;
+    width: 80%;
+    color: white;
+    padding: 50px;
+    text-shadow: 1px 1px #000000;
+    box-shadow: 8px 8px #00000062;
   }
 }

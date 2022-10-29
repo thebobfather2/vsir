@@ -87,31 +87,18 @@ const Navbar = () => {
             </Link>
             <br></br>
 
-            <Link to="/VSNHome" onClick={toggleNav}>
-              <h1
-                style={{
-                  textDecoration: "underline",
-                  fontSize: "1.8em",
-                  color: "orange",
-                }}
-              >
-                Partners
-              </h1>
-            </Link>
-            <br></br>
-
-        <a href="https://twitter.com/VibeStreamNet" className="navbar-logo2" onClick={toggleNav}>
-          <img src={twitter} className="nav-logo" />
+        <a href="https://www.twitch.tv/vibestreamnetwork" className="navbar-logo2" onClick={toggleNav}>
+          <img src={twitch} className="nav-logo" />
           <i class="fab fa-firstdraft" />
         </a>
 
-        <a href="https://www.youtube.com/channel/UCuQMtadkhjYL9ZTtmqMRtng/videos" style={{marginTop: "-10px"}} className="navbar-logo2" onClick={toggleNav}>
+        <a href="https://www.youtube.com/channel/UCuQMtadkhjYL9ZTtmqMRtng/videos" className="navbar-logo2" onClick={toggleNav}>
           <img src={youtube} className="nav-logo" />
           <i class="fab fa-firstdraft" />
         </a>
 
-        <a href="https://www.twitch.tv/vibestreamnetwork" style={{marginTop: "-10px"}} className="navbar-logo2" onClick={toggleNav}>
-          <img src={twitch} className="nav-logo" />
+        <a href="https://twitter.com/VibeStreamNet" className="navbar-logo2" onClick={toggleNav}>
+          <img src={twitter} className="nav-logo" />
           <i class="fab fa-firstdraft" />
         </a>
 

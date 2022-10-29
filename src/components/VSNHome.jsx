@@ -1,219 +1,77 @@
-import { Button, Grid } from "@material-ui/core";
+import React from "react";
 import { Link } from "react-router-dom";
-import placeholder from "../images/bunnyhead.png";
-import carotsend from "../images/carot.png";
-import carotShop from "../images/carotshop.jpeg";
-import dots from "../images/dots.png";
-import bulkIcon from "../images/icons/bulksend.png";
-import dashboardIcon from "../images/icons/dashboard.png";
-import galleryIcon from "../images/icons/gallery.png";
-import slotIcon from "../images/icons/slots.png";
-import walletIcon from "../images/icons/wallet.png";
+import vsn from "../images/vsn.png";
+import apply from "../images/apply.png";
 import "./VSNHome.css";
+import { borderRadius } from "@mui/system";
 
 const VSNHome = () => {
-  const items = [
+  const partners = [
     {
-      id: "1",
-      itemTitle: "Custom Rabbit",
-      itemImage: placeholder,
-      itemDescription: "Request a custom 1 of 1 Bobby Rabbit",
-      itemPrice: "500 $CAROT and 3 OG Bobby Rabbits",
-      path: "/Custom",
-      buttonText: "Buy",
+      name: "VSN Radio",
+      image: vsn,
+      path: "/VSNRadio",
     },
     {
-      id: "2",
-      itemTitle: "Send $CAROT",
-      itemImage: carotsend,
-      itemDescription: "Send $CAROT to any wallet!",
-      itemPrice: "Only Pay Transaction fee",
-      path: "/Send",
-      buttonText: "Send $CAROT",
+      name: "Marketplace",
+      image: vsn,
+      path: "/Marketplace",
     },
-    {
-      id: "3",
-      itemTitle: "Bulk Send NFTs",
-      itemImage: bulkIcon,
-      itemDescription: "Send Multiple NFTs at once!",
-      itemPrice: "~0.003 SOL per NFT",
-      path: "/BulkSend",
-      buttonText: "Send NFTs",
-    },
-    {
-      id: "4",
-      itemTitle: "Wallet Cleaner",
-      itemImage: walletIcon,
-      itemDescription: "Burn any NFT or Token and redeem your rent!",
-      itemPrice:
-        ".001 SOL per NFT or supply of tokens burned, free for Bobby Rabbits holders",
-      path: "/Cleaner",
-      buttonText: "Clean Wallet",
-    },
-    {
-      id: "5",
-      itemTitle: "Gallery",
-      itemImage: galleryIcon,
-      itemDescription: "View the NFTs in any wallet!",
-      itemPrice: "Price Subject to Change per NFT",
-      path: "/Gallery",
-      buttonText: "Go to Gallery",
-    },
-    {
-      id: "6",
-      itemTitle: "Slots",
-      itemImage: slotIcon,
-      itemDescription: "Use your $CAROT coin win $CANS!",
-      itemPrice: "5 $CAROT Per Spin",
-      path: "/Slots",
-      buttonText: "Test Your Luck",
-    },
-    {
-      id: "7",
-      itemTitle: "Holder's Dashboard",
-      itemImage: dashboardIcon,
-      itemDescription: "Use your $CAROT coin win $CANS!",
-      itemPrice: "5 $CAROT Per Spin",
-      path: "/Dashboard",
-      buttonText: "Test Your Luck",
-    },
+
   ];
-
   return (
-    <>
-      {/* <img src={carotShop} className='carotshopimage' alt='carot shop'/> */}
-      <div className="MainShopContainer">
-        <div className="menuContainer">
-          <div className="menuHeading">
-            <h1 className="menuTitle">Welcome to the Carot Shop</h1>
-            <h2 className="menuSubtitle">The Carot Menu</h2>
-          </div>
-          <div className="TheMenu">
-            <div className="Category">
-              <div className="CategoryTitle">
-                <h2 className="CatTitle">Solana Tools</h2>
-                <div className="underline"></div>
-              </div>
-              <div className="menuItems">
-                <div className="items1">
-                  <Link to="/BulkSend">
-                    <h3 className="eachMenuItem">Bulk Send NFTs</h3>
-                  </Link>
-                  <h3 className="Prices">
-                    0.005 SOL/NFT or Free for Bobby Rabbits Holders
-                  </h3>
-                </div>
-                <div className="itemsUnderline"></div>
-                <div className="items1">
-                  <Link to="/Cleaner">
-                    <h3 className="eachMenuItem">Wallet Cleaner</h3>
-                  </Link>
-                  <h3 className="Prices">
-                    0.001 SOL/Burned NFT or Token Set or Free for Bobby Rabbits
-                    Holders
-                  </h3>
-                </div>
-                <div className="itemsUnderline"></div>
-                <div className="itemsUnderline"></div>
-                <div className="items1">
-                  <Link to="/Gallery">
-                    <h3 className="eachMenuItem">Gallery</h3>
-                  </Link>
-                  <h3 className="Prices">Free</h3>
-                </div>
-                <div className="itemsUnderline"></div>
-              </div>
-            </div>
-            <div className="Category">
-              <div className="CategoryTitle">
-                <h2 className="CatTitle">Rabbit Utility</h2>
-                <div className="underline"></div>
-              </div>
-              <div className="menuItems">
-                <div className="items1">
-                  <Link to="/Custom">
-                    <h3 className="eachMenuItem">Custom Bobby Rabbit</h3>
-                  </Link>
-                  <h3 className="Prices">3 OG Rabbits and 500 $CAROT Coin</h3>
-                </div>
-                <div className="itemsUnderline"></div>
-                <div className="items1">
-                  <Link to="/Slots">
-                    <h3 className="eachMenuItem">Slots</h3>
-                  </Link>
-                  <h3 className="Prices">Minimum bet 1 $CAROT Coin</h3>
-                </div>
-                <div className="itemsUnderline"></div>
-                <div className="items1">
-                  <Link to="/Flip">
-                    <h3 className="eachMenuItem">Coin Flip</h3>
-                  </Link>
-                  <h3 className="Prices">Minimum bet 1 $CAROT Coin</h3>
-                </div>
-                <div className="itemsUnderline"></div>
-              </div>
-              <div className="items1">
-                <Link to="/Dashboard">
-                  <h3 className="eachMenuItem">Holder's Dashboard</h3>
-                </Link>
-                <h3 className="Prices">Must Own OG or Icy Rabbit</h3>
-              </div>
-              <div className="itemsUnderline"></div>
-              <div className="items1">
-                <Link to="/Carot-Market">
-                  <h3 className="eachMenuItem">$CAROT Marketplace</h3>
-                </Link>
-                <h3 className="Prices">Individually Priced</h3>
-              </div>
-              <div className="itemsUnderline"></div>
-              <div className="items1">
-                <Link to="/Cans-Market">
-                  <h3 className="eachMenuItem">$CANS Marketplace</h3>
-                </Link>
-                <h3 className="Prices">Individually Priced</h3>
-              </div>
-              <div className="itemsUnderline"></div>
+    <div className="partnersMain" style={{marginTop: "20px"}}>
 
-              <div className="items1">
-                <Link to="/Send">
-                  <h3 className="eachMenuItem">$Carot Send</h3>
-                </Link>
-                <h3 className="Prices">Typical Solana Transaction Fee</h3>
-              </div>
-              <div className="itemsUnderline"></div>
-              <div className="menuItems">
-                <div className="items1">
-                  <a
-                    href="https://staking.bobbyrabbits.com/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <h3 className="eachMenuItem">Rabbit Staking</h3>
-                  </a>
-                  <h3 className="Prices">Stake your OG or Icy Rabbits</h3>
-                </div>
-                <div className="itemsUnderline"></div>
-              </div>
-            </div>
-          </div>
+<h1 className="Title">Welcome To Vibe Stream Network</h1>
 
-          {/* <div className='toolsContainer'>
-        {items.map(item => (
-         
-          <Link to={item.path} style={{color: 'black'}}>
-            <div className='item'>
-              <h1 className='itemTitle'>{item.itemTitle}</h1>
-              <img className='itemImage' src={item.itemImage} alt='Utility'></img>
-             <br></br>
-            </div>
+      <div className="partnerContainer">
+        {partners.map((partner) => {
+          return (
+            <Link to={partner.path}>
+              <div
+                style={{
+                  backgroundColor: partner.primaryColor,
+                  padding: "20px",
+                  margin: "10px",
+                  borderRadius: "10px",
+                }}
+                className="partnerCard"
+              >
+                <img
+                className="partnerimg"
+                  src={partner.image}
+                  style={{ maxWidth: "130px" }}
+                  alt="partner logo"
+                />
+                <h3 style={{ color: "white", marginTop: "10px" }}>{partner.name}</h3>
+              </div>
             </Link>
-      
-        ))}
-     
-      </div> */}
-        </div>
+          );
+        })}
       </div>
-    </>
+
+      <h4 className="TextBox">
+        
+        <h3 className="subTitle">What is Vibe Stream Network?</h3>
+      
+          Vibe Stream Network is more than a music marketplace... it's a music RIGHTS marketplace! Every master listed on our marketplace will be broken down into 100 NFTs - each NFT represents 1% ownership in the track.
+          Simple, right? Now imagine - every dollar earned, from Spotify streaming revenue to a fat check for licensing the song to a tv show or commercial, will be divided by 100 and airdropped straight to the owners. 
+          Our proprietary technology will use the security of blockchain verification to air drop proportionally to owners in an instant. No more vague contracts, no more waiting on "business days" to receive a direct deposit. Owning 5 NFTs of
+          a single track means you own 5%, and will get 5% of every dollar of profit dropped straight into your wallet. This is how we plan to change the music business with Web3.
+      </h4>  
+
+      <h4 className="TextBox">
+        
+      <h3 className="subTitle">Our Mission</h3>
+      
+      Our mission is TBD 
+          <br></br>
+          <h4 style={{marginTop: "30px"}}>-The VSN Team</h4>
+          </h4>
+
+    </div>
+
+    
   );
 };
 

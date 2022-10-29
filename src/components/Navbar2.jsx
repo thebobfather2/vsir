@@ -117,21 +117,6 @@ function Navbar() {
             </Link>
           </li>
 
-          <li
-            className="nav-item"
-            onMouseEnter={onMouseEnterPartners}
-            onMouseLeave={onMouseLeavePartners}
-          >
-            <Link
-              to="/Partners"
-              className="nav-links"
-              onClick={closeMobileMenu}
-            >
-              Partners <i className="fas fa-caret-down" />
-            </Link>
-            {dropdown3 && <Dropdown3 />}
-          </li>
-
         </ul>
         <WalletMultiButton/>
       </nav>
