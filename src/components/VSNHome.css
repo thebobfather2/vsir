@@ -26,11 +26,11 @@
 
 .TextBox {
   border-radius: 20px;
-  margin-top: 15px;
+  margin-top: 0px;
   margin-bottom: 50px;
   width: 80%;
   color: white;
-  padding: 50px;
+  padding: 10px;
   text-shadow: 1px 1px #000000;
 }
 
@@ -87,8 +87,8 @@
 
 .partnerimg {
   border-radius: 20px;
-  width: 70%;
-  height: 70%;
+  width: 100%;
+  height: 100%;
   box-shadow: 8px 8px #00000062;
 }
 
