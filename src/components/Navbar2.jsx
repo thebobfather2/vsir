@@ -97,7 +97,7 @@ function Navbar() {
             className="nav-item"
           >
             <Link
-              to="/Launchpad"
+              to="/VSNRadio"
               className="nav-links"
               onClick={closeMobileMenu}
             >
@@ -109,7 +109,7 @@ function Navbar() {
             className="nav-item"
           >
             <Link
-              to="/Launchpad"
+              to="/Marketplace"
               className="nav-links"
               onClick={closeMobileMenu}
             >

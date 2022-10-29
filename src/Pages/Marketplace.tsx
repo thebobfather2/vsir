@@ -11,11 +11,11 @@ import {
   NETWORK,
 } from "../components/candy-shop-fox";
 
-import "./CarotMarket.css";
+import "./Marketplace.css";
 
-const FoxMart: React.FC = () => {
+const Marketplace: React.FC = () => {
   const wallet = useAnchorWallet();
-  const RPC = "https://solana-api.projectserum.com/";
+  const RPC = "https://api.devnet.solana.com";
   const candyShopRef = useRef<CandyShop>(
     new CandyShop({
       candyShopCreatorAddress: CANDY_SHOP_CREATOR_ADDRESS_FOX,
@@ -24,9 +24,9 @@ const FoxMart: React.FC = () => {
       env: NETWORK,
       // pass additional settings param to configure shop display
       settings: {
-        currencySymbol: "$FIELD",
-        currencyDecimals: 2,
-        priceDecimals: 0,
+        currencySymbol: "$SOL",
+        currencyDecimals: 9,
+        priceDecimals: 2,
         volumeDecimals: 1,
         mainnetConnectionUrl: RPC,
       },
@@ -39,8 +39,8 @@ const FoxMart: React.FC = () => {
           <DesContainer>
             <Stat
               candyShop={candyShopRef.current}
-              title={"FoxMart"}
-              description={"Use Field Coin to purchase upgrades for Edd!"}
+              title={"Music Marketplace"}
+              description={"Purchace shares of ownership in your favorite tracks!"}
               style={{ paddingBottom: 50 }}
             />
 
@@ -53,7 +53,7 @@ const FoxMart: React.FC = () => {
                 padding: "10px",
               }}
             >
-              Purchase upgrades for your fox:
+              Purchace shares of ownership in your favorite tracks!
             </h2>
             <Orders
               wallet={wallet}
@@ -69,7 +69,7 @@ const FoxMart: React.FC = () => {
                 padding: "10px",
               }}
             >
-              List your upgrades for sale in $FIELD:
+              List your ownership in tracks for sale:
             </h2>
             <Sell
               wallet={wallet}
@@ -90,7 +90,7 @@ const FoxMart: React.FC = () => {
   );
 };
 
-export default FoxMart;
+export default Marketplace;
 
 const DesContainer = styled.div`
   width: 100%;

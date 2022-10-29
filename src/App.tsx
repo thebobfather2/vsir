@@ -18,11 +18,12 @@ import { HashRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Navbar2 from "./components/Navbar2";
 import VSNHome from "./components/VSNHome";
+import VSNRadio from "./VSNRadio";
+import Marketplace from "./Pages/Marketplace";
+
 import Auctions from "./Pages/Auctions";
 import Baad from "./Pages/Baad";
 import BulkSend from "./Pages/BulkSend";
-import CansMarket from "./Pages/CansMarket";
-import CarotMarket from "./Pages/CarotMarket";
 import Cleaner from "./Pages/Cleaner";
 import CoinFlip from "./Pages/CoinFlip";
 import Custom from "./Pages/Custom";
@@ -39,7 +40,6 @@ import BunnyClub from "./Pages/BunnyClub";
 import Launchpad from "./Pages/Launchpad";
 import GrouchyTigers from "./Pages/GrouchyTigers";
 import JackTuber from "./Pages/JackTuber";
-import FoxMart from "./Pages/FoxMart";
 import UpgradeFox from "./Pages/UpgradeFox";
 import GnarAFDAO from "./Pages/GnarAFDAO";
 
@@ -111,6 +111,10 @@ const Content: FC = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/VSNHome" element={<VSNHome />} />
+        <Route path="/VSNRadio" element={<VSNRadio />} />
+        <Route path="/Marketplace" element={<Marketplace />} />
+
+
         <Route path="/Send" element={<Send />} />
         <Route path="/BulkSend" element={<BulkSend />} />
         <Route path="/Cleaner" element={<Cleaner />} />
@@ -120,8 +124,6 @@ const Content: FC = () => {
         <Route path="/Slots" element={<Slots />} />
         <Route path="/Gallery" element={<Gallery />} />
         <Route path="/Dashboard" element={<Dashboard />} />
-        <Route path="/Carot-Market" element={<CarotMarket />} />
-        <Route path="/Cans-Market" element={<CansMarket />} />
         <Route path="/Flip" element={<CoinFlip />} />
         <Route path="/EddFox" element={<EddFox />} />
         <Route path="/Partners" element={<Partners />} />
@@ -130,7 +132,6 @@ const Content: FC = () => {
         <Route path="/Launchpad" element={<Launchpad />} />
         <Route path="/GrouchyTigers" element={<GrouchyTigers />} />
         <Route path="/JackTuber" element={<JackTuber />} />
-        <Route path="/FoxMart" element={<FoxMart />} />
         <Route path="/UpgradeFox" element={<UpgradeFox />} />
         <Route path="/NftMinter" element={<NftMinter />} />
         <Route path="/GnarAFDAO" element={<GnarAFDAO />} />
