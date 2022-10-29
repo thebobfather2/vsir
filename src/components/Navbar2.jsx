@@ -69,7 +69,7 @@ function Navbar() {
     <>
       <nav className="navbar">
 
-        <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
+        <Link to="/VSNHome" className="navbar-logo" onClick={closeMobileMenu}>
           <img src={Logo} className="Nav-Logo" />
           <i class="fab fa-firstdraft" />
         </Link>

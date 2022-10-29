@@ -4,8 +4,14 @@
 	border: 10px solid black;
 	border-radius: 20px;
     min-width: 90%;
-	background-color: #b15959;
+	background-color: #2c2c2c;
 	font-size: .8rem;
+    color: black;
+    text-shadow: 1px 1px black;
+}
+
+.title {
+    color: beige;
 }
 
 .player_container
@@ -15,13 +21,14 @@
     padding-top: 60px;
     border: 1px solid rgb(141, 141, 141);
     border-radius: 40px;
-    color: rgb(218, 218, 218);
+    color: rgb(0, 0, 0);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     background-color: black;
     box-shadow: 15px 15px #00000062;
+    
 
     @media screen and (max-width: 700px) {
         .walletCard {
@@ -29,8 +36,12 @@
             margin-top: 20px;
             border: 10px solid black;
             border-radius: 20px;
-            background-color: #b15959;
+            background-color: #1b1b1b;
             font-size: .4rem;
+        }
+
+        .title {
+            padding-top: 80px;
         }
     }
     >*

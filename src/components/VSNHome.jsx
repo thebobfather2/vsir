@@ -40,7 +40,7 @@ const VSNHome = () => {
                 <img
                 className="partnerimg"
                   src={partner.image}
-                  style={{ maxWidth: "130px" }}
+                  style={{ maxWidth: "350px" }}
                   alt="partner logo"
                 />
                 <h3 style={{ color: "white", marginTop: "10px" }}>{partner.name}</h3>
