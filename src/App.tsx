@@ -18,30 +18,13 @@ import { HashRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Navbar2 from "./components/Navbar2";
 import VSNHome from "./components/VSNHome";
-import VSNRadio from "./VSNRadio";
+import Radio from "./Pages/Radio";
 import Marketplace from "./Pages/Marketplace";
-
-import Auctions from "./Pages/Auctions";
-import Baad from "./Pages/Baad";
-import BulkSend from "./Pages/BulkSend";
-import Cleaner from "./Pages/Cleaner";
-import CoinFlip from "./Pages/CoinFlip";
-import Custom from "./Pages/Custom";
-import Dashboard from "./Pages/Dashboard";
-import EddFox from "./Pages/EddFox";
-import Gallery from "./Pages/Gallery";
+import VibeCity from "./Pages/VibeCity";
+import Rewards from "./Pages/Rewards";
+import Profile from "./Pages/Profile";
+import Wallet from "./Pages/Wallet";
 import Home from "./Pages/Home";
-import NftMinter from "./Pages/NftMinter";
-import Partners from "./Pages/Partners";
-import Raffles from "./Pages/Raffles";
-import Send from "./Pages/Send";
-import Slots from "./Pages/Slots";
-import BunnyClub from "./Pages/BunnyClub";
-import Launchpad from "./Pages/Launchpad";
-import GrouchyTigers from "./Pages/GrouchyTigers";
-import JackTuber from "./Pages/JackTuber";
-import UpgradeFox from "./Pages/UpgradeFox";
-import GnarAFDAO from "./Pages/GnarAFDAO";
 
 
 require("./App.css");
@@ -111,30 +94,12 @@ const Content: FC = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/VSNHome" element={<VSNHome />} />
-        <Route path="/VSNRadio" element={<VSNRadio />} />
+        <Route path="/Radio" element={<Radio />} />
         <Route path="/Marketplace" element={<Marketplace />} />
-
-
-        <Route path="/Send" element={<Send />} />
-        <Route path="/BulkSend" element={<BulkSend />} />
-        <Route path="/Cleaner" element={<Cleaner />} />
-        <Route path="/Custom" element={<Custom />} />
-        <Route path="/Raffles" element={<Raffles />} />
-        <Route path="/Auctions" element={<Auctions />} />
-        <Route path="/Slots" element={<Slots />} />
-        <Route path="/Gallery" element={<Gallery />} />
-        <Route path="/Dashboard" element={<Dashboard />} />
-        <Route path="/Flip" element={<CoinFlip />} />
-        <Route path="/EddFox" element={<EddFox />} />
-        <Route path="/Partners" element={<Partners />} />
-        <Route path="/Baad" element={<Baad />} />
-        <Route path="/BunnyClub" element={<BunnyClub />} />
-        <Route path="/Launchpad" element={<Launchpad />} />
-        <Route path="/GrouchyTigers" element={<GrouchyTigers />} />
-        <Route path="/JackTuber" element={<JackTuber />} />
-        <Route path="/UpgradeFox" element={<UpgradeFox />} />
-        <Route path="/NftMinter" element={<NftMinter />} />
-        <Route path="/GnarAFDAO" element={<GnarAFDAO />} />
+        <Route path="/VibeCity" element={<VibeCity />} />
+        <Route path="/Rewards" element={<Rewards />} />
+        <Route path="/Profile" element={<Profile />} />
+        <Route path="/Wallet" element={<Wallet />} />
       </Routes>
     </>
   );

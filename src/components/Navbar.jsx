@@ -61,7 +61,7 @@ const Navbar = () => {
             </Link>
             <br></br>
 
-            <Link to="/VSNRadio" onClick={toggleNav}>
+            <Link to="/" onClick={toggleNav}>
               <h1
                 style={{
                   textDecoration: "underline",
