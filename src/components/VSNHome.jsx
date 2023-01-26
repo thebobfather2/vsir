@@ -10,7 +10,7 @@ const VSNHome = () => {
     {
       name: "VSN Radio",
       image: vsn,
-      path: "/VSNRadio",
+      path: "/Radio",
     },
     {
       name: "Marketplace",

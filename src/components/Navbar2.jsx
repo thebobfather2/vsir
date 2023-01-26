@@ -32,7 +32,7 @@ function Navbar() {
               className="nav-links"
               onClick={closeMobileMenu}
             >
-              Radio <i className="fas fa-caret-down" />
+              RADIO <i className="fas fa-caret-down" />
             </Link>
           </li>
           
@@ -42,7 +42,7 @@ function Navbar() {
               className="nav-links"
               onClick={closeMobileMenu}
             >
-              Marketplace <i className="fas fa-caret-down" />
+              MARKETPLACE <i className="fas fa-caret-down" />
             </Link>
           </li>
 
@@ -52,7 +52,7 @@ function Navbar() {
               className="nav-links"
               onClick={closeMobileMenu}
             >
-              Vibe City <i className="fas fa-caret-down" />
+              VIBE CITY <i className="fas fa-caret-down" />
             </Link>
           </li>
 
@@ -62,7 +62,7 @@ function Navbar() {
               className="nav-links"
               onClick={closeMobileMenu}
             >
-              Rewards <i className="fas fa-caret-down" />
+              REWARDS <i className="fas fa-caret-down" />
             </Link>
           </li>
 
@@ -72,7 +72,7 @@ function Navbar() {
               className="nav-links"
               onClick={closeMobileMenu}
             >
-              Profile <i className="fas fa-caret-down" />
+              PROFILE <i className="fas fa-caret-down" />
             </Link>
           </li>
 
@@ -82,7 +82,7 @@ function Navbar() {
               className="nav-links"
               onClick={closeMobileMenu}
             >
-              Wallet <i className="fas fa-caret-down" />
+              WALLET <i className="fas fa-caret-down" />
             </Link>
           </li>
 

@@ -1,9 +1,9 @@
 .App{
 	min-height: 100vh;
 	min-width: 100%;
-	 background: #FDC830;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #F37335, #FDC830,#a83d08);  
-	background: linear-gradient(to right, #F37335, #FDC830,#ff6214); 
+	 background: #fff;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #5e8d59, #5e8d59,#5e8d59);  
+	background: linear-gradient(to right, #5e8d59, #5e8d59,#5e8d59); 
 	animation: gradient 10s ease infinite;
 	background-size: 400% 400%;  
   }
