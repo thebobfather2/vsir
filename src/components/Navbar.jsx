@@ -6,11 +6,7 @@ import {
 } from "@solana/wallet-adapter-react-ui";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import br from "./img/poweredwhite.png";
 import Logo from "./img/vsn.png";
-import youtube from "./img/youtube.png";
-import twitter from "./img/twitter.png";
-import twitch from "./img/twitch.png";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -39,7 +35,7 @@ const Navbar = () => {
       {toggleMenu || screenWidth > 755 ? (
         <>
           <Link to="/">
-            <img className="navlogo" src={br} alt="logo" />
+            <img className="navlogo" src={Logo} alt="logo" />
           </Link>
           <ul className="list"close>
             <br></br>
@@ -47,7 +43,7 @@ const Navbar = () => {
 
 
 
-            <Link to="/VSNHome" onClick={toggleNav}>
+            <Link to="/Home" onClick={toggleNav}>
               <h1
                 style={{
                   textDecoration: "underline",
@@ -56,12 +52,12 @@ const Navbar = () => {
                   paddingTop: "30px",
                 }}
               >
-                Home
+                HOME
               </h1>
             </Link>
             <br></br>
 
-            <Link to="/" onClick={toggleNav}>
+            <Link to="/Radio" onClick={toggleNav}>
               <h1
                 style={{
                   textDecoration: "underline",
@@ -69,7 +65,7 @@ const Navbar = () => {
                   color: "orange",
                 }}
               >
-                VSN Radio
+                RADIO
               </h1>
             </Link>
             <br></br>
@@ -82,28 +78,63 @@ const Navbar = () => {
                   color: "orange",
                 }}
               >
-                Marketplace
+                MARKETPLACE
               </h1>
             </Link>
             <br></br>
 
-        <a href="https://www.twitch.tv/vibestreamnetwork" className="navbar-logo2" onClick={toggleNav}>
-          <img src={twitch} className="nav-logo" />
-          <i class="fab fa-firstdraft" />
-        </a>
 
-        <a href="https://www.youtube.com/channel/UCuQMtadkhjYL9ZTtmqMRtng/videos" className="navbar-logo2" onClick={toggleNav}>
-          <img src={youtube} className="nav-logo" />
-          <i class="fab fa-firstdraft" />
-        </a>
+        <Link to="/VibeCity" onClick={toggleNav}>
+              <h1
+                style={{
+                  textDecoration: "underline",
+                  fontSize: "1.8em",
+                  color: "orange",
+                }}
+              >
+                VIBE CITY
+              </h1>
+            </Link>
+            <br></br>
 
-        <a href="https://twitter.com/VibeStreamNet" className="navbar-logo2" onClick={toggleNav}>
-          <img src={twitter} className="nav-logo" />
-          <i class="fab fa-firstdraft" />
-        </a>
+            <Link to="/Rewards" onClick={toggleNav}>
+              <h1
+                style={{
+                  textDecoration: "underline",
+                  fontSize: "1.8em",
+                  color: "orange",
+                }}
+              >
+                REWARDS
+              </h1>
+            </Link>
+            <br></br>
 
-        <br></br>
+            <Link to="/Profile" onClick={toggleNav}>
+              <h1
+                style={{
+                  textDecoration: "underline",
+                  fontSize: "1.8em",
+                  color: "orange",
+                }}
+              >
+                PROFILE
+              </h1>
+            </Link>
+            <br></br>
 
+            <Link to="/Wallet" onClick={toggleNav}>
+              <h1
+                style={{
+                  textDecoration: "underline",
+                  fontSize: "1.8em",
+                  color: "orange",
+                }}
+              >
+                WALLET
+              </h1>
+            </Link>
+            <br></br>
             <WalletModalProvider>
               <li>
                 <WalletMultiButton
